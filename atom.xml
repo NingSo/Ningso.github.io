@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>NingSo</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://ningso.me/"/>
+  <updated>2016-11-29T10:04:18.000Z</updated>
+  <id>http://ningso.me/</id>
+  
+  <author>
+    <name>NingSo</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IllegalArgumentException</title>
+    <link href="http://ningso.me/2016/11/20/IllegalArgumentException/"/>
+    <id>http://ningso.me/2016/11/20/IllegalArgumentException/</id>
+    <published>2016-11-20T09:57:55.000Z</published>
+    <updated>2016-11-29T10:04:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Caused-by-java-lang-IllegalArgumentException-Could-not-locate-call-adapter-for-rx-Observable-lt-gt-错误"><a href="#Caused-by-java-lang-IllegalArgumentException-Could-not-locate-call-adapter-for-rx-Observable-lt-gt-错误" class="headerlink" title="Caused by: java.lang.IllegalArgumentException: Could not locate call adapter for rx.Observable&lt;&gt;错误"></a>Caused by: java.lang.IllegalArgumentException: Could not locate call adapter for rx.Observable&lt;&gt;错误</h3><p>问题：在构建retrofit的时候，没有指定RxJavaCallAdapterFactory适配器</p>
+<p>解决如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public static final ApiService service = new Retrofit.Builder()</div><div class="line">           .baseUrl(ApiConstants.API_BASE_URL)</div><div class="line">           .client(new OkHttpClient.Builder()</div><div class="line">                   .addInterceptor(createUserAgentInterceptor())</div><div class="line">                   .addInterceptor(createHttpLoggingInterceptor())</div><div class="line">                   .build())</div><div class="line">           .addConverterFactory(GsonConverterFactory.create())</div><div class="line">           .addCallAdapterFactory(RxJavaCallAdapterFactory.create())</div><div class="line">           .build()</div><div class="line">           .create(ApiService.class);</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Caused-by-java-lang-IllegalArgumentException-Could-not-locate-call-adapter-for-rx-Observable-lt-gt-错误&quot;&gt;&lt;a href=&quot;#Caused-by-java-lang
+    
+    </summary>
+    
+      <category term="Android" scheme="http://ningso.me/categories/Android/"/>
+    
+    
+      <category term="Exception" scheme="http://ningso.me/tags/Exception/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>adb常用命令总结</title>
+    <link href="http://ningso.me/2016/06/23/ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/"/>
+    <id>http://ningso.me/2016/06/23/ADB常用命令总结/</id>
+    <published>2016-06-23T15:26:13.000Z</published>
+    <updated>2016-11-29T09:18:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="ADB命令"><a href="#ADB命令" class="headerlink" title="ADB命令"></a>ADB命令</h2><ul>
+<li>adb shell cat [file] <code>查看文件内容</code></li>
+<li>adb shell service list <code>查看后台服务信息</code></li>
+<li>adb push [local] [remote] <code>将电脑本地文件拷贝到手机设备</code></li>
+<li>adb pull [remote] [local] <code>把文件从设备复制到本地电脑</code></li>
+<li>adb shell monkey -v -p [packagename] 500 <code>执行monkey命令</code></li>
+<li>adb shell dumpsys activity top  <code>查看栈顶activity的信息</code></li>
+<li>adb shell pm clear [packagename] <code>清除应用数据</code></li>
+</ul>
+<h2 id="AAPT命令"><a href="#AAPT命令" class="headerlink" title="AAPT命令"></a>AAPT命令</h2><p> Android asset packaging tool</p>
+<ul>
+<li>aapt list filepath.apk <code>列出apk的所有资源文件目录清单</code></li>
+<li>aapt list -v filepath.apk </li>
+<li>aapt d[ump] [values] file.{apk} </li>
+</ul>
+<blockquote>
+<p>下面的四个参值为values的值</p>
+<ul>
+<li><code>badging</code> 查看apk的包名，laber 权限等所有信息</li>
+<li><code>permissions</code> 查看apk权限</li>
+<li><code>resources</code> 打印的所有资源文件列表</li>
+<li><code>configurations</code> 查看apk配置信息</li>
+<li><code>configurations</code> 查看apk配置信息</li>
+</ul>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;ADB命令&quot;&gt;&lt;a href=&quot;#ADB命令&quot; class=&quot;headerlink&quot; title=&quot;ADB命令&quot;&gt;&lt;/a&gt;ADB命令&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;adb shell cat [file] &lt;code&gt;查看文件内容&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;ad
+    
+    </summary>
+    
+      <category term="Android" scheme="http://ningso.me/categories/Android/"/>
+    
+    
+      <category term="ADB" scheme="http://ningso.me/tags/ADB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于华为手机EMUI4.0以上换字问题</title>
+    <link href="http://ningso.me/2016/06/18/huawei-change-font-for-emui4-0/"/>
+    <id>http://ningso.me/2016/06/18/huawei-change-font-for-emui4-0/</id>
+    <published>2016-06-18T15:52:42.000Z</published>
+    <updated>2016-11-29T10:01:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="华为手机换字图文解说"><a href="#华为手机换字图文解说" class="headerlink" title="华为手机换字图文解说"></a>华为手机换字图文解说</h2><blockquote>
+<ol>
+<li>先在字体管家里面使用华为模式安装字体</li>
+<li>成功之后打开华为主题商城－下载一款免费的主题</li>
+<li>用文件管理打开<code>HWTheme</code>文件夹，在这个文件夹下面”纯数字文件名”的就是表示华为主题下载的免费主题文件（<code>.hwt文件后缀</code>），字体管家安装的字体也在这个里面（文件名中包含hifont字符）</li>
+<li>把字体管家字体文件重命名改成华为下载的主题文件名</li>
+<li>重新打开主题商城，点击试用刚才下载的免费主题即可换字 <code>(注意：部分华为手机修改完文件名之后，在主题商店-我的-已下载中，找不到刚才下载的主题，需要重新回到主题分类里面，找到该主题即可成功应用)</code></li>
+</ol>
+</blockquote>
+<a id="more"></a>
+<p><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_1.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_1_1.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_2.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_3.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_4.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_5.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_6.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_7.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_8.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_9.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_10.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_11.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_12.png" alt="替的桌面"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;华为手机换字图文解说&quot;&gt;&lt;a href=&quot;#华为手机换字图文解说&quot; class=&quot;headerlink&quot; title=&quot;华为手机换字图文解说&quot;&gt;&lt;/a&gt;华为手机换字图文解说&lt;/h2&gt;&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;先在字体管家里面使用华为模式安装字体&lt;/li&gt;
+&lt;li&gt;成功之后打开华为主题商城－下载一款免费的主题&lt;/li&gt;
+&lt;li&gt;用文件管理打开&lt;code&gt;HWTheme&lt;/code&gt;文件夹，在这个文件夹下面”纯数字文件名”的就是表示华为主题下载的免费主题文件（&lt;code&gt;.hwt文件后缀&lt;/code&gt;），字体管家安装的字体也在这个里面（文件名中包含hifont字符）&lt;/li&gt;
+&lt;li&gt;把字体管家字体文件重命名改成华为下载的主题文件名&lt;/li&gt;
+&lt;li&gt;重新打开主题商城，点击试用刚才下载的免费主题即可换字 &lt;code&gt;(注意：部分华为手机修改完文件名之后，在主题商店-我的-已下载中，找不到刚才下载的主题，需要重新回到主题分类里面，找到该主题即可成功应用)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="字体" scheme="http://ningso.me/categories/%E5%AD%97%E4%BD%93/"/>
+    
+    
+      <category term="Font" scheme="http://ningso.me/tags/Font/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>KeyTool的基本使用方式</title>
+    <link href="http://ningso.me/2016/02/02/How-To-Use-KeyTool/"/>
+    <id>http://ningso.me/2016/02/02/How-To-Use-KeyTool/</id>
+    <published>2016-02-02T15:52:42.000Z</published>
+    <updated>2016-11-29T09:18:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="keytool-创建签名keystore"><a href="#keytool-创建签名keystore" class="headerlink" title="keytool 创建签名keystore"></a>keytool 创建签名<code>keystore</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&quot;</div></pre></td></tr></table></figure>
+<p>结果<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-1@2x.png" alt="创建签名"></p>
+<h3 id="Keytool-查看keystore的签名信息"><a href="#Keytool-查看keystore的签名信息" class="headerlink" title="Keytool 查看keystore的签名信息"></a>Keytool 查看keystore的签名信息</h3><p>执行如下命令，并按照提示输入keystore 密码</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -list -v -keystore XXXX.keystore</div></pre></td></tr></table></figure>
+<p>结果：<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-0@2x.png" alt="keystore的签名信息"></p>
+<h3 id="Keytool-查看apk的签名信息"><a href="#Keytool-查看apk的签名信息" class="headerlink" title="Keytool 查看apk的签名信息"></a>Keytool 查看apk的签名信息</h3><p>解压apk得到META-INF文件夹下面的RSA文件，执行如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -printcert -file XXX/META-INF/CERT.RSA</div></pre></td></tr></table></figure></p>
+<p> 结果：<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-2@2x.png" alt="查看apk的签名信息"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;keytool-创建签名keystore&quot;&gt;&lt;a href=&quot;#keytool-创建签名keystore&quot; class=&quot;headerlink&quot; title=&quot;keytool 创建签名keystore&quot;&gt;&lt;/a&gt;keytool 创建签名&lt;code&gt;keystore&lt;/code&gt;&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &amp;quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&amp;quot;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;结果&lt;br&gt;&lt;img src=&quot;http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-1@2x.png&quot; alt=&quot;创建签名&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Keytool-查看keystore的签名信息&quot;&gt;&lt;a href=&quot;#Keytool-查看keystore的签名信息&quot; class=&quot;headerlink&quot; title=&quot;Keytool 查看keystore的签名信息&quot;&gt;&lt;/a&gt;Keytool 查看keystore的签名信息&lt;/h3&gt;&lt;p&gt;执行如下命令，并按照提示输入keystore 密码&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android工具类介绍" scheme="http://ningso.me/categories/Android%E5%B7%A5%E5%85%B7%E7%B1%BB%E4%BB%8B%E7%BB%8D/"/>
+    
+    
+      <category term="Android" scheme="http://ningso.me/tags/Android/"/>
+    
+      <category term="KeyTool" scheme="http://ningso.me/tags/KeyTool/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to Root Nexus6 Devices on Android Marshmallow 6.0</title>
+    <link href="http://ningso.me/2015/12/19/How-to-Root-on-Nexus6-Android6-0/"/>
+    <id>http://ningso.me/2015/12/19/How-to-Root-on-Nexus6-Android6-0/</id>
+    <published>2015-12-19T14:16:16.000Z</published>
+    <updated>2016-11-29T09:18:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>教程</p>
+</blockquote>
+<ul>
+<li><a href="http://www.ibtimes.co.uk/how-root-android-6-0-marshmallow-build-mra58k-nexus-5-6-7-9-nexus-player-1522653" target="_blank" rel="external">网页教程</a></li>
+<li><a href="https://www.youtube.com/watch?v=HmpaxJJOhi0" target="_blank" rel="external">视频教程</a></li>
+</ul>
+<blockquote>
+<p>材料准备</p>
+</blockquote>
+<ul>
+<li><a href="https://twrp.me/devices/motorolanexus6.html" target="_blank" rel="external">下载twrp包</a></li>
+<li><a href="http://elementalx.org/devices/nexus-6/" target="_blank" rel="external">下载supperSu 和elementalX 包</a></li>
+</ul>
+<blockquote>
+<p>操作</p>
+</blockquote>
+<p>1、将SuperSu.zip和ElementalX.zip复制到ni的sd卡的目录下<br>2、将手机关机进入到Bootloader模式，并将数据线连接电脑（安装包adb环境）<br>3、执行 fastboot flash recovery twrp-2.8.7.1-shamu.img<br>4、然后拔去数据线连接，用手机音量减键选择Recovery mode并确认进入<br>5、滑动<code>swipe to Allow Modifications</code> –&gt;点击<code>install</code><br>6、找到复制到SD卡里面的<code>ElementalX.zip</code>并点击<br>7、滑动<code>swpie to Confim Flash</code> –&gt;<code>next</code><br>8、选择- [x]<code>I Agree with these Terms of Use</code>–&gt;<code>next</code>–&gt;看到弹窗框<code>ok</code><br>9、连续点<code>next</code>最后没了在选择点击<code>install ElementalX</code>–&gt;<code>finish</code><br>10、滑动<code>swipe to Unlock</code>解锁<br>11、<code>Wipe Cache&amp;Dalvik</code>–&gt;<code>Swipe to Wipe</code>–&gt;<code>Back</code><br>12、点击选择复制到SD卡里面的<code>SuperSu.zip</code>–&gt;<code>swipe to Confirm Flash</code><br>13、再次执行一边操作<code>Wipe Cache&amp;Dalvik</code>–&gt;<code>Swipe to Wipe</code>—&gt;<code>Back</code><br>14、最后点击<code>Reboot System</code>重启手机可以在桌面看到如下图我手机一样的SuperSu图标了</p>
+<a id="more"></a>
+<blockquote>
+<p>以上步骤都是根据视屏里面讲解来的，翻不了墙没办法打开Youtube视频的可以直接安装上面操作步骤来做。</p>
+</blockquote>
+<hr>
+<p><img src="https://dn-ningso.qbox.me/image/git-markdown/shuaroot1.png" alt="Paste_Image.png"></p>
+<p><img src="https://dn-ningso.qbox.me/image/git-markdown/shuaroot2.png" alt="Paste_Image.png"></p>
+<p><img src="https://dn-ningso.qbox.me/image/git-markdown/shauroot3.png" alt="Paste_Image.png"></p>
+<ul>
+<li>如有不懂欢迎留言</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;教程&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ibtimes.co.uk/how-root-android-6-0-marshmallow-build-mra58k-nexus-5-6-7-9-nexus-player-1522653&quot;&gt;网页教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=HmpaxJJOhi0&quot;&gt;视频教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;材料准备&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://twrp.me/devices/motorolanexus6.html&quot;&gt;下载twrp包&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://elementalx.org/devices/nexus-6/&quot;&gt;下载supperSu 和elementalX 包&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;操作&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;1、将SuperSu.zip和ElementalX.zip复制到ni的sd卡的目录下&lt;br&gt;2、将手机关机进入到Bootloader模式，并将数据线连接电脑（安装包adb环境）&lt;br&gt;3、执行 fastboot flash recovery twrp-2.8.7.1-shamu.img&lt;br&gt;4、然后拔去数据线连接，用手机音量减键选择Recovery mode并确认进入&lt;br&gt;5、滑动&lt;code&gt;swipe to Allow Modifications&lt;/code&gt; –&amp;gt;点击&lt;code&gt;install&lt;/code&gt;&lt;br&gt;6、找到复制到SD卡里面的&lt;code&gt;ElementalX.zip&lt;/code&gt;并点击&lt;br&gt;7、滑动&lt;code&gt;swpie to Confim Flash&lt;/code&gt; –&amp;gt;&lt;code&gt;next&lt;/code&gt;&lt;br&gt;8、选择- [x]&lt;code&gt;I Agree with these Terms of Use&lt;/code&gt;–&amp;gt;&lt;code&gt;next&lt;/code&gt;–&amp;gt;看到弹窗框&lt;code&gt;ok&lt;/code&gt;&lt;br&gt;9、连续点&lt;code&gt;next&lt;/code&gt;最后没了在选择点击&lt;code&gt;install ElementalX&lt;/code&gt;–&amp;gt;&lt;code&gt;finish&lt;/code&gt;&lt;br&gt;10、滑动&lt;code&gt;swipe to Unlock&lt;/code&gt;解锁&lt;br&gt;11、&lt;code&gt;Wipe Cache&amp;amp;Dalvik&lt;/code&gt;–&amp;gt;&lt;code&gt;Swipe to Wipe&lt;/code&gt;–&amp;gt;&lt;code&gt;Back&lt;/code&gt;&lt;br&gt;12、点击选择复制到SD卡里面的&lt;code&gt;SuperSu.zip&lt;/code&gt;–&amp;gt;&lt;code&gt;swipe to Confirm Flash&lt;/code&gt;&lt;br&gt;13、再次执行一边操作&lt;code&gt;Wipe Cache&amp;amp;Dalvik&lt;/code&gt;–&amp;gt;&lt;code&gt;Swipe to Wipe&lt;/code&gt;—&amp;gt;&lt;code&gt;Back&lt;/code&gt;&lt;br&gt;14、最后点击&lt;code&gt;Reboot System&lt;/code&gt;重启手机可以在桌面看到如下图我手机一样的SuperSu图标了&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Nexus6" scheme="http://ningso.me/tags/Nexus6/"/>
+    
+      <category term="Android 6.0" scheme="http://ningso.me/tags/Android-6-0/"/>
+    
+      <category term="Root" scheme="http://ningso.me/tags/Root/"/>
+    
+  </entry>
+  
+</feed>
