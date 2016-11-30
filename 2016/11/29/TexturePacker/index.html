@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Font," />
+  <meta name="keywords" content="TexturePacker," />
 
 
 
@@ -86,48 +86,22 @@
 
 
 
-<meta name="description" content="华为手机换字图文解说
-
-先在字体管家里面使用华为模式安装字体
-成功之后打开华为主题商城－下载一款免费的主题
-用文件管理打开HWTheme文件夹，在这个文件夹下面”纯数字文件名”的就是表示华为主题下载的免费主题文件（.hwt文件后缀），字体管家安装的字体也在这个里面（文件名中包含hifont字符）
-把字体管家字体文件重命名改成华为下载的主题文件名
-重新打开主题商城，点击试用刚才下载的免费主题即可换字">
+<meta name="description" content="方式一：执行jar方式1java -jar runnable-texturepacker.jar [inputDir] [outputDir] [packFileName]
+注意：第一个参数资源文件路径必填项，后面两参数为可选项runnable-texturepacker.jar下载
+方式二：通过Android Studio的Gradle在项目全局build.gradle中引入环境">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于华为手机EMUI4.0以上换字问题">
-<meta property="og:url" content="http://ningso.me/2016/06/18/huawei-change-font-for-emui4-0/index.html">
+<meta property="og:title" content="使用TexturePacker对资源图进行打包的两种方法">
+<meta property="og:url" content="http://ningso.me/2016/11/29/TexturePacker/index.html">
 <meta property="og:site_name" content="NingSo">
-<meta property="og:description" content="华为手机换字图文解说
-
-先在字体管家里面使用华为模式安装字体
-成功之后打开华为主题商城－下载一款免费的主题
-用文件管理打开HWTheme文件夹，在这个文件夹下面”纯数字文件名”的就是表示华为主题下载的免费主题文件（.hwt文件后缀），字体管家安装的字体也在这个里面（文件名中包含hifont字符）
-把字体管家字体文件重命名改成华为下载的主题文件名
-重新打开主题商城，点击试用刚才下载的免费主题即可换字">
-<meta property="og:image" content="http://fonts.b0.upaiyun.com/html/hauwei_img/img_1.JPG">
-<meta property="og:image" content="http://fonts.b0.upaiyun.com/html/hauwei_img/img_1_1.JPG">
-<meta property="og:image" content="http://fonts.b0.upaiyun.com/html/hauwei_img/img_2.JPG">
-<meta property="og:image" content="http://fonts.b0.upaiyun.com/html/hauwei_img/img_3.png">
-<meta property="og:image" content="http://fonts.b0.upaiyun.com/html/hauwei_img/img_4.JPG">
-<meta property="og:image" content="http://fonts.b0.upaiyun.com/html/hauwei_img/img_5.png">
-<meta property="og:image" content="http://fonts.b0.upaiyun.com/html/hauwei_img/img_6.JPG">
-<meta property="og:image" content="http://fonts.b0.upaiyun.com/html/hauwei_img/img_7.png">
-<meta property="og:image" content="http://fonts.b0.upaiyun.com/html/hauwei_img/img_8.JPG">
-<meta property="og:image" content="http://fonts.b0.upaiyun.com/html/hauwei_img/img_9.JPG">
-<meta property="og:image" content="http://fonts.b0.upaiyun.com/html/hauwei_img/img_10.png">
-<meta property="og:image" content="http://fonts.b0.upaiyun.com/html/hauwei_img/img_11.png">
-<meta property="og:image" content="http://fonts.b0.upaiyun.com/html/hauwei_img/img_12.png">
-<meta property="og:updated_time" content="2016-11-29T10:01:56.000Z">
+<meta property="og:description" content="方式一：执行jar方式1java -jar runnable-texturepacker.jar [inputDir] [outputDir] [packFileName]
+注意：第一个参数资源文件路径必填项，后面两参数为可选项runnable-texturepacker.jar下载
+方式二：通过Android Studio的Gradle在项目全局build.gradle中引入环境">
+<meta property="og:updated_time" content="2016-11-30T08:40:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于华为手机EMUI4.0以上换字问题">
-<meta name="twitter:description" content="华为手机换字图文解说
-
-先在字体管家里面使用华为模式安装字体
-成功之后打开华为主题商城－下载一款免费的主题
-用文件管理打开HWTheme文件夹，在这个文件夹下面”纯数字文件名”的就是表示华为主题下载的免费主题文件（.hwt文件后缀），字体管家安装的字体也在这个里面（文件名中包含hifont字符）
-把字体管家字体文件重命名改成华为下载的主题文件名
-重新打开主题商城，点击试用刚才下载的免费主题即可换字">
-<meta name="twitter:image" content="http://fonts.b0.upaiyun.com/html/hauwei_img/img_1.JPG">
+<meta name="twitter:title" content="使用TexturePacker对资源图进行打包的两种方法">
+<meta name="twitter:description" content="方式一：执行jar方式1java -jar runnable-texturepacker.jar [inputDir] [outputDir] [packFileName]
+注意：第一个参数资源文件路径必填项，后面两参数为可选项runnable-texturepacker.jar下载
+方式二：通过Android Studio的Gradle在项目全局build.gradle中引入环境">
 
 
 
@@ -155,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://ningso.me/2016/06/18/huawei-change-font-for-emui4-0/"/>
+  <link rel="canonical" href="http://ningso.me/2016/11/29/TexturePacker/"/>
 
 
 
 
 
-  <title> 关于华为手机EMUI4.0以上换字问题 | NingSo </title>
+  <title> 使用TexturePacker对资源图进行打包的两种方法 | NingSo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -292,7 +266,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://ningso.me/2016/06/18/huawei-change-font-for-emui4-0/">
+  <link itemprop="mainEntityOfPage" href="http://ningso.me/2016/11/29/TexturePacker/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="NingSo">
@@ -316,7 +290,7 @@
             
             
               
-                关于华为手机EMUI4.0以上换字问题
+                使用TexturePacker对资源图进行打包的两种方法
               
             
           </h1>
@@ -329,8 +303,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-18T23:52:42+08:00">
-                2016-06-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-29T16:16:16+08:00">
+                2016-11-29
               </time>
             
 
@@ -348,8 +322,19 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/字体/" itemprop="url" rel="index">
-                    <span itemprop="name">字体</span>
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/Gradle/" itemprop="url" rel="index">
+                    <span itemprop="name">Gradle</span>
                   </a>
                 </span>
 
@@ -363,8 +348,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/06/18/huawei-change-font-for-emui4-0/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/18/huawei-change-font-for-emui4-0/" itemprop="commentCount"></span>
+                <a href="/2016/11/29/TexturePacker/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/29/TexturePacker/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -393,17 +378,15 @@
       
 
       
-        <h2 id="华为手机换字图文解说"><a href="#华为手机换字图文解说" class="headerlink" title="华为手机换字图文解说"></a>华为手机换字图文解说</h2><blockquote>
-<ol>
-<li>先在字体管家里面使用华为模式安装字体</li>
-<li>成功之后打开华为主题商城－下载一款免费的主题</li>
-<li>用文件管理打开<code>HWTheme</code>文件夹，在这个文件夹下面”纯数字文件名”的就是表示华为主题下载的免费主题文件（<code>.hwt文件后缀</code>），字体管家安装的字体也在这个里面（文件名中包含hifont字符）</li>
-<li>把字体管家字体文件重命名改成华为下载的主题文件名</li>
-<li>重新打开主题商城，点击试用刚才下载的免费主题即可换字 <code>(注意：部分华为手机修改完文件名之后，在主题商店-我的-已下载中，找不到刚才下载的主题，需要重新回到主题分类里面，找到该主题即可成功应用)</code></li>
-</ol>
-</blockquote>
+        <h3 id="方式一：执行jar方式"><a href="#方式一：执行jar方式" class="headerlink" title="方式一：执行jar方式"></a>方式一：执行jar方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -jar runnable-texturepacker.jar [inputDir] [outputDir] [packFileName]</div></pre></td></tr></table></figure>
+<p>注意：<code>第一个参数资源文件路径必填项，后面两参数为可选项</code><br><a href="https://pan.baidu.com/s/1jHCNpQ2" target="_blank" rel="external">runnable-texturepacker.jar</a>下载</p>
+<h3 id="方式二：通过Android-Studio的Gradle"><a href="#方式二：通过Android-Studio的Gradle" class="headerlink" title="方式二：通过Android Studio的Gradle"></a>方式二：通过Android Studio的Gradle</h3><p>在项目全局<code>build.gradle</code>中引入环境</p>
 <a id="more"></a>
-<p><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_1.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_1_1.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_2.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_3.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_4.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_5.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_6.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_7.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_8.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_9.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_10.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_11.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_12.png" alt="替的桌面"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        classpath &apos;com.android.tools.build:gradle:2.2.2&apos;</div><div class="line">        classpath &apos;com.badlogicgames.gdx:gdx-tools:1.9.4&apos; //版本号根据自己使用的libdgx来定。</div><div class="line">        // NOTE: Do not place your application dependencies here; they belong</div><div class="line">        // in the individual module build.gradle files</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// 定义一个变量texturePacker并设置想传递的参数...参数一：资源所在文件夹路径，参数二：生成的打包图片所存放的文件路径，参数三：packFileName包文件的名称。同时也作用于图片名。</div><div class="line">project.ext.texturePacker = [rootDir.getPath() + &quot;/app/src/main/atlas&quot;, rootDir.getPath() + &quot;/app/src/main/assets&quot;, &quot;atlas_flip&quot;]</div><div class="line"></div><div class="line">// 导入texturepacker的引用</div><div class="line">import com.badlogic.gdx.tools.texturepacker.TexturePacker</div><div class="line"></div><div class="line">// 添加一个生存进行图片资源打包的task </div><div class="line">task texturePacker &lt;&lt; &#123;</div><div class="line">    if (project.ext.has(&apos;texturePacker&apos;)) &#123;</div><div class="line">        logger.info &quot;Calling TexturePacker: &quot; + texturePacker</div><div class="line">        TexturePacker.process(texturePacker[0], texturePacker[1], texturePacker[2])</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>最后在执行这个task<code>./gradlew texturePacker</code>即可</p>
+<p>参考来源:</p>
+<p><a href="https://github.com/libgdx/libgdx/wiki/Texture-packer#running-texturepacker" target="_blank" rel="external">libgdx wiki</a></p>
 
       
     </div>
@@ -448,7 +431,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Font/" rel="tag"># Font</a>
+            <a href="/tags/TexturePacker/" rel="tag"># TexturePacker</a>
           
         </div>
       
@@ -457,8 +440,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/02/How-To-Use-KeyTool/" rel="next" title="KeyTool的基本使用方式">
-                <i class="fa fa-chevron-left"></i> KeyTool的基本使用方式
+              <a href="/2016/11/20/IllegalArgumentException/" rel="next" title="IllegalArgumentException">
+                <i class="fa fa-chevron-left"></i> IllegalArgumentException
               </a>
             
           </div>
@@ -466,10 +449,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/23/ADB常用命令总结/" rel="prev" title="adb常用命令总结">
-                adb常用命令总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -501,8 +480,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/18/huawei-change-font-for-emui4-0/"
-           data-title="关于华为手机EMUI4.0以上换字问题" data-url="http://ningso.me/2016/06/18/huawei-change-font-for-emui4-0/">
+      <div class="ds-thread" data-thread-key="2016/11/29/TexturePacker/"
+           data-title="使用TexturePacker对资源图进行打包的两种方法" data-url="http://ningso.me/2016/11/29/TexturePacker/">
       </div>
     
   </div>
@@ -644,7 +623,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#华为手机换字图文解说"><span class="nav-number">1.</span> <span class="nav-text">华为手机换字图文解说</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#方式一：执行jar方式"><span class="nav-number">1.</span> <span class="nav-text">方式一：执行jar方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方式二：通过Android-Studio的Gradle"><span class="nav-number">2.</span> <span class="nav-text">方式二：通过Android Studio的Gradle</span></a></li></ol></div>
             
 
           </div>
