@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ningso.me/"/>
-  <updated>2016-11-30T08:48:05.000Z</updated>
+  <updated>2017-03-03T07:56:31.000Z</updated>
   <id>http://ningso.me/</id>
   
   <author>
@@ -16,64 +16,72 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>使用TexturePacker对资源图进行打包的两种方法</title>
-    <link href="http://ningso.me/2016/11/29/TexturePacker/"/>
-    <id>http://ningso.me/2016/11/29/TexturePacker/</id>
-    <published>2016-11-29T08:16:16.000Z</published>
-    <updated>2016-11-30T08:48:05.000Z</updated>
+    <title></title>
+    <link href="http://ningso.me/2017/03/03/Hexo%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://ningso.me/2017/03/03/Hexo遇到的问题/</id>
+    <published>2017-03-03T07:49:09.000Z</published>
+    <updated>2017-03-03T07:56:31.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="方式一：执行jar方式"><a href="#方式一：执行jar方式" class="headerlink" title="方式一：执行jar方式"></a>方式一：执行jar方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -jar runnable-texturepacker.jar [inputDir] [outputDir] [packFileName]</div></pre></td></tr></table></figure>
-<p>注意：第一个参数资源文件路径必填项，后面两参数为可选项<br><a href="https://pan.baidu.com/s/1jHCNpQ2" target="_blank" rel="external">runnable-texturepacker.jar</a>下载</p>
-<h3 id="方式二：通过Android-Studio的Gradle"><a href="#方式二：通过Android-Studio的Gradle" class="headerlink" title="方式二：通过Android Studio的Gradle"></a>方式二：通过Android Studio的Gradle</h3><p>在项目全局<code>build.gradle</code>中引入环境</p>
-<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        classpath &apos;com.android.tools.build:gradle:2.2.2&apos;</div><div class="line">        classpath &apos;com.badlogicgames.gdx:gdx-tools:1.9.4&apos; //版本号根据自己使用的libdgx来定。</div><div class="line">        // NOTE: Do not place your application dependencies here; they belong</div><div class="line">        // in the individual module build.gradle files</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// 定义一个变量texturePacker并设置想传递的参数...参数一：资源所在文件夹路径，参数二：生成的打包图片所存放的文件路径，参数三：packFileName包文件的名称。同时也作用于图片名。</div><div class="line">project.ext.texturePacker = [rootDir.getPath() + &quot;/app/src/main/atlas&quot;, rootDir.getPath() + &quot;/app/src/main/assets&quot;, &quot;atlas_flip&quot;]</div><div class="line"></div><div class="line">// 导入texturepacker的引用</div><div class="line">import com.badlogic.gdx.tools.texturepacker.TexturePacker</div><div class="line"></div><div class="line">// 添加一个生存进行图片资源打包的task </div><div class="line">task texturePacker &lt;&lt; &#123;</div><div class="line">    if (project.ext.has(&apos;texturePacker&apos;)) &#123;</div><div class="line">        logger.info &quot;Calling TexturePacker: &quot; + texturePacker</div><div class="line">        TexturePacker.process(texturePacker[0], texturePacker[1], texturePacker[2])</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>最后在执行这个task<code>./gradlew texturePacker</code>即可</p>
-<p>参考来源:</p>
-<p><a href="https://github.com/libgdx/libgdx/wiki/Texture-packer#running-texturepacker" target="_blank" rel="external">libgdx wiki</a></p>
-]]></content>
+    <content type="html"><![CDATA[<p>使用Hexo过程中遇到的问题</p>
+<ul>
+<li>执行<code>npm install -g hexo-cli</code>时报错：如下图</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/Users/NingSo/Library/Containers/com.tencent.qq/Data/Library/Application" alt="EACCES:" title="">
+                </div>
+                <div class="image-caption">EACCES:</div>
+            </figure>]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;方式一：执行jar方式&quot;&gt;&lt;a href=&quot;#方式一：执行jar方式&quot; class=&quot;headerlink&quot; title=&quot;方式一：执行jar方式&quot;&gt;&lt;/a&gt;方式一：执行jar方式&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;java -jar runnable-texturepacker.jar [inputDir] [outputDir] [packFileName]&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;注意：第一个参数资源文件路径必填项，后面两参数为可选项&lt;br&gt;&lt;a href=&quot;https://pan.baidu.com/s/1jHCNpQ2&quot;&gt;runnable-texturepacker.jar&lt;/a&gt;下载&lt;/p&gt;
-&lt;h3 id=&quot;方式二：通过Android-Studio的Gradle&quot;&gt;&lt;a href=&quot;#方式二：通过Android-Studio的Gradle&quot; class=&quot;headerlink&quot; title=&quot;方式二：通过Android Studio的Gradle&quot;&gt;&lt;/a&gt;方式二：通过Android Studio的Gradle&lt;/h3&gt;&lt;p&gt;在项目全局&lt;code&gt;build.gradle&lt;/code&gt;中引入环境&lt;/p&gt;
+      &lt;p&gt;使用Hexo过程中遇到的问题&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;执行&lt;code&gt;npm install -g hexo-cli&lt;/code&gt;时报错：如下图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div c
     
     </summary>
     
-      <category term="Android" scheme="http://ningso.me/categories/Android/"/>
-    
-      <category term="Gradle" scheme="http://ningso.me/categories/Android/Gradle/"/>
-    
-      <category term="Libgdx" scheme="http://ningso.me/categories/Android/Gradle/Libgdx/"/>
-    
-    
-      <category term="TexturePacker" scheme="http://ningso.me/tags/TexturePacker/"/>
     
   </entry>
   
   <entry>
-    <title>IllegalArgumentException</title>
-    <link href="http://ningso.me/2016/11/20/IllegalArgumentException/"/>
-    <id>http://ningso.me/2016/11/20/IllegalArgumentException/</id>
-    <published>2016-11-20T09:57:55.000Z</published>
-    <updated>2016-11-29T10:04:18.000Z</updated>
+    <title></title>
+    <link href="http://ningso.me/2016/12/08/JobScheduler%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/"/>
+    <id>http://ningso.me/2016/12/08/JobScheduler遇到的一些小问题/</id>
+    <published>2016-12-08T11:10:32.000Z</published>
+    <updated>2016-12-09T02:28:16.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Caused-by-java-lang-IllegalArgumentException-Could-not-locate-call-adapter-for-rx-Observable-lt-gt-错误"><a href="#Caused-by-java-lang-IllegalArgumentException-Could-not-locate-call-adapter-for-rx-Observable-lt-gt-错误" class="headerlink" title="Caused by: java.lang.IllegalArgumentException: Could not locate call adapter for rx.Observable&lt;&gt;错误"></a>Caused by: java.lang.IllegalArgumentException: Could not locate call adapter for rx.Observable&lt;&gt;错误</h3><p>问题：在构建retrofit的时候，没有指定RxJavaCallAdapterFactory适配器</p>
-<p>解决如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public static final ApiService service = new Retrofit.Builder()</div><div class="line">           .baseUrl(ApiConstants.API_BASE_URL)</div><div class="line">           .client(new OkHttpClient.Builder()</div><div class="line">                   .addInterceptor(createUserAgentInterceptor())</div><div class="line">                   .addInterceptor(createHttpLoggingInterceptor())</div><div class="line">                   .build())</div><div class="line">           .addConverterFactory(GsonConverterFactory.create())</div><div class="line">           .addCallAdapterFactory(RxJavaCallAdapterFactory.create())</div><div class="line">           .build()</div><div class="line">           .create(ApiService.class);</div></pre></td></tr></table></figure>
-]]></content>
+    <content type="html"><![CDATA[<h1 id="JobScheduler-遇到的一些小问题"><a href="#JobScheduler-遇到的一些小问题" class="headerlink" title="JobScheduler 遇到的一些小问题"></a>JobScheduler 遇到的一些小问题</h1><h3 id="Working-on-Android-Nougat"><a href="#Working-on-Android-Nougat" class="headerlink" title="Working on Android Nougat"></a>Working on Android Nougat</h3><p>在Android7.0上设置jobinfoBuilder.setPeriodic(5 * 1000);为5秒时，看到系统自己打印出来的logo,当时没太留意，然而问题出来了，我勒个去？？等了好久都没执行<code>onStartJob()</code>方法，但是看设置schedule()的时候确实返回的是成功啊。最后注意到这个结果！！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">W/JobInfo: Specified interval for 1 is +5s0ms. Clamped to +15m0s0ms</div><div class="line">W/JobInfo: Specified flex for 1 is +5s0ms. Clamped to +5m0s0ms</div></pre></td></tr></table></figure>
+<p>就是说指定周期间隔时间为5seconds，被强制指定为15minutes,<br>指定弹性延迟时间为5seconds，被强制指定为5minutes！！<br>这就日狗了。难道是因为Android Nuga的出了省电模式之后自己改了？？</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://dn-ningso.qbox.me/blog/WX20161208-194549.png" alt="working" title="">
+                </div>
+                <div class="image-caption">working</div>
+            </figure>
+<p>跟踪到API24源码我们发现：在JobInfo中设置了最小间隔时间和最小弹性时间，如果设置的比改值还小，则取默认值。。。千万只草泥马有没有。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">/* Minimum interval for a periodic job, in milliseconds. */</div><div class="line">   private static final long MIN_PERIOD_MILLIS = 15 * 60 * 1000L;   // 15 minutes</div><div class="line"></div><div class="line">/* Minimum flex for a periodic job, in milliseconds. */</div><div class="line">   private static final long MIN_FLEX_MILLIS = 5 * 60 * 1000L; // 5 minutes</div><div class="line">      /**</div><div class="line">    * Set to the interval between occurrences of this job. This value is &lt;b&gt;not&lt;/b&gt; set if the</div><div class="line">    * job does not recur periodically.</div><div class="line">    */</div><div class="line">   public long getIntervalMillis() &#123;</div><div class="line">       return intervalMillis &gt;= getMinPeriodMillis() ? intervalMillis : getMinPeriodMillis();//看！！这里！！</div><div class="line">   &#125;</div><div class="line">&lt;---省略若干无关代码---&gt;</div><div class="line">   /**</div><div class="line">    * Flex time for this job. Only valid if this is a periodic job.  The job can</div><div class="line">    * execute at any time in a window of flex length at the end of the period.</div><div class="line">    */</div><div class="line">   public long getFlexMillis() &#123;</div><div class="line">       long interval = getIntervalMillis();</div><div class="line">       long percentClamp = 5 * interval / 100;</div><div class="line">       long clampedFlex = Math.max(flexMillis, Math.max(percentClamp, getMinFlexMillis()));//看！！这里！！</div><div class="line">       return clampedFlex &lt;= interval ? clampedFlex : interval;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p>在API为23的时候并没有这些，也就是说在24及以上版本会出现这样的问题。<br>作为解决方法，如果作业间隔小于15分钟，可以使用以下代码以定期间隔调度作业。不过该方式只能被执行一次。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">JobInfo jobInfo;</div><div class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N) &#123;</div><div class="line">  jobInfo = <span class="keyword">new</span> JobInfo.Builder(JOB_ID, serviceName)</div><div class="line">      .setMinimumLatency(REFRESH_INTERVAL)</div><div class="line">      .setExtras(bundle).build();</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  jobInfo = <span class="keyword">new</span> JobInfo.Builder(JOB_ID, serviceName)</div><div class="line">      .setPeriodic(REFRESH_INTERVAL)</div><div class="line">      .setExtras(bundle).build();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>参考链接：</p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/38344220/job-scheduler-not-running-on-android-n" target="_blank" rel="external">stackoverflow</a></li>
+<li><a href="https://code.google.com/p/android/issues/detail?id=81265" target="_blank" rel="external">Android Open Source Issue</a></li>
+</ul>
+<h3 id="setPersisted-true-导致crash"><a href="#setPersisted-true-导致crash" class="headerlink" title="setPersisted(true) 导致crash"></a>setPersisted(true) 导致crash</h3>]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;Caused-by-java-lang-IllegalArgumentException-Could-not-locate-call-adapter-for-rx-Observable-lt-gt-错误&quot;&gt;&lt;a href=&quot;#Caused-by-java-lang
+      &lt;h1 id=&quot;JobScheduler-遇到的一些小问题&quot;&gt;&lt;a href=&quot;#JobScheduler-遇到的一些小问题&quot; class=&quot;headerlink&quot; title=&quot;JobScheduler 遇到的一些小问题&quot;&gt;&lt;/a&gt;JobScheduler 遇到的一些小问题&lt;/
     
     </summary>
     
-      <category term="Android" scheme="http://ningso.me/categories/Android/"/>
-    
-    
-      <category term="Exception" scheme="http://ningso.me/tags/Exception/"/>
     
   </entry>
   
@@ -143,8 +151,97 @@
 </ol>
 </blockquote>
 <a id="more"></a>
-<p><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_1.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_1_1.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_2.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_3.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_4.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_5.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_6.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_7.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_8.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_9.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_10.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_11.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_12.png" alt="替的桌面"></p>
-]]></content>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_1.JPG" alt="替的桌面" title="">
+                </div>
+                <div class="image-caption">替的桌面</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_1_1.JPG" alt="替的桌面" title="">
+                </div>
+                <div class="image-caption">替的桌面</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_2.JPG" alt="替的桌面" title="">
+                </div>
+                <div class="image-caption">替的桌面</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_3.png" alt="替的桌面" title="">
+                </div>
+                <div class="image-caption">替的桌面</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_4.JPG" alt="替的桌面" title="">
+                </div>
+                <div class="image-caption">替的桌面</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_5.png" alt="替的桌面" title="">
+                </div>
+                <div class="image-caption">替的桌面</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_6.JPG" alt="替的桌面" title="">
+                </div>
+                <div class="image-caption">替的桌面</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_7.png" alt="替的桌面" title="">
+                </div>
+                <div class="image-caption">替的桌面</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_8.JPG" alt="替的桌面" title="">
+                </div>
+                <div class="image-caption">替的桌面</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_9.JPG" alt="替的桌面" title="">
+                </div>
+                <div class="image-caption">替的桌面</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_10.png" alt="替的桌面" title="">
+                </div>
+                <div class="image-caption">替的桌面</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_11.png" alt="替的桌面" title="">
+                </div>
+                <div class="image-caption">替的桌面</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_12.png" alt="替的桌面" title="">
+                </div>
+                <div class="image-caption">替的桌面</div>
+            </figure>]]></content>
     
     <summary type="html">
     
@@ -175,19 +272,43 @@
     <updated>2016-11-29T09:18:28.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="keytool-创建签名keystore"><a href="#keytool-创建签名keystore" class="headerlink" title="keytool 创建签名keystore"></a>keytool 创建签名<code>keystore</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&quot;</div></pre></td></tr></table></figure>
-<p>结果<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-1@2x.png" alt="创建签名"></p>
+<p>结果<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-1@2x.png" alt="创建签名" title="">
+                </div>
+                <div class="image-caption">创建签名</div>
+            </figure></p>
 <h3 id="Keytool-查看keystore的签名信息"><a href="#Keytool-查看keystore的签名信息" class="headerlink" title="Keytool 查看keystore的签名信息"></a>Keytool 查看keystore的签名信息</h3><p>执行如下命令，并按照提示输入keystore 密码</p>
 <a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -list -v -keystore XXXX.keystore</div></pre></td></tr></table></figure>
-<p>结果：<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-0@2x.png" alt="keystore的签名信息"></p>
+<p>结果：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-0@2x.png" alt="keystore的签名信息" title="">
+                </div>
+                <div class="image-caption">keystore的签名信息</div>
+            </figure></p>
 <h3 id="Keytool-查看apk的签名信息"><a href="#Keytool-查看apk的签名信息" class="headerlink" title="Keytool 查看apk的签名信息"></a>Keytool 查看apk的签名信息</h3><p>解压apk得到META-INF文件夹下面的RSA文件，执行如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -printcert -file XXX/META-INF/CERT.RSA</div></pre></td></tr></table></figure></p>
-<p> 结果：<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-2@2x.png" alt="查看apk的签名信息"></p>
+<p> 结果：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-2@2x.png" alt="查看apk的签名信息" title="">
+                </div>
+                <div class="image-caption">查看apk的签名信息</div>
+            </figure></p>
 ]]></content>
     
     <summary type="html">
     
       &lt;h3 id=&quot;keytool-创建签名keystore&quot;&gt;&lt;a href=&quot;#keytool-创建签名keystore&quot; class=&quot;headerlink&quot; title=&quot;keytool 创建签名keystore&quot;&gt;&lt;/a&gt;keytool 创建签名&lt;code&gt;keystore&lt;/code&gt;&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &amp;quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&amp;quot;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;结果&lt;br&gt;&lt;img src=&quot;http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-1@2x.png&quot; alt=&quot;创建签名&quot;&gt;&lt;/p&gt;
+&lt;p&gt;结果&lt;br&gt;&lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                    &lt;img src=&quot;http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-1@2x.png&quot; alt=&quot;创建签名&quot; title=&quot;&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;image-caption&quot;&gt;创建签名&lt;/div&gt;
+            &lt;/figure&gt;&lt;/p&gt;
 &lt;h3 id=&quot;Keytool-查看keystore的签名信息&quot;&gt;&lt;a href=&quot;#Keytool-查看keystore的签名信息&quot; class=&quot;headerlink&quot; title=&quot;Keytool 查看keystore的签名信息&quot;&gt;&lt;/a&gt;Keytool 查看keystore的签名信息&lt;/h3&gt;&lt;p&gt;执行如下命令，并按照提示输入keystore 密码&lt;/p&gt;
     
     </summary>
@@ -231,9 +352,27 @@
 <p>以上步骤都是根据视屏里面讲解来的，翻不了墙没办法打开Youtube视频的可以直接安装上面操作步骤来做。</p>
 </blockquote>
 <hr>
-<p><img src="https://dn-ningso.qbox.me/image/git-markdown/shuaroot1.png" alt="Paste_Image.png"></p>
-<p><img src="https://dn-ningso.qbox.me/image/git-markdown/shuaroot2.png" alt="Paste_Image.png"></p>
-<p><img src="https://dn-ningso.qbox.me/image/git-markdown/shauroot3.png" alt="Paste_Image.png"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://dn-ningso.qbox.me/image/git-markdown/shuaroot1.png" alt="Paste_Image.png" title="">
+                </div>
+                <div class="image-caption">Paste_Image.png</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://dn-ningso.qbox.me/image/git-markdown/shuaroot2.png" alt="Paste_Image.png" title="">
+                </div>
+                <div class="image-caption">Paste_Image.png</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://dn-ningso.qbox.me/image/git-markdown/shauroot3.png" alt="Paste_Image.png" title="">
+                </div>
+                <div class="image-caption">Paste_Image.png</div>
+            </figure>
 <ul>
 <li>如有不懂欢迎留言</li>
 </ul>
