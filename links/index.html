@@ -10,7 +10,7 @@
     
     <title>
         
-            标签: Android 6.0 | 
+            友情链接 | 
         
         NingSo
     </title>
@@ -60,7 +60,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://ningso.me">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: Android 6.0 | NingSo">
+    <meta property="og:title" content="友情链接 | NingSo">
     <meta property="og:description" content="一个还可以继续犯点二的年纪，我会努力变成一个不太二的自己！">
     
 
@@ -223,113 +223,136 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
-
-    <!-- Pin on top -->
-    
-
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2015/12/19/How-to-Root-on-Nexus6-Android6-0/">How to Root Nexus6 Devices on Android Marshmallow 6.0</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-教程
+                    <!-- Post TOC -->
 
 
-网页教程
-视频教程
+<!-- Layouts -->
 
-
-材料准备
-
-
-下载twrp包
-下载supperSu 和elementalX 包
-
-
-操作
-
-1、将SuperSu.zip和ElementalX.zip复制到ni的sd卡的目录下2、将手机关机进入到Bootloader模式，并将数据线连接电脑（安装包adb环境）3、执行 fastboot flash recovery twrp-2.8.7.1-shamu.img4、然后拔去数据线连接，用手机音量减键选择Recovery mode并确认进入5、滑动swipe to Allow Modifications –&gt;点击install6、找到复制到SD卡里面的ElementalX.zip并点击7、滑动swpie to Confim Flash –&gt;next8、选择- [x]I Agree with these Terms of Use–&gt;next–&gt;看到弹窗框ok9、连续点next最后没了在选择点击install ElementalX–&gt;finish10、滑动swipe to Unlock解锁11、Wipe Cache&amp;Dalvik–&gt;Swipe to Wipe–&gt;Back12、点击选择复制到SD卡里面的SuperSu.zip–&gt;swipe to Confirm Flash13、再次执行一边操作Wipe Cache&amp;Dalvik–&gt;Swipe to Wipe—&gt;Back14、最后点击Reboot System重启手机可以在桌面看到如下图我手机一样的SuperSu图标了
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2015/12/19/How-to-Root-on-Nexus6-Android6-0/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/uploads/avatar.jpg" width="44px" height="44px" alt="NingSo's avatar">
-            </div>
-            <div>
-                <strong>NingSo</strong>
-                <span>12月 19, 2015</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
+    <!-- Single Links Page -->
+    <style>
+    .md-links {
+        min-height: calc(100% - 120px - 5pc - 6em);
+        text-align: center;
+        overflow: auto;
+        padding: 0;
+        margin: 0 auto;
+        max-width: 320px;
     }
+
+    @media screen and (min-width: 640px) {
+        .md-links {
+            max-width: 640px;
+        }
+    }
+
+    @media screen and (min-width: 960px) {
+        .md-links {
+            max-width: 960px;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        .md-links {
+            max-width: 1280px;
+        }
+    }
+
+    @media screen and (min-width: 1600px) {
+        .md-links {
+            max-width: 1600px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .md-links {
+            min-height: calc(100% - 200px - 5pc - 6em);
+            margin-top: 6em;
+        }
+    }
+
+    .md-links-item {
+        background: #fff;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+        height: 72px;
+        line-height: 15px;
+        margin: 20px 10px;
+        padding: 0px 0px;
+        transition: box-shadow 0.25s;
+    }
+
+    .md-links a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .md-links li {
+        width: 300px;
+        float: left;
+        list-style: none;
+    }
+
+    .md-links-item img {
+        float: left;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 11px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    }
+
+    .md-links-item:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .md-links-item a:hover{
+        cursor: pointer;
+    }
+
+    .md-links-title {
+        font-size: 20px;
+        line-height: 50px;
+    }
+
+    #scheme-Paradox .mdl-mini-footer{
+        clear: left;
+    }
+    #bottom{
+        position: relative;
+    }
+</style>
+
+<ul class="md-links">
+    
+        
+            <li class="md-links-item">
+                <a href="http://www.apkfuns.com" title="舞影凌风" target="_blank">
+                    <img src="/img/logo.png" alt="舞影凌风" width="72px"/>
+                    <span class="md-links-title">舞影凌风</span><br />
+                    <span>程序猿一枚！可攻可受！</span>
+                </a>
+            </li>
+        
+            <li class="md-links-item">
+                <a href="https://www.iyuxy.com" title="喻小右" target="_blank">
+                    <img src="/img/logo.png" alt="喻小右" width="72px"/>
+                    <span class="md-links-title">喻小右</span><br />
+                    <span>弱弱的受🐔</span>
+                </a>
+            </li>
+        
+    
+</ul>
+
+<script>
+    var adjustFooter = function() {
+        if( ($('#bottom').offset().top + $('#bottom').outerHeight() )<$(window).height() ) {
+            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
+            $('#bottom').css('bottom', '-' + footerBottom + 'px');
+        }
+    };
+    $(document).ready(function() {
+        adjustFooter();
+    });
 </script>
 
-    
-</div>
+
+
 
 
                     

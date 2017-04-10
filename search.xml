@@ -3,17 +3,19 @@
   
     
     <entry>
-      <title></title>
-      <url>/2017/03/03/Hexo%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-      <content type="html"><![CDATA[<p>使用Hexo过程中遇到的问题</p>
-<ul>
-<li>执行<code>npm install -g hexo-cli</code>时报错：如下图</li>
-</ul>
-<p><img src="/Users/NingSo/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/903334649/QQ/Temp.db/8B9BAF6B-D504-45E7-8F2F-EEE1C5B24962.png" alt="EACCES: permission denied, access &#39;/usr/local/lib/node_modules"><br>提示没有/usr/local/lib/node_modules路径没有权限</p>
+      <title><![CDATA[使用Hexo过程中遇到的问题]]></title>
+      <url>/2017/01/19/Hexo%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+      <content type="html"><![CDATA[<h3 id="执行npm-install-g-hexo-cli时报错：如下图"><a href="#执行npm-install-g-hexo-cli时报错：如下图" class="headerlink" title="执行npm install -g hexo-cli时报错：如下图"></a>执行<code>npm install -g hexo-cli</code>时报错：如下图</h3><p><img src="/Users/NingSo/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/903334649/QQ/Temp.db/8B9BAF6B-D504-45E7-8F2F-EEE1C5B24962.png" alt="EACCES: permission denied, access &#39;/usr/local/lib/node_modules"><br>提示没有/usr/local/lib/node_modules路径没有权限</p>
 <p>解决方法：执行该命令行获取权限<code>sudo chown -R $USER /usr/local/lib/node_modules</code></p>
 <p>参考来源: <a href="http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo" target="_blank" rel="external">npm throws error without sudo</a></p>
 ]]></content>
       
+        
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
         
     </entry>
     
