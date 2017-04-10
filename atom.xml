@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ningso.me/"/>
-  <updated>2017-03-10T10:27:00.000Z</updated>
+  <updated>2017-04-10T10:27:00.000Z</updated>
   <id>http://ningso.me/</id>
   
   <author>
@@ -14,6 +14,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Hexo过程中遇到的问题</title>
+    <link href="http://ningso.me/2017/01/19/Hexo%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://ningso.me/2017/01/19/Hexo遇到的问题/</id>
+    <published>2017-01-19T14:16:00.000Z</published>
+    <updated>2017-04-10T10:27:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="执行npm-install-g-hexo-cli时报错：如下图"><a href="#执行npm-install-g-hexo-cli时报错：如下图" class="headerlink" title="执行npm install -g hexo-cli时报错：如下图"></a>执行<code>npm install -g hexo-cli</code>时报错：如下图</h3><p><img src="/Users/NingSo/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/903334649/QQ/Temp.db/8B9BAF6B-D504-45E7-8F2F-EEE1C5B24962.png" alt="EACCES: permission denied, access &#39;/usr/local/lib/node_modules"><br>提示没有/usr/local/lib/node_modules路径没有权限</p>
+<p>解决方法：执行该命令行获取权限<code>sudo chown -R $USER /usr/local/lib/node_modules</code></p>
+<p>参考来源: <a href="http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo" target="_blank" rel="external">npm throws error without sudo</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;执行npm-install-g-hexo-cli时报错：如下图&quot;&gt;&lt;a href=&quot;#执行npm-install-g-hexo-cli时报错：如下图&quot; class=&quot;headerlink&quot; title=&quot;执行npm install -g hexo-cli时报错：如
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://ningso.me/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://ningso.me/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>JobScheduler 遇到的一些小问题</title>
@@ -43,31 +68,10 @@
     
     </summary>
     
-    
-      <category term="Android" scheme="http://ningso.me/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Hexo过程中遇到的问题</title>
-    <link href="http://ningso.me/2017/01/19/Hexo%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://ningso.me/2017/01/19/Hexo遇到的问题/</id>
-    <published>2017-01-19T14:16:00.000Z</published>
-    <updated>2017-04-10T10:27:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="执行npm-install-g-hexo-cli时报错：如下图"><a href="#执行npm-install-g-hexo-cli时报错：如下图" class="headerlink" title="执行npm install -g hexo-cli时报错：如下图"></a>执行<code>npm install -g hexo-cli</code>时报错：如下图</h3><p><img src="/Users/NingSo/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/903334649/QQ/Temp.db/8B9BAF6B-D504-45E7-8F2F-EEE1C5B24962.png" alt="EACCES: permission denied, access &#39;/usr/local/lib/node_modules"><br>提示没有/usr/local/lib/node_modules路径没有权限</p>
-<p>解决方法：执行该命令行获取权限<code>sudo chown -R $USER /usr/local/lib/node_modules</code></p>
-<p>参考来源: <a href="http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo" target="_blank" rel="external">npm throws error without sudo</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;执行npm-install-g-hexo-cli时报错：如下图&quot;&gt;&lt;a href=&quot;#执行npm-install-g-hexo-cli时报错：如下图&quot; class=&quot;headerlink&quot; title=&quot;执行npm install -g hexo-cli时报错：如
-    
-    </summary>
+      <category term="Android" scheme="http://ningso.me/categories/Android/"/>
     
     
-      <category term="Hexo" scheme="http://ningso.me/tags/Hexo/"/>
+      <category term="JobScheduler" scheme="http://ningso.me/tags/JobScheduler/"/>
     
   </entry>
   
@@ -76,7 +80,7 @@
     <link href="http://ningso.me/2016/06/23/ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/"/>
     <id>http://ningso.me/2016/06/23/ADB常用命令总结/</id>
     <published>2016-06-23T15:26:13.000Z</published>
-    <updated>2016-11-29T09:18:28.000Z</updated>
+    <updated>2017-04-10T12:07:55.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="ADB命令"><a href="#ADB命令" class="headerlink" title="ADB命令"></a>ADB命令</h2><ul>
 <li>adb shell cat [file] <code>查看文件内容</code></li>
