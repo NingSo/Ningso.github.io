@@ -76,6 +76,42 @@
   </entry>
   
   <entry>
+    <title>使用TexturePacker对资源图进行打包的两种方法</title>
+    <link href="http://ningso.me/2016/11/29/TexturePacker/"/>
+    <id>http://ningso.me/2016/11/29/TexturePacker/</id>
+    <published>2016-11-29T08:16:16.000Z</published>
+    <updated>2017-04-11T02:39:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="方式一：执行jar方式"><a href="#方式一：执行jar方式" class="headerlink" title="方式一：执行jar方式"></a>方式一：执行jar方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -jar runnable-texturepacker.jar [inputDir] [outputDir] [packFileName]</div></pre></td></tr></table></figure>
+<p>注意：第一个参数资源文件路径必填项，后面两参数为可选项<br><a href="https://pan.baidu.com/s/1jHCNpQ2" target="_blank" rel="external">runnable-texturepacker.jar</a>下载</p>
+<h3 id="方式二：通过Android-Studio的Gradle"><a href="#方式二：通过Android-Studio的Gradle" class="headerlink" title="方式二：通过Android Studio的Gradle"></a>方式二：通过Android Studio的Gradle</h3><p>在项目全局<code>build.gradle</code>中引入环境</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        classpath &apos;com.android.tools.build:gradle:2.2.2&apos;</div><div class="line">        classpath &apos;com.badlogicgames.gdx:gdx-tools:1.9.4&apos; //版本号根据自己使用的libdgx来定。</div><div class="line">        // NOTE: Do not place your application dependencies here; they belong</div><div class="line">        // in the individual module build.gradle files</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// 定义一个变量texturePacker并设置想传递的参数...参数一：资源所在文件夹路径，参数二：生成的打包图片所存放的文件路径，参数三：packFileName包文件的名称。同时也作用于图片名。</div><div class="line">project.ext.texturePacker = [rootDir.getPath() + &quot;/app/src/main/atlas&quot;, rootDir.getPath() + &quot;/app/src/main/assets&quot;, &quot;atlas_flip&quot;]</div><div class="line"></div><div class="line">// 导入texturepacker的引用</div><div class="line">import com.badlogic.gdx.tools.texturepacker.TexturePacker</div><div class="line"></div><div class="line">// 添加一个生存进行图片资源打包的task </div><div class="line">task texturePacker &lt;&lt; &#123;</div><div class="line">    if (project.ext.has(&apos;texturePacker&apos;)) &#123;</div><div class="line">        logger.info &quot;Calling TexturePacker: &quot; + texturePacker</div><div class="line">        TexturePacker.process(texturePacker[0], texturePacker[1], texturePacker[2])</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>最后在执行这个task<code>./gradlew texturePacker</code>即可</p>
+<h3 id="参考来源"><a href="#参考来源" class="headerlink" title="参考来源:"></a>参考来源:</h3><p><a href="https://github.com/libgdx/libgdx/wiki/Texture-packer#running-texturepacker" target="_blank" rel="external">libgdx wiki</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;方式一：执行jar方式&quot;&gt;&lt;a href=&quot;#方式一：执行jar方式&quot; class=&quot;headerlink&quot; title=&quot;方式一：执行jar方式&quot;&gt;&lt;/a&gt;方式一：执行jar方式&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;java -jar runnable-texturepacker.jar [inputDir] [outputDir] [packFileName]&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;注意：第一个参数资源文件路径必填项，后面两参数为可选项&lt;br&gt;&lt;a href=&quot;https://pan.baidu.com/s/1jHCNpQ2&quot;&gt;runnable-texturepacker.jar&lt;/a&gt;下载&lt;/p&gt;
+&lt;h3 id=&quot;方式二：通过Android-Studio的Gradle&quot;&gt;&lt;a href=&quot;#方式二：通过Android-Studio的Gradle&quot; class=&quot;headerlink&quot; title=&quot;方式二：通过Android Studio的Gradle&quot;&gt;&lt;/a&gt;方式二：通过Android Studio的Gradle&lt;/h3&gt;&lt;p&gt;在项目全局&lt;code&gt;build.gradle&lt;/code&gt;中引入环境&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://ningso.me/categories/Android/"/>
+    
+    
+      <category term="TexturePacker" scheme="http://ningso.me/tags/TexturePacker/"/>
+    
+      <category term="Gradle" scheme="http://ningso.me/tags/Gradle/"/>
+    
+      <category term="Libgdx" scheme="http://ningso.me/tags/Libgdx/"/>
+    
+  </entry>
+  
+  <entry>
     <title>adb常用命令总结</title>
     <link href="http://ningso.me/2016/06/23/ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/"/>
     <id>http://ningso.me/2016/06/23/ADB常用命令总结/</id>
@@ -170,7 +206,7 @@
     <link href="http://ningso.me/2016/02/02/How-To-Use-KeyTool/"/>
     <id>http://ningso.me/2016/02/02/How-To-Use-KeyTool/</id>
     <published>2016-02-02T15:52:42.000Z</published>
-    <updated>2016-11-29T09:18:28.000Z</updated>
+    <updated>2017-04-11T02:41:30.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="keytool-创建签名keystore"><a href="#keytool-创建签名keystore" class="headerlink" title="keytool 创建签名keystore"></a>keytool 创建签名<code>keystore</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&quot;</div></pre></td></tr></table></figure>
 <p>结果<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-1@2x.png" alt="创建签名"></p>
@@ -190,10 +226,8 @@
     
     </summary>
     
-      <category term="Android工具类介绍" scheme="http://ningso.me/categories/Android%E5%B7%A5%E5%85%B7%E7%B1%BB%E4%BB%8B%E7%BB%8D/"/>
+      <category term="Android" scheme="http://ningso.me/categories/Android/"/>
     
-    
-      <category term="Android" scheme="http://ningso.me/tags/Android/"/>
     
       <category term="KeyTool" scheme="http://ningso.me/tags/KeyTool/"/>
     
@@ -204,7 +238,7 @@
     <link href="http://ningso.me/2015/12/19/How-to-Root-on-Nexus6-Android6-0/"/>
     <id>http://ningso.me/2015/12/19/How-to-Root-on-Nexus6-Android6-0/</id>
     <published>2015-12-19T14:16:16.000Z</published>
-    <updated>2016-11-29T09:18:28.000Z</updated>
+    <updated>2017-04-11T02:41:51.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>教程</p>
