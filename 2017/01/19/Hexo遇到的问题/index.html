@@ -263,25 +263,18 @@
 
 <!-- Layouts -->
 
-    <!-- Hidden Page -->
+    <!-- Post Module -->
     <div class="material-post_container">
+
         <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
                 <!-- Post Header(Thumbnail & Title) -->
                 
     <!-- Paradox Post Header -->
     
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script>
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-</script>
-
-        
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://dn-ningso.qbox.me/blog/permission-denied.png)">
     
             <p class="article-headline-p">
                 使用Hexo过程中遇到的问题
@@ -293,8 +286,8 @@
 
 
                 
-                  <!-- Paradox Post Info -->
-                  <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
 
     <!-- Author Avatar -->
     <div id="author-avatar">
@@ -411,15 +404,24 @@
 
                 
 
-                <!-- Post Hidden -->
-                <div id="post-content">
-                    <p>私有文章，暂不公开</p>
-                </div>
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h3 id="执行npm-install-g-hexo-cli时报错：如下图"><a href="#执行npm-install-g-hexo-cli时报错：如下图" class="headerlink" title="执行npm install -g hexo-cli时报错：如下图"></a>执行<code>npm install -g hexo-cli</code>时报错：如下图</h3><p><img src="https://dn-ningso.qbox.me/blog/permission-denied.png" alt="EACCES: permission denied, access &#39;/usr/local/lib/node_modules"><br>提示没有/usr/local/lib/node_modules路径没有权限</p>
+<p>解决方法：执行该命令行获取权限<code>sudo chown -R $USER /usr/local/lib/node_modules</code></p>
+<p>参考来源: <a href="http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo" target="_blank" rel="external">npm throws error without sudo</a></p>
+
+    
+
+    
+</div>
+
 
                 
 
                 <!-- Post Comments -->
                 
+                    
 
 
 
@@ -427,6 +429,7 @@
 
 
 
+                
             </div>
 
             <!-- Post Prev & Next Nav -->
@@ -451,7 +454,6 @@
 
         </div>
     </div>
-
 
 
 
