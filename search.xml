@@ -175,7 +175,6 @@
 <li>adb shell dumpsys activity top  <code>查看栈顶activity的信息</code></li>
 <li>adb shell pm clear [packagename] <code>清除应用数据</code></li>
 </ul>
-<a id="more"></a>
 <h2 id="AAPT命令"><a href="#AAPT命令" class="headerlink" title="AAPT命令"></a>AAPT命令</h2><p> Android asset packaging tool</p>
 <ul>
 <li>aapt list filepath.apk <code>列出apk的所有资源文件目录清单</code></li>
@@ -189,7 +188,6 @@
 <li><code>permissions</code> 查看apk权限</li>
 <li><code>resources</code> 打印的所有资源文件列表</li>
 <li><code>configurations</code> 查看apk配置信息</li>
-<li><code>configurations</code> 查看apk配置信息</li>
 </ul>
 </blockquote>
 <h2 id="终端命令更新SDK"><a href="#终端命令更新SDK" class="headerlink" title="终端命令更新SDK"></a>终端命令更新SDK</h2><ul>
@@ -200,8 +198,6 @@
 ]]></content>
       
         <categories>
-            
-            <category> Android </category>
             
             <category> DevTools </category>
             

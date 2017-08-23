@@ -205,7 +205,7 @@
     <link href="http://ningso.me/2016/06/23/ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/"/>
     <id>http://ningso.me/2016/06/23/ADB常用命令总结/</id>
     <published>2016-06-23T15:26:13.000Z</published>
-    <updated>2017-08-23T15:04:50.000Z</updated>
+    <updated>2017-08-23T15:19:02.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="ADB命令"><a href="#ADB命令" class="headerlink" title="ADB命令"></a>ADB命令</h2><ul>
 <li>adb shell cat [file] <code>查看文件内容</code></li>
@@ -216,7 +216,6 @@
 <li>adb shell dumpsys activity top  <code>查看栈顶activity的信息</code></li>
 <li>adb shell pm clear [packagename] <code>清除应用数据</code></li>
 </ul>
-<a id="more"></a>
 <h2 id="AAPT命令"><a href="#AAPT命令" class="headerlink" title="AAPT命令"></a>AAPT命令</h2><p> Android asset packaging tool</p>
 <ul>
 <li>aapt list filepath.apk <code>列出apk的所有资源文件目录清单</code></li>
@@ -229,7 +228,6 @@
 <li><code>badging</code> 查看apk的包名，laber 权限等所有信息</li>
 <li><code>permissions</code> 查看apk权限</li>
 <li><code>resources</code> 打印的所有资源文件列表</li>
-<li><code>configurations</code> 查看apk配置信息</li>
 <li><code>configurations</code> 查看apk配置信息</li>
 </ul>
 </blockquote>
@@ -244,19 +242,11 @@
     
       &lt;h2 id=&quot;ADB命令&quot;&gt;&lt;a href=&quot;#ADB命令&quot; class=&quot;headerlink&quot; title=&quot;ADB命令&quot;&gt;&lt;/a&gt;ADB命令&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;adb shell cat [file] &lt;code&gt;查看文件内容&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;adb shell service list &lt;code&gt;查看后台服务信息&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;adb push [local] [remote] &lt;code&gt;将电脑本地文件拷贝到手机设备&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;adb pull [remote] [local] &lt;code&gt;把文件从设备复制到本地电脑&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;adb shell monkey -v -p [packagename] 500 &lt;code&gt;执行monkey命令&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;adb shell dumpsys activity top  &lt;code&gt;查看栈顶activity的信息&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;adb shell pm clear [packagename] &lt;code&gt;清除应用数据&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;ad
     
     </summary>
     
-      <category term="Android" scheme="http://ningso.me/categories/Android/"/>
-    
-      <category term="DevTools" scheme="http://ningso.me/categories/Android/DevTools/"/>
+      <category term="DevTools" scheme="http://ningso.me/categories/DevTools/"/>
     
     
       <category term="ADB" scheme="http://ningso.me/tags/ADB/"/>
