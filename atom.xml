@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ningso.me/"/>
-  <updated>2017-04-10T10:27:00.000Z</updated>
+  <updated>2017-08-23T10:27:00.000Z</updated>
   <id>http://ningso.me/</id>
   
   <author>
@@ -14,6 +14,90 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Andorid Studio NDK快捷编译配置</title>
+    <link href="http://ningso.me/2017/07/19/AndoridStudio-NDK-Quick-Build-configuration/"/>
+    <id>http://ningso.me/2017/07/19/AndoridStudio-NDK-Quick-Build-configuration/</id>
+    <published>2017-07-19T14:16:00.000Z</published>
+    <updated>2017-08-23T10:27:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Andorid-Studio-NDK快捷编译配置"><a href="#Andorid-Studio-NDK快捷编译配置" class="headerlink" title="Andorid Studio NDK快捷编译配置"></a>Andorid Studio NDK快捷编译配置</h1><blockquote>
+<p>接触Jni的时候，最繁琐的就是去生成<code>.h</code>头文件，以前很笨的方法就是通过javah工具生成.h头文件，还要各种指定路径等繁琐操作,写着写着就有点烦人。现在介绍一种更快捷的方式，通过配置快捷键的形式一劳永逸。</p>
+</blockquote>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">javah</div><div class="line">Program:$JDKPath$/bin/javah</div><div class="line">Parameters:-encoding UTF-8 -d ../jni -jni $FileClass$</div><div class="line">Working directory:$ModuleFileDir$/src/main/java</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ndk-build</div><div class="line">Program:/Users/Liam/Library/Android/sdk/ndk-bundle/build/ndk-build</div><div class="line">Parameters:</div><div class="line">Working directory:$ModuleFileDir$/src/main</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ndk-build clean</div><div class="line">Program:/Users/Liam/Library/Android/sdk/ndk-bundle/build/ndk-build</div><div class="line">Parameters:clean</div><div class="line">Working directory:$ModuleFileDir$/src/main</div></pre></td></tr></table></figure>
+<h3 id="NDK开发常见的一些错误："><a href="#NDK开发常见的一些错误：" class="headerlink" title="NDK开发常见的一些错误："></a>NDK开发常见的一些错误：</h3><h4 id="Error-1"><a href="#Error-1" class="headerlink" title="Error 1"></a>Error 1</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">UnsatisfiedLinkError: No implementation found for int com.liam.nativeplugin.nativeutils.SymLink.createSymLinkJNI(java.lang.String, java.lang.String) </div><div class="line">(tried Java_com_liam_nativeplugin_nativeutils_SymLink_createSymLinkJNI and Java_com_liam_nativeplugin_nativeutils_SymLink_createSymLinkJNI__Ljava_lang_String_2Ljava_lang_String_2)</div></pre></td></tr></table></figure>
+<p>这是刚接触的时候最会遇到的错误类型了，意思就是会所，<code>.c</code>文件定义的JNI接口类型是<code>Java_com_liam_nativeplugin_nativeutils_SymLink_createSymLinkJNI</code> 即包名必须为<code>com.liam.nativeplugin.nativeutils</code>,类名为必须为<code>SymLink</code>。<br>也就是说，我们.so中函数声明涉及到的package name和class name与调用它的package name和class name不符。因此我们要改变我们工程中的package name和class name。使其与.so文件中函数签名提示的一致，在这个类中加入native方法的声明。<br>知道了这个规则，那么错误解决方案自然也就懂了。修改正确的package name和class name重新编译一下就好了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Andorid-Studio-NDK快捷编译配置&quot;&gt;&lt;a href=&quot;#Andorid-Studio-NDK快捷编译配置&quot; class=&quot;headerlink&quot; title=&quot;Andorid Studio NDK快捷编译配置&quot;&gt;&lt;/a&gt;Andorid Studio NDK快捷编译配置&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;接触Jni的时候，最繁琐的就是去生成&lt;code&gt;.h&lt;/code&gt;头文件，以前很笨的方法就是通过javah工具生成.h头文件，还要各种指定路径等繁琐操作,写着写着就有点烦人。现在介绍一种更快捷的方式，通过配置快捷键的形式一劳永逸。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://ningso.me/categories/Android/"/>
+    
+      <category term="DevTools" scheme="http://ningso.me/categories/Android/DevTools/"/>
+    
+    
+      <category term="NDK" scheme="http://ningso.me/tags/NDK/"/>
+    
+      <category term="Jni" scheme="http://ningso.me/tags/Jni/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git命令多敲就能记住了</title>
+    <link href="http://ningso.me/2017/04/01/How-to-use-git/"/>
+    <id>http://ningso.me/2017/04/01/How-to-use-git/</id>
+    <published>2017-04-01T10:37:57.000Z</published>
+    <updated>2017-03-10T10:27:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="git查看某个文件的修改历史"><a href="#git查看某个文件的修改历史" class="headerlink" title="git查看某个文件的修改历史"></a>git查看某个文件的修改历史</h3><ul>
+<li>git log –pretty=oneline filename</li>
+<li>git log filename 可以看到fileName相关的commit记录</li>
+<li>git log -p filename 可以显示每次提交的diff<br>只看某次提交中的某个文件变化，可以直接加上fileName</li>
+<li>git show c5e69804bbd9725b5dece57f8cbece4a96b9f80b filename</li>
+<li>git rm -r e fileName 删除git服务器追踪文件文件但不删除本地文件</li>
+</ul>
+<a id="more"></a>
+<h3 id="Clean-up-a-fork-and-restart-it-from-the-upstream"><a href="#Clean-up-a-fork-and-restart-it-from-the-upstream" class="headerlink" title="Clean up a fork and restart it from the upstream"></a>Clean up a fork and restart it from the upstream</h3><ul>
+<li>git remote add upstream git@github.com:XXXXXXXX.git</li>
+<li>git fetch upstream</li>
+<li>git rebase upstream/master</li>
+<li>git rebase –abort</li>
+</ul>
+<h3 id="git-一个分支完全替换另一个分支"><a href="#git-一个分支完全替换另一个分支" class="headerlink" title="git 一个分支完全替换另一个分支"></a>git 一个分支完全替换另一个分支</h3><ul>
+<li>git checkout master</li>
+<li>git reset –hard upstream/master  </li>
+<li>git push origin master –force </li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;git查看某个文件的修改历史&quot;&gt;&lt;a href=&quot;#git查看某个文件的修改历史&quot; class=&quot;headerlink&quot; title=&quot;git查看某个文件的修改历史&quot;&gt;&lt;/a&gt;git查看某个文件的修改历史&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;git log –pretty=oneline filename&lt;/li&gt;
+&lt;li&gt;git log filename 可以看到fileName相关的commit记录&lt;/li&gt;
+&lt;li&gt;git log -p filename 可以显示每次提交的diff&lt;br&gt;只看某次提交中的某个文件变化，可以直接加上fileName&lt;/li&gt;
+&lt;li&gt;git show c5e69804bbd9725b5dece57f8cbece4a96b9f80b filename&lt;/li&gt;
+&lt;li&gt;git rm -r e fileName 删除git服务器追踪文件文件但不删除本地文件&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="DevTools" scheme="http://ningso.me/categories/DevTools/"/>
+    
+    
+      <category term="git" scheme="http://ningso.me/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Hexo过程中遇到的问题</title>
@@ -25,11 +109,13 @@
     <content type="html"><![CDATA[<h3 id="执行npm-install-g-hexo-cli时报错：如下图"><a href="#执行npm-install-g-hexo-cli时报错：如下图" class="headerlink" title="执行npm install -g hexo-cli时报错：如下图"></a>执行<code>npm install -g hexo-cli</code>时报错：如下图</h3><p><img src="https://dn-ningso.qbox.me/blog/permission-denied.png" alt="EACCES: permission denied, access &#39;/usr/local/lib/node_modules"><br>提示没有/usr/local/lib/node_modules路径没有权限</p>
 <p>解决方法：执行该命令行获取权限<code>sudo chown -R $USER /usr/local/lib/node_modules</code></p>
 <p>参考来源: <a href="http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo" target="_blank" rel="external">npm throws error without sudo</a></p>
-]]></content>
+<a id="more"></a>]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;执行npm-install-g-hexo-cli时报错：如下图&quot;&gt;&lt;a href=&quot;#执行npm-install-g-hexo-cli时报错：如下图&quot; class=&quot;headerlink&quot; title=&quot;执行npm install -g hexo-cli时报错：如
+      &lt;h3 id=&quot;执行npm-install-g-hexo-cli时报错：如下图&quot;&gt;&lt;a href=&quot;#执行npm-install-g-hexo-cli时报错：如下图&quot; class=&quot;headerlink&quot; title=&quot;执行npm install -g hexo-cli时报错：如下图&quot;&gt;&lt;/a&gt;执行&lt;code&gt;npm install -g hexo-cli&lt;/code&gt;时报错：如下图&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://dn-ningso.qbox.me/blog/permission-denied.png&quot; alt=&quot;EACCES: permission denied, access &amp;#39;/usr/local/lib/node_modules&quot;&gt;&lt;br&gt;提示没有/usr/local/lib/node_modules路径没有权限&lt;/p&gt;
+&lt;p&gt;解决方法：执行该命令行获取权限&lt;code&gt;sudo chown -R $USER /usr/local/lib/node_modules&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;参考来源: &lt;a href=&quot;http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo&quot;&gt;npm throws error without sudo&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -50,6 +136,7 @@
     <content type="html"><![CDATA[<h3 id="Working-on-Android-Nougat"><a href="#Working-on-Android-Nougat" class="headerlink" title="Working on Android Nougat"></a>Working on Android Nougat</h3><p>在Android7.0上设置jobinfoBuilder.setPeriodic(5 * 1000);为5秒时，看到系统自己打印出来的logo,当时没太留意，然而问题出来了，我勒个去？？等了好久都没执行<code>onStartJob()</code>方法，但是看设置schedule()的时候确实返回的是成功啊。最后注意到这个结果！！</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">W/JobInfo: Specified interval for 1 is +5s0ms. Clamped to +15m0s0ms</div><div class="line">W/JobInfo: Specified flex for 1 is +5s0ms. Clamped to +5m0s0ms</div></pre></td></tr></table></figure>
 <p>就是说指定周期间隔时间为5seconds，被强制指定为15minutes,<br>指定弹性延迟时间为5seconds，被强制指定为5minutes！！<br>这就日狗了。难道是因为Android Nuga的出了省电模式之后自己改了？？</p>
+<a id="more"></a>
 <p><img src="https://dn-ningso.qbox.me/blog/WX20161208-194549.png" alt="working on Nougat"></p>
 <p>跟踪到API24源码我们发现：在JobInfo中设置了最小间隔时间和最小弹性时间，如果设置的比改值还小，则取默认值。。。千万只草泥马有没有。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">/* Minimum interval for a periodic job, in milliseconds. */</div><div class="line">   private static final long MIN_PERIOD_MILLIS = 15 * 60 * 1000L;   // 15 minutes</div><div class="line"></div><div class="line">/* Minimum flex for a periodic job, in milliseconds. */</div><div class="line">   private static final long MIN_FLEX_MILLIS = 5 * 60 * 1000L; // 5 minutes</div><div class="line">      /**</div><div class="line">    * Set to the interval between occurrences of this job. This value is &lt;b&gt;not&lt;/b&gt; set if the</div><div class="line">    * job does not recur periodically.</div><div class="line">    */</div><div class="line">   public long getIntervalMillis() &#123;</div><div class="line">       return intervalMillis &gt;= getMinPeriodMillis() ? intervalMillis : getMinPeriodMillis();//看！！这里！！</div><div class="line">   &#125;</div><div class="line">&lt;---省略若干无关代码---&gt;</div><div class="line">   /**</div><div class="line">    * Flex time for this job. Only valid if this is a periodic job.  The job can</div><div class="line">    * execute at any time in a window of flex length at the end of the period.</div><div class="line">    */</div><div class="line">   public long getFlexMillis() &#123;</div><div class="line">       long interval = getIntervalMillis();</div><div class="line">       long percentClamp = 5 * interval / 100;</div><div class="line">       long clampedFlex = Math.max(flexMillis, Math.max(percentClamp, getMinFlexMillis()));//看！！这里！！</div><div class="line">       return clampedFlex &lt;= interval ? clampedFlex : interval;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
@@ -64,7 +151,9 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;Working-on-Android-Nougat&quot;&gt;&lt;a href=&quot;#Working-on-Android-Nougat&quot; class=&quot;headerlink&quot; title=&quot;Working on Android Nougat&quot;&gt;&lt;/a&gt;Working on 
+      &lt;h3 id=&quot;Working-on-Android-Nougat&quot;&gt;&lt;a href=&quot;#Working-on-Android-Nougat&quot; class=&quot;headerlink&quot; title=&quot;Working on Android Nougat&quot;&gt;&lt;/a&gt;Working on Android Nougat&lt;/h3&gt;&lt;p&gt;在Android7.0上设置jobinfoBuilder.setPeriodic(5 * 1000);为5秒时，看到系统自己打印出来的logo,当时没太留意，然而问题出来了，我勒个去？？等了好久都没执行&lt;code&gt;onStartJob()&lt;/code&gt;方法，但是看设置schedule()的时候确实返回的是成功啊。最后注意到这个结果！！&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;W/JobInfo: Specified interval for 1 is +5s0ms. Clamped to +15m0s0ms&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;W/JobInfo: Specified flex for 1 is +5s0ms. Clamped to +5m0s0ms&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;就是说指定周期间隔时间为5seconds，被强制指定为15minutes,&lt;br&gt;指定弹性延迟时间为5seconds，被强制指定为5minutes！！&lt;br&gt;这就日狗了。难道是因为Android Nuga的出了省电模式之后自己改了？？&lt;/p&gt;
     
     </summary>
     
@@ -116,7 +205,7 @@
     <link href="http://ningso.me/2016/06/23/ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/"/>
     <id>http://ningso.me/2016/06/23/ADB常用命令总结/</id>
     <published>2016-06-23T15:26:13.000Z</published>
-    <updated>2017-04-25T02:38:52.000Z</updated>
+    <updated>2017-08-23T15:04:50.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="ADB命令"><a href="#ADB命令" class="headerlink" title="ADB命令"></a>ADB命令</h2><ul>
 <li>adb shell cat [file] <code>查看文件内容</code></li>
@@ -127,6 +216,7 @@
 <li>adb shell dumpsys activity top  <code>查看栈顶activity的信息</code></li>
 <li>adb shell pm clear [packagename] <code>清除应用数据</code></li>
 </ul>
+<a id="more"></a>
 <h2 id="AAPT命令"><a href="#AAPT命令" class="headerlink" title="AAPT命令"></a>AAPT命令</h2><p> Android asset packaging tool</p>
 <ul>
 <li>aapt list filepath.apk <code>列出apk的所有资源文件目录清单</code></li>
@@ -154,55 +244,22 @@
     
       &lt;h2 id=&quot;ADB命令&quot;&gt;&lt;a href=&quot;#ADB命令&quot; class=&quot;headerlink&quot; title=&quot;ADB命令&quot;&gt;&lt;/a&gt;ADB命令&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;adb shell cat [file] &lt;code&gt;查看文件内容&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;ad
+&lt;li&gt;adb shell service list &lt;code&gt;查看后台服务信息&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;adb push [local] [remote] &lt;code&gt;将电脑本地文件拷贝到手机设备&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;adb pull [remote] [local] &lt;code&gt;把文件从设备复制到本地电脑&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;adb shell monkey -v -p [packagename] 500 &lt;code&gt;执行monkey命令&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;adb shell dumpsys activity top  &lt;code&gt;查看栈顶activity的信息&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;adb shell pm clear [packagename] &lt;code&gt;清除应用数据&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
       <category term="Android" scheme="http://ningso.me/categories/Android/"/>
     
+      <category term="DevTools" scheme="http://ningso.me/categories/Android/DevTools/"/>
+    
     
       <category term="ADB" scheme="http://ningso.me/tags/ADB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于华为手机EMUI4.0以上换字问题</title>
-    <link href="http://ningso.me/2016/06/18/huawei-change-font-for-emui4-0/"/>
-    <id>http://ningso.me/2016/06/18/huawei-change-font-for-emui4-0/</id>
-    <published>2016-06-18T15:52:42.000Z</published>
-    <updated>2016-11-29T10:01:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="华为手机换字图文解说"><a href="#华为手机换字图文解说" class="headerlink" title="华为手机换字图文解说"></a>华为手机换字图文解说</h2><blockquote>
-<ol>
-<li>先在字体管家里面使用华为模式安装字体</li>
-<li>成功之后打开华为主题商城－下载一款免费的主题</li>
-<li>用文件管理打开<code>HWTheme</code>文件夹，在这个文件夹下面”纯数字文件名”的就是表示华为主题下载的免费主题文件（<code>.hwt文件后缀</code>），字体管家安装的字体也在这个里面（文件名中包含hifont字符）</li>
-<li>把字体管家字体文件重命名改成华为下载的主题文件名</li>
-<li>重新打开主题商城，点击试用刚才下载的免费主题即可换字 <code>(注意：部分华为手机修改完文件名之后，在主题商店-我的-已下载中，找不到刚才下载的主题，需要重新回到主题分类里面，找到该主题即可成功应用)</code></li>
-</ol>
-</blockquote>
-<a id="more"></a>
-<p><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_1.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_1_1.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_2.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_3.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_4.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_5.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_6.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_7.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_8.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_9.JPG" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_10.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_11.png" alt="替的桌面"><br><img src="http://fonts.b0.upaiyun.com/html/hauwei_img/img_12.png" alt="替的桌面"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;华为手机换字图文解说&quot;&gt;&lt;a href=&quot;#华为手机换字图文解说&quot; class=&quot;headerlink&quot; title=&quot;华为手机换字图文解说&quot;&gt;&lt;/a&gt;华为手机换字图文解说&lt;/h2&gt;&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;先在字体管家里面使用华为模式安装字体&lt;/li&gt;
-&lt;li&gt;成功之后打开华为主题商城－下载一款免费的主题&lt;/li&gt;
-&lt;li&gt;用文件管理打开&lt;code&gt;HWTheme&lt;/code&gt;文件夹，在这个文件夹下面”纯数字文件名”的就是表示华为主题下载的免费主题文件（&lt;code&gt;.hwt文件后缀&lt;/code&gt;），字体管家安装的字体也在这个里面（文件名中包含hifont字符）&lt;/li&gt;
-&lt;li&gt;把字体管家字体文件重命名改成华为下载的主题文件名&lt;/li&gt;
-&lt;li&gt;重新打开主题商城，点击试用刚才下载的免费主题即可换字 &lt;code&gt;(注意：部分华为手机修改完文件名之后，在主题商店-我的-已下载中，找不到刚才下载的主题，需要重新回到主题分类里面，找到该主题即可成功应用)&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="字体" scheme="http://ningso.me/categories/%E5%AD%97%E4%BD%93/"/>
-    
-    
-      <category term="Font" scheme="http://ningso.me/tags/Font/"/>
     
   </entry>
   
@@ -211,10 +268,13 @@
     <link href="http://ningso.me/2016/02/02/How-To-Use-KeyTool/"/>
     <id>http://ningso.me/2016/02/02/How-To-Use-KeyTool/</id>
     <published>2016-02-02T15:52:42.000Z</published>
-    <updated>2017-04-11T02:41:30.000Z</updated>
+    <updated>2017-08-23T14:43:52.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="keytool-创建签名keystore"><a href="#keytool-创建签名keystore" class="headerlink" title="keytool 创建签名keystore"></a>keytool 创建签名<code>keystore</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&quot;</div></pre></td></tr></table></figure>
-<p>结果<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-1@2x.png" alt="创建签名"></p>
+<blockquote>
+<p>-dname       指定证书拥有者信息 例如：  “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名称,ST=州或省份名称,C=单位的两字母国家代码”</p>
+</blockquote>
+<p>结果:<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-1@2x.png" alt="创建签名"></p>
 <h3 id="Keytool-查看keystore的签名信息"><a href="#Keytool-查看keystore的签名信息" class="headerlink" title="Keytool 查看keystore的签名信息"></a>Keytool 查看keystore的签名信息</h3><p>执行如下命令，并按照提示输入keystore 密码</p>
 <a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -list -v -keystore XXXX.keystore</div></pre></td></tr></table></figure>
@@ -226,7 +286,10 @@
     <summary type="html">
     
       &lt;h3 id=&quot;keytool-创建签名keystore&quot;&gt;&lt;a href=&quot;#keytool-创建签名keystore&quot; class=&quot;headerlink&quot; title=&quot;keytool 创建签名keystore&quot;&gt;&lt;/a&gt;keytool 创建签名&lt;code&gt;keystore&lt;/code&gt;&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &amp;quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&amp;quot;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;结果&lt;br&gt;&lt;img src=&quot;http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-1@2x.png&quot; alt=&quot;创建签名&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;-dname       指定证书拥有者信息 例如：  “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名称,ST=州或省份名称,C=单位的两字母国家代码”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;结果:&lt;br&gt;&lt;img src=&quot;http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-1@2x.png&quot; alt=&quot;创建签名&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;Keytool-查看keystore的签名信息&quot;&gt;&lt;a href=&quot;#Keytool-查看keystore的签名信息&quot; class=&quot;headerlink&quot; title=&quot;Keytool 查看keystore的签名信息&quot;&gt;&lt;/a&gt;Keytool 查看keystore的签名信息&lt;/h3&gt;&lt;p&gt;执行如下命令，并按照提示输入keystore 密码&lt;/p&gt;
     
     </summary>

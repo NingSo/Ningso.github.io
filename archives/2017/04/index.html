@@ -10,7 +10,7 @@
     
     <title>
         
-            KeyTool的基本使用方式 | 
+            归档: 2017/4 | 
         
         NingSo
     </title>
@@ -34,7 +34,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="NingSo">
     <meta name="description" content="一个还可以继续犯点二的年纪，我会努力变成一个不太二的自己！">
-    <meta name="keywords" content="NingSo Kika keyboard,KeyTool">
+    <meta name="keywords" content="NingSo Kika keyboard">
 
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -60,9 +60,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://ningso.me">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="KeyTool的基本使用方式 | NingSo">
+    <meta property="og:title" content="归档: 2017/4 | NingSo">
     <meta property="og:description" content="一个还可以继续犯点二的年纪，我会努力变成一个不太二的自己！">
-    <meta property="og:article:tag" content="KeyTool"> 
+    
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -223,263 +223,102 @@
                         </button>
                     
 
-                    <!-- Post TOC -->
-
+                    <!-- Index Module -->
+<div class="material-index mdl-grid">
     
-    <!-- Back Button -->
-    <!--
-    <div class="material-back" id="backhome-div" tabindex="0">
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
-           href="#" onclick="window.history.back();return false;"
-           target="_self"
-           role="button"
-           data-upgraded=",MaterialButton,MaterialRipple">
-            <i class="material-icons" role="presentation">arrow_back</i>
-            <span class="mdl-button__ripple-container">
-                <span class="mdl-ripple"></span>
-            </span>
-        </a>
-    </div>
-    -->
+    <div class="locate-thumbnail-symbol"></div>
 
-    <!-- Left aligned menu below button -->
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
-    </button>
+    <!-- Pin on top -->
+    
 
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#keytool-创建签名keystore"><span class="post-toc-number">1.</span> <span class="post-toc-text">keytool 创建签名keystore</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Keytool-查看keystore的签名信息"><span class="post-toc-number">2.</span> <span class="post-toc-text">Keytool 查看keystore的签名信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Keytool-查看apk的签名信息"><span class="post-toc-number">3.</span> <span class="post-toc-text">Keytool 查看apk的签名信息</span></a></li></ol>
-
-        <!--
-        <li class="mdl-menu__item">
-            Some Action
-        </li>
-        -->
-    </ul>
-
-
-
-
-<!-- Layouts -->
-
-    <!-- Post Module -->
-    <div class="material-post_container">
-
-        <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-
-                <!-- Post Header(Thumbnail & Title) -->
-                
-    <!-- Paradox Post Header -->
+    <!-- Normal Post -->
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script>
-    var randomNum = Math.floor(Math.random() * 19 + 1);
+        
+    
 
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2017/04/01/How-to-use-git/">git命令多敲就能记住了</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            git查看某个文件的修改历史
+git log –pretty=oneline filename
+git log filename 可以看到fileName相关的commit记录
+git log -p filename 可以显示每次提交的diff只看某次提交中的某个文件变化，可以直接加上fileName
+git show c5e69804bbd9725b5dece57f8cbece4a96b9f80b filename
+git rm -r e fileName 删除git服务器追踪文件文件但不删除本地文件
+
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2017/04/01/How-to-use-git/" target="_self">阅读全文</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/uploads/avatar.jpg" width="44px" height="44px" alt="NingSo's avatar">
+            </div>
+            <div>
+                <strong>NingSo</strong>
+                <span>4月 01, 2017</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+            <!-- Category -->
+            <span class="post_entry-category">
+                <a class="post_category-link" href="/categories/DevTools/">DevTools</a>
+            </span>
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+
+    
+
+    
+        <script>
+    var randomNum;
+
+    var locatePost = $('.locate-thumbnail-symbol').next();
+    for(var i = 0; i < 10; i++) {
+        randomNum = Math.floor(Math.random() * 19 + 1);
+
+        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
+        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
+
+        locatePost = locatePost.next();
+    }
 </script>
 
-        
-    
-            <p class="article-headline-p">
-                KeyTool的基本使用方式
-            </p>
-        </div>
-
-
-
-
-
-                
-                    <!-- Paradox Post Info -->
-                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-
-    <!-- Author Avatar -->
-    <div id="author-avatar">
-        <img src="/uploads/avatar.jpg" width="44px" height="44px" alt="Author Avatar"/>
-    </div>
-    <!-- Author Name & Date -->
-    <div>
-        <strong>NingSo</strong>
-        <span>2月 02, 2016</span>
-    </div>
-
-    <div class="section-spacer"></div>
-
-    <!-- Favorite -->
-    <!--
-        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
-            <i class="material-icons" role="presentation">favorite</i>
-            <span class="visuallyhidden">favorites</span>
-        </button>
-    -->
-
-    <!-- Qrcode -->
-    
-        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">devices other</i>
-            <span class="visuallyhidden">devices other</span>
-        </button>
-        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
-            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACa0lEQVR42u3aQVLDMBAEwPz/0/AAymFmJQuHap0oSGy3D9Iyu6+vf71eeHh4eHh4eHh4D+O94nV5ubefya/286+zZ8PDw8M7w/tlq337QMm38k+uPxseHh7eSd7Vhnv1mfw3+Ua/8mx4eHh4n8KLAoK4KE/ui4eHh/fpvNdoRcUxHh4e3uN5bawwK44fnbXg4eHhxbx8Kz//89H+Hh4eHl7Aq0ea3oazK62vNuC4vCYeHh7ezbxZiZxHse+vnAQN9RAYHh4e3hFeEh/MRgGS4HV2xzqMwMPDw7uZ17am8gOgPUja8QU8PDy8u3mz0CF5oCRumIGLkhoPDw/vBl5y+3VSPkzQRhV4eHh4f8Vrm0+zY2AFXLw4PDw8vJt5+YVmIWwbRuRjr3UYgYeHh7eJt+tgiAZJY0b7KvHw8PBO8trNPRkaSMrfWbwbPTMeHh7eEd5KMV1v3MtFeT06gIeHh3czLy+gZ1v5DLw0dIWHh4e3lber9TUsf4MwNw878PDw8M7w8rZTXijnA1LtMTMcHcDDw8PbylsZD0027tnmntwxinHx8PDwbuPl0UMbquaNtPywWfqPAQ8PD28rr23/txHtrFBeaoDh4eHhHeHlMWuyZbcFer7qkhoPDw9vE69deZyax8TrYwR4eHh4J3ntRrzyrZW2WdFOw8PDwzvCmwUKCXhbOBtHEnh4eHgneW30kDf1ZwNbbQyBh4eH93xe28SaRRJ1uY+Hh4f3SF7e+soPhnz8axhG4OHh4d3AW2lKtcV3+2qKQwUPDw/vCG8WAezCJMfSUhiBh4eHt5X3/xYeHh4eHh4eHt4D1jf+OMRwWa8QIwAAAABJRU5ErkJggg==">
-        </ul>
-    
-
-    <!-- Tags (bookmark) -->
-    
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/KeyTool/">KeyTool</a>
-    </ul>
-    
-
-    <!-- Share -->
-    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-    <i class="material-icons" role="presentation">share</i>
-    <span class="visuallyhidden">share</span>
-</button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
-    
-
-    
-        
-            <!-- Busuanzi Views -->
-            <a class="post_share-link" href="#">
-                <li class="mdl-menu__item">
-                    <span id="busuanzi_container_page_pv">
-                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
-                    </span>
-                </li>
-            </a>
-        
-    
-
-    <!-- Share Weibo -->
-    
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=KeyTool的基本使用方式&url=http://ningso.me//2016/02/02/How-To-Use-KeyTool/index.html&pic=&searchPic=false&style=simple" target="_blank">
-            <li class="mdl-menu__item">
-                分享到微博
-            </li>
-        </a>
-    
-
-    <!-- Share Twitter -->
-    
-
-    <!-- Share Facebook -->
-    
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ningso.me//2016/02/02/How-To-Use-KeyTool/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Facebook
-            </li>
-        </a>
-    
-
-    <!-- Share Google+ -->
-    
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://ningso.me//2016/02/02/How-To-Use-KeyTool/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Google+
-            </li>
-        </a>
-    
-
-    <!-- Share LinkedIn -->
-    
-
-    <!-- Share QQ -->
-    
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=NingSo&title=KeyTool的基本使用方式&summary=一个还可以继续犯点二的年纪，我会努力变成一个不太二的自己！&pics=http://ningso.me/img/favicon.png&url=http://ningso.me/2016/02/02/How-To-Use-KeyTool/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 QQ
-            </li>
-        </a>
-    
-
-    <!-- Share Telegram -->
-    
-</ul>
-
-</div>
-
-                
-
-                <!-- Post Content -->
-                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
-    
-        <h3 id="keytool-创建签名keystore"><a href="#keytool-创建签名keystore" class="headerlink" title="keytool 创建签名keystore"></a>keytool 创建签名<code>keystore</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&quot;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>-dname       指定证书拥有者信息 例如：  “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名称,ST=州或省份名称,C=单位的两字母国家代码”</p>
-</blockquote>
-<p>结果:<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-1@2x.png" alt="创建签名"></p>
-<h3 id="Keytool-查看keystore的签名信息"><a href="#Keytool-查看keystore的签名信息" class="headerlink" title="Keytool 查看keystore的签名信息"></a>Keytool 查看keystore的签名信息</h3><p>执行如下命令，并按照提示输入keystore 密码</p>
-<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -list -v -keystore XXXX.keystore</div></pre></td></tr></table></figure>
-<p>结果：<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-0@2x.png" alt="keystore的签名信息"></p>
-<h3 id="Keytool-查看apk的签名信息"><a href="#Keytool-查看apk的签名信息" class="headerlink" title="Keytool 查看apk的签名信息"></a>Keytool 查看apk的签名信息</h3><p>解压apk得到META-INF文件夹下面的RSA文件，执行如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -printcert -file XXX/META-INF/CERT.RSA</div></pre></td></tr></table></figure></p>
-<p> 结果：<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-2@2x.png" alt="查看apk的签名信息"></p>
-
-    
-
     
 </div>
-
-
-                
-
-                <!-- Post Comments -->
-                
-                    
-
-
-
-
-
-
-
-                
-            </div>
-
-            <!-- Post Prev & Next Nav -->
-            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-    <!-- Prev Nav -->
-    
-        <a href="/2016/06/23/ADB常用命令总结/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
-
-    <!-- Section Spacer -->
-    <div class="section-spacer"></div>
-
-    <!-- Next Nav -->
-    
-        <a href="/2015/12/19/How-to-Root-on-Nexus6-Android6-0/" id="post_nav-older" class="next-content">
-            旧篇
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_forward</i>
-            </button>
-        </a>
-    
-</nav>
-
-        </div>
-    </div>
-
 
 
                     

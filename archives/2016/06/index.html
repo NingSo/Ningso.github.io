@@ -253,7 +253,14 @@
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
             ADB命令
-adb shell cat [file] 查看...
+adb shell cat [file] 查看文件内容
+adb shell service list 查看后台服务信息
+adb push [local] [remote] 将电脑本地文件拷贝到手机设备
+adb pull [remote] [local] 把文件从设备复制到本地电脑
+adb shell monkey -v -p [packagename] 500 执行monkey命令
+adb shell dumpsys activity top  查看栈顶activity的信息
+adb shell pm clear [packagename] 清除应用数据
+
         
         &nbsp;&nbsp;&nbsp;
         <span>
@@ -275,74 +282,7 @@ adb shell cat [file] 查看...
         <div id="post_entry-right-info">
             <!-- Category -->
             <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/Android/">Android</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/06/18/huawei-change-font-for-emui4-0/">关于华为手机EMUI4.0以上换字问题</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            华为手机换字图文解说
-
-先在字体管家里面使用华为模式安装字体
-成功之后打开华为主题商城－下载一款免费的主题
-用文件管理打开HWTheme文件夹，在这个文件夹下面”纯数字文件名”的就是表示华为主题下载的免费主题文件（.hwt文件后缀），字体管家安装的字体也在这个里面（文件名中包含hifont字符）
-把字体管家字体文件重命名改成华为下载的主题文件名
-重新打开主题商城，点击试用刚才下载的免费主题即可换字 (注意：部分华为手机修改完文件名之后，在主题商店-我的-已下载中，找不到刚才下载的主题，需要重新回到主题分类里面，找到该主题即可成功应用)
-
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/06/18/huawei-change-font-for-emui4-0/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/uploads/avatar.jpg" width="44px" height="44px" alt="NingSo's avatar">
-            </div>
-            <div>
-                <strong>NingSo</strong>
-                <span>6月 18, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/字体/">字体</a>
+                <a class="post_category-link" href="/categories/Android/">Android</a>, <a class="post_category-link" href="/categories/Android/DevTools/">DevTools</a>
             </span>
 
             
@@ -460,7 +400,7 @@ adb shell cat [file] 查看...
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/12/">十二月 2015<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/12/">十二月 2015<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -478,7 +418,7 @@ adb shell cat [file] 查看...
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/字体/">字体<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/Android/DevTools/">DevTools<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/DevTools/">DevTools<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         

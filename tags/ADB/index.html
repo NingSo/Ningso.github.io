@@ -253,7 +253,14 @@
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
             ADB命令
-adb shell cat [file] 查看...
+adb shell cat [file] 查看文件内容
+adb shell service list 查看后台服务信息
+adb push [local] [remote] 将电脑本地文件拷贝到手机设备
+adb pull [remote] [local] 把文件从设备复制到本地电脑
+adb shell monkey -v -p [packagename] 500 执行monkey命令
+adb shell dumpsys activity top  查看栈顶activity的信息
+adb shell pm clear [packagename] 清除应用数据
+
         
         &nbsp;&nbsp;&nbsp;
         <span>
@@ -275,7 +282,7 @@ adb shell cat [file] 查看...
         <div id="post_entry-right-info">
             <!-- Category -->
             <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/Android/">Android</a>
+                <a class="post_category-link" href="/categories/Android/">Android</a>, <a class="post_category-link" href="/categories/Android/DevTools/">DevTools</a>
             </span>
 
             
@@ -393,7 +400,7 @@ adb shell cat [file] 查看...
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/12/">十二月 2015<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/12/">十二月 2015<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -411,7 +418,7 @@ adb shell cat [file] 查看...
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/字体/">字体<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/Android/DevTools/">DevTools<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/DevTools/">DevTools<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         

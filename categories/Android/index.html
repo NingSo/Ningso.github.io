@@ -246,13 +246,76 @@
     
 
         <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2017/07/19/AndoridStudio-NDK-Quick-Build-configuration/">Andorid Studio NDK快捷编译配置</a></p>
+    </div>
+
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            Andorid Studio NDK快捷编译配置
+接触Jni的时候，最繁琐的就是去生成.h头文件，以前很笨的方法就是通过javah工具生成.h头文件，还要各种指定路径等繁琐操作,写着写着就有点烦人。现在介绍一种更快捷的方式，通过配置快捷键的形式一劳永逸。
+
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2017/07/19/AndoridStudio-NDK-Quick-Build-configuration/" target="_self">阅读全文</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="/uploads/avatar.jpg" width="44px" height="44px" alt="NingSo's avatar">
+            </div>
+            <div>
+                <strong>NingSo</strong>
+                <span>7月 19, 2017</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+            <!-- Category -->
+            <span class="post_entry-category">
+                <a class="post_category-link" href="/categories/Android/">Android</a>, <a class="post_category-link" href="/categories/Android/DevTools/">DevTools</a>
+            </span>
+
+            
+
+            
+
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
+        </div>
+    </div>
+</div>
+
+            
+            
+        
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+        
+    
+
+        <!-- Post Title -->
         <p class="article-headline-p"><a href="/2017/01/19/JobScheduler遇到的一些小问题/">JobScheduler 遇到的一些小问题</a></p>
     </div>
 
     <!-- Post Excerpt -->
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
-            
+            Working on Android Nougat在Android7.0上设置jobinfoBuilder.setPeriodic(5 * 1000);为5秒时，看到系统自己打印出来的logo,当时没太留意，然而问题出来了，我勒个去？？等了好久都没执行onStartJob()方法，但是看设置schedule()的时候确实返回的是成功啊。最后注意到这个结果！！
+12W/JobInfo: Specified interval for 1 is +5s0ms. Clamped to +15m0s0msW/JobInfo: Specified flex for 1 is +5s0ms. Clamped to +5m0s0ms
+就是说指定周期间隔时间为5seconds，被强制指定为15minutes,指定弹性延迟时间为5seconds，被强制指定为5minutes！！这就日狗了。难道是因为Android Nuga的出了省电模式之后自己改了？？
         
         &nbsp;&nbsp;&nbsp;
         <span>
@@ -373,7 +436,14 @@
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
             ADB命令
-adb shell cat [file] 查看...
+adb shell cat [file] 查看文件内容
+adb shell service list 查看后台服务信息
+adb push [local] [remote] 将电脑本地文件拷贝到手机设备
+adb pull [remote] [local] 把文件从设备复制到本地电脑
+adb shell monkey -v -p [packagename] 500 执行monkey命令
+adb shell dumpsys activity top  查看栈顶activity的信息
+adb shell pm clear [packagename] 清除应用数据
+
         
         &nbsp;&nbsp;&nbsp;
         <span>
@@ -395,7 +465,7 @@ adb shell cat [file] 查看...
         <div id="post_entry-right-info">
             <!-- Category -->
             <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/Android/">Android</a>
+                <a class="post_category-link" href="/categories/Android/">Android</a>, <a class="post_category-link" href="/categories/Android/DevTools/">DevTools</a>
             </span>
 
             
@@ -433,7 +503,10 @@ adb shell cat [file] 查看...
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
             keytool 创建签名keystore1keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&quot;
-结果
+
+-dname       指定证书拥有者信息 例如：  “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名称,ST=州或省份名称,C=单位的两字母国家代码”
+
+结果:
 Keytool 查看keystore的签名信息执行如下命令，并按照提示输入keystore 密码
         
         &nbsp;&nbsp;&nbsp;
@@ -574,7 +647,7 @@ Keytool 查看keystore的签名信息执行如下命令，并按照提示输入k
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/12/">十二月 2015<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/02/">二月 2016<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/12/">十二月 2015<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -592,7 +665,7 @@ Keytool 查看keystore的签名信息执行如下命令，并按照提示输入k
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/字体/">字体<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/Android/DevTools/">DevTools<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/DevTools/">DevTools<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
