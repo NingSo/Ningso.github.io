@@ -17,8 +17,8 @@
   
   <entry>
     <title>Andorid Studio NDK快捷编译配置</title>
-    <link href="http://ningso.me/2017/07/19/AndoridStudio-NDK-Quick-Build-configuration/"/>
-    <id>http://ningso.me/2017/07/19/AndoridStudio-NDK-Quick-Build-configuration/</id>
+    <link href="http://ningso.me/AndoridStudio-NDK-Quick-Build-configuration/"/>
+    <id>http://ningso.me/AndoridStudio-NDK-Quick-Build-configuration/</id>
     <published>2017-07-19T14:16:00.000Z</published>
     <updated>2017-08-23T10:27:00.000Z</updated>
     
@@ -54,8 +54,8 @@
   
   <entry>
     <title>git命令多敲就能记住了</title>
-    <link href="http://ningso.me/2017/04/01/How-to-use-git/"/>
-    <id>http://ningso.me/2017/04/01/How-to-use-git/</id>
+    <link href="http://ningso.me/How-to-use-git/"/>
+    <id>http://ningso.me/How-to-use-git/</id>
     <published>2017-04-01T10:37:57.000Z</published>
     <updated>2017-03-10T10:27:00.000Z</updated>
     
@@ -101,8 +101,8 @@
   
   <entry>
     <title>使用Hexo过程中遇到的问题</title>
-    <link href="http://ningso.me/2017/01/19/Hexo%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://ningso.me/2017/01/19/Hexo遇到的问题/</id>
+    <link href="http://ningso.me/Hexo%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://ningso.me/Hexo遇到的问题/</id>
     <published>2017-01-19T14:16:00.000Z</published>
     <updated>2017-04-10T10:27:00.000Z</updated>
     
@@ -128,8 +128,8 @@
   
   <entry>
     <title>JobScheduler 遇到的一些小问题</title>
-    <link href="http://ningso.me/2017/01/19/JobScheduler%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/"/>
-    <id>http://ningso.me/2017/01/19/JobScheduler遇到的一些小问题/</id>
+    <link href="http://ningso.me/JobScheduler%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E9%97%AE%E9%A2%98/"/>
+    <id>http://ningso.me/JobScheduler遇到的一些小问题/</id>
     <published>2017-01-19T14:16:00.000Z</published>
     <updated>2017-03-10T10:27:00.000Z</updated>
     
@@ -166,8 +166,8 @@
   
   <entry>
     <title>使用TexturePacker对资源图进行打包的两种方法</title>
-    <link href="http://ningso.me/2016/11/29/TexturePacker/"/>
-    <id>http://ningso.me/2016/11/29/TexturePacker/</id>
+    <link href="http://ningso.me/TexturePacker/"/>
+    <id>http://ningso.me/TexturePacker/</id>
     <published>2016-11-29T08:16:16.000Z</published>
     <updated>2017-04-11T02:39:13.000Z</updated>
     
@@ -202,8 +202,8 @@
   
   <entry>
     <title>adb常用命令总结</title>
-    <link href="http://ningso.me/2016/06/23/ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/"/>
-    <id>http://ningso.me/2016/06/23/ADB常用命令总结/</id>
+    <link href="http://ningso.me/ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/"/>
+    <id>http://ningso.me/ADB常用命令总结/</id>
     <published>2016-06-23T15:26:13.000Z</published>
     <updated>2017-08-23T15:19:02.000Z</updated>
     
@@ -255,8 +255,8 @@
   
   <entry>
     <title>KeyTool的基本使用方式</title>
-    <link href="http://ningso.me/2016/02/02/How-To-Use-KeyTool/"/>
-    <id>http://ningso.me/2016/02/02/How-To-Use-KeyTool/</id>
+    <link href="http://ningso.me/How-To-Use-KeyTool/"/>
+    <id>http://ningso.me/How-To-Use-KeyTool/</id>
     <published>2016-02-02T15:52:42.000Z</published>
     <updated>2017-08-23T14:43:52.000Z</updated>
     
@@ -293,8 +293,8 @@
   
   <entry>
     <title>How to Root Nexus6 Devices on Android Marshmallow 6.0</title>
-    <link href="http://ningso.me/2015/12/19/How-to-Root-on-Nexus6-Android6-0/"/>
-    <id>http://ningso.me/2015/12/19/How-to-Root-on-Nexus6-Android6-0/</id>
+    <link href="http://ningso.me/How-to-Root-on-Nexus6-Android6-0/"/>
+    <id>http://ningso.me/How-to-Root-on-Nexus6-Android6-0/</id>
     <published>2015-12-19T14:16:16.000Z</published>
     <updated>2017-04-11T02:41:51.000Z</updated>
     

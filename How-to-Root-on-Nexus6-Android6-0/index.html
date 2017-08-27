@@ -12,7 +12,7 @@
     
     <title>
         
-            KeyTool的基本使用方式 | 
+            How to Root Nexus6 Devices on Android Marshmallow 6.0 | 
         
         NingSo
     </title>
@@ -37,13 +37,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="NingSo">
-    <meta name="description" itemprop="description" content="keytool 创建签名keystore1keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &amp;quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&amp;quot;
+    <meta name="description" itemprop="description" content="
+教程
 
--dname       指定证书拥有者信息 例如：  “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名称,ST=州或省份名称,C=单位的两字母国家代码”
 
-结果:
-Keytool 查看keystore的签名信息执行如下命令，并按照提示输入keystore 密码">
-    <meta name="keywords" content="NingSo Kika keyboard,KeyTool">
+网页教程
+视频教程
+
+
+材料准备
+
+
+下载twrp包
+下载supperSu 和elementalX 包
+
+
+操作
+
+1、将SuperSu.zip和ElementalX.zip复制到ni的sd卡的目录下2、将手机关机进入到Bootloader模式，并将数据线连接电脑（安装包adb环境）3、执行 fastboot flash recovery twrp-2.8.7.1-shamu.img4、然后拔去数据线连接，用手机音量减键选择Recovery mode并确认进入5、滑动swipe to Allow Modifications –&amp;gt;点击install6、找到复制到SD卡里面的ElementalX.zip并点击7、滑动swpie to Confim Flash –&amp;gt;next8、选择- [x]I Agree with these Terms of Use–&amp;gt;next–&amp;gt;看到弹窗框ok9、连续点next最后没了在选择点击install ElementalX–&amp;gt;finish10、滑动swipe to Unlock解锁11、Wipe Cache&amp;amp;Dalvik–&amp;gt;Swipe to Wipe–&amp;gt;Back12、点击选择复制到SD卡里面的SuperSu.zip–&amp;gt;swipe to Confirm Flash13、再次执行一边操作Wipe Cache&amp;amp;Dalvik–&amp;gt;Swipe to Wipe—&amp;gt;Back14、最后点击Reboot System重启手机可以在桌面看到如下图我手机一样的SuperSu图标了">
+    <meta name="keywords" content="NingSo Kika keyboard,Nexus6,Android 6.0,Root">
 
     <!-- Site Verification -->
     
@@ -72,36 +84,60 @@ Keytool 查看keystore的签名信息执行如下命令，并按照提示输入k
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://ningso.me">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="KeyTool的基本使用方式 | NingSo">
+    <meta property="og:title" content="How to Root Nexus6 Devices on Android Marshmallow 6.0 | NingSo">
     <meta property="og:image" content="/img/favicon.png" />
-    <meta property="og:description" content="keytool 创建签名keystore1keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &amp;quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&amp;quot;
+    <meta property="og:description" content="
+教程
 
--dname       指定证书拥有者信息 例如：  “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名称,ST=州或省份名称,C=单位的两字母国家代码”
 
-结果:
-Keytool 查看keystore的签名信息执行如下命令，并按照提示输入keystore 密码">
-    <meta property="og:article:tag" content="KeyTool"> 
+网页教程
+视频教程
+
+
+材料准备
+
+
+下载twrp包
+下载supperSu 和elementalX 包
+
+
+操作
+
+1、将SuperSu.zip和ElementalX.zip复制到ni的sd卡的目录下2、将手机关机进入到Bootloader模式，并将数据线连接电脑（安装包adb环境）3、执行 fastboot flash recovery twrp-2.8.7.1-shamu.img4、然后拔去数据线连接，用手机音量减键选择Recovery mode并确认进入5、滑动swipe to Allow Modifications –&amp;gt;点击install6、找到复制到SD卡里面的ElementalX.zip并点击7、滑动swpie to Confim Flash –&amp;gt;next8、选择- [x]I Agree with these Terms of Use–&amp;gt;next–&amp;gt;看到弹窗框ok9、连续点next最后没了在选择点击install ElementalX–&amp;gt;finish10、滑动swipe to Unlock解锁11、Wipe Cache&amp;amp;Dalvik–&amp;gt;Swipe to Wipe–&amp;gt;Back12、点击选择复制到SD卡里面的SuperSu.zip–&amp;gt;swipe to Confirm Flash13、再次执行一边操作Wipe Cache&amp;amp;Dalvik–&amp;gt;Swipe to Wipe—&amp;gt;Back14、最后点击Reboot System重启手机可以在桌面看到如下图我手机一样的SuperSu图标了">
+    <meta property="og:article:tag" content="Nexus6"> <meta property="og:article:tag" content="Android 6.0"> <meta property="og:article:tag" content="Root"> 
 
     
-        <meta property="article:published_time" content="2月 02, 2016" />
-        <meta property="article:modified_time" content="8月 23, 2017" />
+        <meta property="article:published_time" content="12月 19, 2015" />
+        <meta property="article:modified_time" content="4月 11, 2017" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="KeyTool的基本使用方式 | NingSo">
-    <meta name="twitter:description" content="keytool 创建签名keystore1keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &amp;quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&amp;quot;
+    <meta name="twitter:title" content="How to Root Nexus6 Devices on Android Marshmallow 6.0 | NingSo">
+    <meta name="twitter:description" content="
+教程
 
--dname       指定证书拥有者信息 例如：  “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名称,ST=州或省份名称,C=单位的两字母国家代码”
 
-结果:
-Keytool 查看keystore的签名信息执行如下命令，并按照提示输入keystore 密码">
+网页教程
+视频教程
+
+
+材料准备
+
+
+下载twrp包
+下载supperSu 和elementalX 包
+
+
+操作
+
+1、将SuperSu.zip和ElementalX.zip复制到ni的sd卡的目录下2、将手机关机进入到Bootloader模式，并将数据线连接电脑（安装包adb环境）3、执行 fastboot flash recovery twrp-2.8.7.1-shamu.img4、然后拔去数据线连接，用手机音量减键选择Recovery mode并确认进入5、滑动swipe to Allow Modifications –&amp;gt;点击install6、找到复制到SD卡里面的ElementalX.zip并点击7、滑动swpie to Confim Flash –&amp;gt;next8、选择- [x]I Agree with these Terms of Use–&amp;gt;next–&amp;gt;看到弹窗框ok9、连续点next最后没了在选择点击install ElementalX–&amp;gt;finish10、滑动swipe to Unlock解锁11、Wipe Cache&amp;amp;Dalvik–&amp;gt;Swipe to Wipe–&amp;gt;Back12、点击选择复制到SD卡里面的SuperSu.zip–&amp;gt;swipe to Confirm Flash13、再次执行一边操作Wipe Cache&amp;amp;Dalvik–&amp;gt;Swipe to Wipe—&amp;gt;Back14、最后点击Reboot System重启手机可以在桌面看到如下图我手机一样的SuperSu图标了">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://ningso.me" />
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://ningso.me/2016/02/02/How-To-Use-KeyTool/index.html" />
+        <link rel="canonical" href="http://ningso.me/How-to-Root-on-Nexus6-Android6-0/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -127,16 +163,28 @@ Keytool 查看keystore的签名信息执行如下命令，并按照提示输入k
         },
         "description": "一个还可以继续犯点二的年纪，我会努力变成一个不太二的自己！"
     },
-    "headline": "KeyTool的基本使用方式",
-    "url": "http://ningso.me/2016/02/02/How-To-Use-KeyTool/index.html",
-    "datePublished": "2月 02, 2016",
-    "dateModified": "8月 23, 2017",
-    "description": "keytool 创建签名keystore1keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &amp;quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&amp;quot;
+    "headline": "How to Root Nexus6 Devices on Android Marshmallow 6.0",
+    "url": "http://ningso.me/How-to-Root-on-Nexus6-Android6-0/index.html",
+    "datePublished": "12月 19, 2015",
+    "dateModified": "4月 11, 2017",
+    "description": "
+教程
 
--dname       指定证书拥有者信息 例如：  “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名称,ST=州或省份名称,C=单位的两字母国家代码”
 
-结果:
-Keytool 查看keystore的签名信息执行如下命令，并按照提示输入keystore 密码",
+网页教程
+视频教程
+
+
+材料准备
+
+
+下载twrp包
+下载supperSu 和elementalX 包
+
+
+操作
+
+1、将SuperSu.zip和ElementalX.zip复制到ni的sd卡的目录下2、将手机关机进入到Bootloader模式，并将数据线连接电脑（安装包adb环境）3、执行 fastboot flash recovery twrp-2.8.7.1-shamu.img4、然后拔去数据线连接，用手机音量减键选择Recovery mode并确认进入5、滑动swipe to Allow Modifications –&amp;gt;点击install6、找到复制到SD卡里面的ElementalX.zip并点击7、滑动swpie to Confim Flash –&amp;gt;next8、选择- [x]I Agree with these Terms of Use–&amp;gt;next–&amp;gt;看到弹窗框ok9、连续点next最后没了在选择点击install ElementalX–&amp;gt;finish10、滑动swipe to Unlock解锁11、Wipe Cache&amp;amp;Dalvik–&amp;gt;Swipe to Wipe–&amp;gt;Back12、点击选择复制到SD卡里面的SuperSu.zip–&amp;gt;swipe to Confirm Flash13、再次执行一边操作Wipe Cache&amp;amp;Dalvik–&amp;gt;Swipe to Wipe—&amp;gt;Back14、最后点击Reboot System重启手机可以在桌面看到如下图我手机一样的SuperSu图标了",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://ningso.me"
@@ -348,7 +396,7 @@ Keytool 查看keystore的签名信息执行如下命令，并按照提示输入k
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#keytool-创建签名keystore"><span class="post-toc-number">1.</span> <span class="post-toc-text">keytool 创建签名keystore</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Keytool-查看keystore的签名信息"><span class="post-toc-number">2.</span> <span class="post-toc-text">Keytool 查看keystore的签名信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Keytool-查看apk的签名信息"><span class="post-toc-number">3.</span> <span class="post-toc-text">Keytool 查看apk的签名信息</span></a></li></ol>
+        
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -386,7 +434,7 @@ Keytool 查看keystore的签名信息执行如下命令，并按照提示输入k
         
     
             <p class="article-headline-p">
-                KeyTool的基本使用方式
+                How to Root Nexus6 Devices on Android Marshmallow 6.0
             </p>
         </div>
 
@@ -405,7 +453,7 @@ Keytool 查看keystore的签名信息执行如下命令，并按照提示输入k
     <!-- Author Name & Date -->
     <div>
         <strong>NingSo</strong>
-        <span>2月 02, 2016</span>
+        <span>12月 19, 2015</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -427,7 +475,7 @@ Keytool 查看keystore的签名信息执行如下命令，并按照提示输入k
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACa0lEQVR42u3aQVLDMBAEwPz/0/AAymFmJQuHap0oSGy3D9Iyu6+vf71eeHh4eHh4eHh4D+O94nV5ubefya/286+zZ8PDw8M7w/tlq337QMm38k+uPxseHh7eSd7Vhnv1mfw3+Ua/8mx4eHh4n8KLAoK4KE/ui4eHh/fpvNdoRcUxHh4e3uN5bawwK44fnbXg4eHhxbx8Kz//89H+Hh4eHl7Aq0ea3oazK62vNuC4vCYeHh7ezbxZiZxHse+vnAQN9RAYHh4e3hFeEh/MRgGS4HV2xzqMwMPDw7uZ17am8gOgPUja8QU8PDy8u3mz0CF5oCRumIGLkhoPDw/vBl5y+3VSPkzQRhV4eHh4f8Vrm0+zY2AFXLw4PDw8vJt5+YVmIWwbRuRjr3UYgYeHh7eJt+tgiAZJY0b7KvHw8PBO8trNPRkaSMrfWbwbPTMeHh7eEd5KMV1v3MtFeT06gIeHh3czLy+gZ1v5DLw0dIWHh4e3lber9TUsf4MwNw878PDw8M7w8rZTXijnA1LtMTMcHcDDw8PbylsZD0027tnmntwxinHx8PDwbuPl0UMbquaNtPywWfqPAQ8PD28rr23/txHtrFBeaoDh4eHhHeHlMWuyZbcFer7qkhoPDw9vE69deZyax8TrYwR4eHh4J3ntRrzyrZW2WdFOw8PDwzvCmwUKCXhbOBtHEnh4eHgneW30kDf1ZwNbbQyBh4eH93xe28SaRRJ1uY+Hh4f3SF7e+soPhnz8axhG4OHh4d3AW2lKtcV3+2qKQwUPDw/vCG8WAezCJMfSUhiBh4eHt5X3/xYeHh4eHh4eHt4D1jf+OMRwWa8QIwAAAABJRU5ErkJggg==">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACZklEQVR42u3aQW7DMAwEwPz/0+21QBpnSUqKEYxPReLKHh0kZcnHz1dfDzw8PDw8PDw8vJvxHvH19/5/Bn2689X913c+Pyt/Nzw8PLyTvDdL7eUj85e+flY+lW+mDw8PD+8gL98Mkk9yRsIrvBseHh7ezXjJ0bn3LR4eHt638iZBw2Qi8PDw8O7Jy3/wTzCTLWR71oKHh4cX83oFsDN/f6y+h4eHh/eCV25pCh4wKWvlcfDLEfDw8PA285Ijb85IFvRe+FsIlPHw8PA+xMubR6vBQS/SLcQZeHh4eJt5k7A1We6vF/HetBY2Bjw8PLzNvOpCX40nqo1cvf/Cw8PDO8nLX3fewFo9dm/Z9/Dw8PBavF5zQDXMrX4yKZXh4eHhneTlsWmvlJWX0/JgFw8PD+88L6euvadXVIvGxMPDw9vMyxfxatNANcjIn4KHh4f3WV7hR36rQJUcjnNeNK14eHh4m3m9g+98C1kbEOPh4eGd5K1a6CcRQ36gj47seHh4eJt5vQJY70WTwKLa4IWHh4f3KV5etp+0Gmwpd+Hh4eEd5/VKVnnIG8UHrUaE8i8GPDw8vKW866W8uuhXY458o2rW9/Dw8PCW8la1nO7YQqrNBHh4eHhneNUrb72qNk5Njt14eHh4J3mrGqeSSZkUw64jEjw8PLzzvHwzqEYSeYkrwUdj4uHh4R3k9Yr6+bd5uNCLIfDw8PDuyaveU402yi1WazcGPDw8vM28yUE8iWirWwIeHh7eeV5vOV41QnJMj0bGw8PDO8JbFQTkI/c2kubGgIeHh7eU930XHh4eHh4eHh7eDa5farJy3hh457wAAAAASUVORK5CYII=">
     
 </ul>
     
@@ -440,7 +488,7 @@ Keytool 查看keystore的签名信息执行如下命令，并按照提示输入k
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/KeyTool/">KeyTool</a>
+        <a class="post_tag-link" href="/tags/Android-6-0/">Android 6.0</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Nexus6/">Nexus6</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Root/">Root</a>
     </ul>
     
 
@@ -458,7 +506,7 @@ Keytool 查看keystore的签名信息执行如下命令，并按照提示输入k
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=KeyTool的基本使用方式&url=http://ningso.me/2016/02/02/How-To-Use-KeyTool/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=How to Root Nexus6 Devices on Android Marshmallow 6.0&url=http://ningso.me/How-to-Root-on-Nexus6-Android6-0/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -467,7 +515,7 @@ Keytool 查看keystore的签名信息执行如下命令，并按照提示输入k
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=KeyTool的基本使用方式&url=http://ningso.me/2016/02/02/How-To-Use-KeyTool/index.html&via=NingSo" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=How to Root Nexus6 Devices on Android Marshmallow 6.0&url=http://ningso.me/How-to-Root-on-Nexus6-Android6-0/index.html&via=NingSo" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -476,7 +524,7 @@ Keytool 查看keystore的签名信息执行如下命令，并按照提示输入k
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ningso.me/2016/02/02/How-To-Use-KeyTool/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ningso.me/How-to-Root-on-Nexus6-Android6-0/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -485,7 +533,7 @@ Keytool 查看keystore的签名信息执行如下命令，并按照提示输入k
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://ningso.me/2016/02/02/How-To-Use-KeyTool/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://ningso.me/How-to-Root-on-Nexus6-Android6-0/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -509,17 +557,35 @@ Keytool 查看keystore的签名信息执行如下命令，并按照提示输入k
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="keytool-创建签名keystore"><a href="#keytool-创建签名keystore" class="headerlink" title="keytool 创建签名keystore"></a>keytool 创建签名<code>keystore</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&quot;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>-dname       指定证书拥有者信息 例如：  “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名称,ST=州或省份名称,C=单位的两字母国家代码”</p>
+        <blockquote>
+<p>教程</p>
 </blockquote>
-<p>结果:<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-1@2x.png" alt="创建签名"></p>
-<h3 id="Keytool-查看keystore的签名信息"><a href="#Keytool-查看keystore的签名信息" class="headerlink" title="Keytool 查看keystore的签名信息"></a>Keytool 查看keystore的签名信息</h3><p>执行如下命令，并按照提示输入keystore 密码</p>
+<ul>
+<li><a href="http://www.ibtimes.co.uk/how-root-android-6-0-marshmallow-build-mra58k-nexus-5-6-7-9-nexus-player-1522653" target="_blank" rel="external">网页教程</a></li>
+<li><a href="https://www.youtube.com/watch?v=HmpaxJJOhi0" target="_blank" rel="external">视频教程</a></li>
+</ul>
+<blockquote>
+<p>材料准备</p>
+</blockquote>
+<ul>
+<li><a href="https://twrp.me/devices/motorolanexus6.html" target="_blank" rel="external">下载twrp包</a></li>
+<li><a href="http://elementalx.org/devices/nexus-6/" target="_blank" rel="external">下载supperSu 和elementalX 包</a></li>
+</ul>
+<blockquote>
+<p>操作</p>
+</blockquote>
+<p>1、将SuperSu.zip和ElementalX.zip复制到ni的sd卡的目录下<br>2、将手机关机进入到Bootloader模式，并将数据线连接电脑（安装包adb环境）<br>3、执行 fastboot flash recovery twrp-2.8.7.1-shamu.img<br>4、然后拔去数据线连接，用手机音量减键选择Recovery mode并确认进入<br>5、滑动<code>swipe to Allow Modifications</code> –&gt;点击<code>install</code><br>6、找到复制到SD卡里面的<code>ElementalX.zip</code>并点击<br>7、滑动<code>swpie to Confim Flash</code> –&gt;<code>next</code><br>8、选择- [x]<code>I Agree with these Terms of Use</code>–&gt;<code>next</code>–&gt;看到弹窗框<code>ok</code><br>9、连续点<code>next</code>最后没了在选择点击<code>install ElementalX</code>–&gt;<code>finish</code><br>10、滑动<code>swipe to Unlock</code>解锁<br>11、<code>Wipe Cache&amp;Dalvik</code>–&gt;<code>Swipe to Wipe</code>–&gt;<code>Back</code><br>12、点击选择复制到SD卡里面的<code>SuperSu.zip</code>–&gt;<code>swipe to Confirm Flash</code><br>13、再次执行一边操作<code>Wipe Cache&amp;Dalvik</code>–&gt;<code>Swipe to Wipe</code>—&gt;<code>Back</code><br>14、最后点击<code>Reboot System</code>重启手机可以在桌面看到如下图我手机一样的SuperSu图标了</p>
 <a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -list -v -keystore XXXX.keystore</div></pre></td></tr></table></figure>
-<p>结果：<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-0@2x.png" alt="keystore的签名信息"></p>
-<h3 id="Keytool-查看apk的签名信息"><a href="#Keytool-查看apk的签名信息" class="headerlink" title="Keytool 查看apk的签名信息"></a>Keytool 查看apk的签名信息</h3><p>解压apk得到META-INF文件夹下面的RSA文件，执行如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -printcert -file XXX/META-INF/CERT.RSA</div></pre></td></tr></table></figure></p>
-<p> 结果：<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-2@2x.png" alt="查看apk的签名信息"></p>
+<blockquote>
+<p>以上步骤都是根据视屏里面讲解来的，翻不了墙没办法打开Youtube视频的可以直接安装上面操作步骤来做。</p>
+</blockquote>
+<hr>
+<p><img src="https://dn-ningso.qbox.me/image/git-markdown/shuaroot1.png" alt="Paste_Image.png"></p>
+<p><img src="https://dn-ningso.qbox.me/image/git-markdown/shuaroot2.png" alt="Paste_Image.png"></p>
+<p><img src="https://dn-ningso.qbox.me/image/git-markdown/shauroot3.png" alt="Paste_Image.png"></p>
+<ul>
+<li>如有不懂欢迎留言</li>
+</ul>
 
     
 
@@ -539,7 +605,7 @@ Keytool 查看keystore的签名信息执行如下命令，并按照提示输入k
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2016/06/23/ADB常用命令总结/" id="post_nav-newer" class="prev-content">
+        <a href="/How-To-Use-KeyTool/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -552,14 +618,6 @@ Keytool 查看keystore的签名信息执行如下命令，并按照提示输入k
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
-    
-        <a href="/2015/12/19/How-to-Root-on-Nexus6-Android6-0/" id="post_nav-older" class="next-content">
-            旧篇
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_forward</i>
-            </button>
-        </a>
     
 </nav>
 

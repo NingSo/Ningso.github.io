@@ -12,7 +12,7 @@
     
     <title>
         
-            Andorid Studio NDK快捷编译配置 | 
+            adb常用命令总结 | 
         
         NingSo
     </title>
@@ -37,10 +37,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="NingSo">
-    <meta name="description" itemprop="description" content="Andorid Studio NDK快捷编译配置
-接触Jni的时候，最繁琐的就是去生成.h头文件，以前很笨的方法就是通过javah工具生成.h头文件，还要各种指定路径等繁琐操作,写着写着就有点烦人。现在介绍一种更快捷的方式，通过配置快捷键的形式一劳永逸。
-">
-    <meta name="keywords" content="NingSo Kika keyboard,NDK,Jni">
+    <meta name="description" itemprop="description" content="一个还可以继续犯点二的年纪，我会努力变成一个不太二的自己！">
+    <meta name="keywords" content="NingSo Kika keyboard,ADB">
 
     <!-- Site Verification -->
     
@@ -69,30 +67,26 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://ningso.me">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Andorid Studio NDK快捷编译配置 | NingSo">
+    <meta property="og:title" content="adb常用命令总结 | NingSo">
     <meta property="og:image" content="/img/favicon.png" />
-    <meta property="og:description" content="Andorid Studio NDK快捷编译配置
-接触Jni的时候，最繁琐的就是去生成.h头文件，以前很笨的方法就是通过javah工具生成.h头文件，还要各种指定路径等繁琐操作,写着写着就有点烦人。现在介绍一种更快捷的方式，通过配置快捷键的形式一劳永逸。
-">
-    <meta property="og:article:tag" content="NDK"> <meta property="og:article:tag" content="Jni"> 
+    <meta property="og:description" content="一个还可以继续犯点二的年纪，我会努力变成一个不太二的自己！">
+    <meta property="og:article:tag" content="ADB"> 
 
     
-        <meta property="article:published_time" content="7月 19, 2017" />
+        <meta property="article:published_time" content="6月 23, 2016" />
         <meta property="article:modified_time" content="8月 23, 2017" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="Andorid Studio NDK快捷编译配置 | NingSo">
-    <meta name="twitter:description" content="Andorid Studio NDK快捷编译配置
-接触Jni的时候，最繁琐的就是去生成.h头文件，以前很笨的方法就是通过javah工具生成.h头文件，还要各种指定路径等繁琐操作,写着写着就有点烦人。现在介绍一种更快捷的方式，通过配置快捷键的形式一劳永逸。
-">
+    <meta name="twitter:title" content="adb常用命令总结 | NingSo">
+    <meta name="twitter:description" content="一个还可以继续犯点二的年纪，我会努力变成一个不太二的自己！">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://ningso.me" />
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://ningso.me/2017/07/19/AndoridStudio-NDK-Quick-Build-configuration/index.html" />
+        <link rel="canonical" href="http://ningso.me/ADB常用命令总结/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -118,13 +112,11 @@
         },
         "description": "一个还可以继续犯点二的年纪，我会努力变成一个不太二的自己！"
     },
-    "headline": "Andorid Studio NDK快捷编译配置",
-    "url": "http://ningso.me/2017/07/19/AndoridStudio-NDK-Quick-Build-configuration/index.html",
-    "datePublished": "7月 19, 2017",
+    "headline": "adb常用命令总结",
+    "url": "http://ningso.me/ADB常用命令总结/index.html",
+    "datePublished": "6月 23, 2016",
     "dateModified": "8月 23, 2017",
-    "description": "Andorid Studio NDK快捷编译配置
-接触Jni的时候，最繁琐的就是去生成.h头文件，以前很笨的方法就是通过javah工具生成.h头文件，还要各种指定路径等繁琐操作,写着写着就有点烦人。现在介绍一种更快捷的方式，通过配置快捷键的形式一劳永逸。
-",
+    "description": "一个还可以继续犯点二的年纪，我会努力变成一个不太二的自己！",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://ningso.me"
@@ -336,7 +328,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Andorid-Studio-NDK快捷编译配置"><span class="post-toc-number">1.</span> <span class="post-toc-text">Andorid Studio NDK快捷编译配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#NDK开发常见的一些错误："><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">NDK开发常见的一些错误：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Error-1"><span class="post-toc-number">1.0.1.1.</span> <span class="post-toc-text">Error 1</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ADB命令"><span class="post-toc-number">1.</span> <span class="post-toc-text">ADB命令</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#AAPT命令"><span class="post-toc-number">2.</span> <span class="post-toc-text">AAPT命令</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#终端命令更新SDK"><span class="post-toc-number">3.</span> <span class="post-toc-text">终端命令更新SDK</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -374,7 +366,7 @@
         
     
             <p class="article-headline-p">
-                Andorid Studio NDK快捷编译配置
+                adb常用命令总结
             </p>
         </div>
 
@@ -393,7 +385,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>NingSo</strong>
-        <span>7月 19, 2017</span>
+        <span>6月 23, 2016</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -415,7 +407,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC40lEQVR42u3awW4bMQwEUP//T7fXAm22M6SDeLVvTwFsy3o6ZExSr1+PfF7Y2NjY2NjY2NjYH8l+xc+f7/9qhX98Wfzq39/SvvrV+7GxsbGfwP7Pv/7LTeefvQZcr3x99MnesLGxsZ/AbkMrCaokhGZr1nvGxsbGxi4ZefC0B42NjY2NvWe3hUfbWsobW9jY2NjY72oM5bHUrvARvTRsbGzsj2dvwuOn/v6x+TY2Njb2h7Hbp91iDkheXe0cGxsb+1B2Xga07aF9QLbR9YYKDBsbG/uG7Ha5/BJP8qnZNaDkiKPcxsbGxj6IPWvrz9pA18fdxl5eqGBjY2Ofyt4s1246D6fZe4oAw8bGxj6IPYuo/WHti5P6VWxsbOxD2fnYtd1Qvs4m6t4wFcHGxsa+OXt2sWYDyI8pvwAa7RAbGxv7aHZ7mWbWQkpaUe1g+Nvn29jY2Ng3Ye/bQPkx1cETH1ndS8PGxsY+iJ1vty0G8oh6VylS5zY2Njb2zdmbJn7Syp+1opKhRf1d2NjY2A9gz37ut8eR89pBxTDAsLGxsW/OTr5yFlp5U2k2AMijCxsbG/tsdv3hRWMob061495on9jY2NiHsvMYmw0M2gP9jsEANjY29tns9sd9HkttAbMfJxRXdrCxsbEPYufBkGxxEzyb60Fvu6mEjY2NfUN2UiS0A9f82R9NsX9sbGzsQ9n5AKBF5u2hWXFSlzHY2NjYD2DnJUTe4tlvPdlVUpBgY2Njn8rO20BtOCUrbAqSOiCxsbGxD2W/qw00azwV8RMPD7CxsbGfxp4Fw2zoO7uOk4dcPRXBxsbGPog9GxhsomXffkpiDxsbG/tp7M3VydkYoC05ZuGKjY2Njd2GSj4kyHfSFipRUwkbGxv7weyklb+57jM7vm8sRbCxsbFvws6bSm1cDS/ZXJcW7ypFsLGxsY9gzwa9+SWb2Ri4hl2vho2NjX0o+zkPNjY2NjY2NjY29sc8vwG4wTQ2llAfzAAAAABJRU5ErkJggg==">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACYklEQVR42u3aQW4DIRAEQP//08k1UhS7e2DxOipOlpP1Uhxg1Mzj61+PBx4eHh4eHh4e3s14j3j8fur5N7P//PnX4dzw8PDwjvBebLWbeH9NK1+aaG54eHh4B3nJ6/PPf23cz4+B9aXBw8PDuzOvjgkCartkeHh4eJ/LS0KEpCjHw8PD+yxesqGvL0FSOr8ta8HDw8OLefkl0/nPR+/38PDw8ALeLFBomwxWmhLqGeLh4eFdzMs34jZKaIOJtukKDw8P7128/DpqV2i70gKLh4eHdx/e89fn7VPJs7PAN/8FPDw8vDO8WRzQTqJtDtjQOoCHh4d3Aa9tfkqWYFaUrzQr4OHh4Z3kJdv93k2/fWMe++Lh4eGd4bUBa9ue1S5K++zwfg8PDw9vK6+9jloJgmcHxouDDQ8PD+9iXh4o5GV03SY1CiOGKTUeHh7eVl6yBecTbVuv8sJ6eL+Hh4eHt4mXN5sWV1BlmT77nSLGxcPDw7uYlx8SeXmdBA35Qrw4nPDw8PCO8NoNvb0Maw+SWasWHh4e3nneekSbB7htGJGA8fDw8M7z2iuu9Xg3L6yLKAQPDw/vOK+NJNp2q7b4rkNkPDw8vOO8PKhdCXzzULhtWsXDw8O7mteOdsteiXSH7Qh4eHh4F/Me8Zg1EOQRbRtM4OHh4b2Xt34YJJdbOXJlDnh4eHgneW2J3C7NbPnqIwcPDw/vxry62C0D3yEYDw8P78N5bZCRlOZL93t4eHh4W3l5Wbze5JoUyps7I/Dw8PC28vKydf2bvHU1vx7Dw8PDO8n7fwMPDw8PDw8PD+8G4xtHwTUAmpcJzwAAAABJRU5ErkJggg==">
     
 </ul>
     
@@ -428,7 +420,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Jni/">Jni</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/NDK/">NDK</a>
+        <a class="post_tag-link" href="/tags/ADB/">ADB</a>
     </ul>
     
 
@@ -446,7 +438,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Andorid Studio NDK快捷编译配置&url=http://ningso.me/2017/07/19/AndoridStudio-NDK-Quick-Build-configuration/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=adb常用命令总结&url=http://ningso.me/ADB常用命令总结/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -455,7 +447,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Andorid Studio NDK快捷编译配置&url=http://ningso.me/2017/07/19/AndoridStudio-NDK-Quick-Build-configuration/index.html&via=NingSo" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=adb常用命令总结&url=http://ningso.me/ADB常用命令总结/index.html&via=NingSo" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -464,7 +456,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ningso.me/2017/07/19/AndoridStudio-NDK-Quick-Build-configuration/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ningso.me/ADB常用命令总结/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -473,7 +465,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://ningso.me/2017/07/19/AndoridStudio-NDK-Quick-Build-configuration/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://ningso.me/ADB常用命令总结/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -497,15 +489,35 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Andorid-Studio-NDK快捷编译配置"><a href="#Andorid-Studio-NDK快捷编译配置" class="headerlink" title="Andorid Studio NDK快捷编译配置"></a>Andorid Studio NDK快捷编译配置</h1><blockquote>
-<p>接触Jni的时候，最繁琐的就是去生成<code>.h</code>头文件，以前很笨的方法就是通过javah工具生成.h头文件，还要各种指定路径等繁琐操作,写着写着就有点烦人。现在介绍一种更快捷的方式，通过配置快捷键的形式一劳永逸。</p>
+        <h2 id="ADB命令"><a href="#ADB命令" class="headerlink" title="ADB命令"></a>ADB命令</h2><ul>
+<li>adb shell cat [file] <code>查看文件内容</code></li>
+<li>adb shell service list <code>查看后台服务信息</code></li>
+<li>adb push [local] [remote] <code>将电脑本地文件拷贝到手机设备</code></li>
+<li>adb pull [remote] [local] <code>把文件从设备复制到本地电脑</code></li>
+<li>adb shell monkey -v -p [packagename] 500 <code>执行monkey命令</code></li>
+<li>adb shell dumpsys activity top  <code>查看栈顶activity的信息</code></li>
+<li>adb shell pm clear [packagename] <code>清除应用数据</code></li>
+</ul>
+<h2 id="AAPT命令"><a href="#AAPT命令" class="headerlink" title="AAPT命令"></a>AAPT命令</h2><p> Android asset packaging tool</p>
+<ul>
+<li>aapt list filepath.apk <code>列出apk的所有资源文件目录清单</code></li>
+<li>aapt list -v filepath.apk </li>
+<li>aapt d[ump] [values] file.{apk} </li>
+</ul>
+<blockquote>
+<p>下面的四个参值为values的值</p>
+<ul>
+<li><code>badging</code> 查看apk的包名，laber 权限等所有信息</li>
+<li><code>permissions</code> 查看apk权限</li>
+<li><code>resources</code> 打印的所有资源文件列表</li>
+<li><code>configurations</code> 查看apk配置信息</li>
+</ul>
 </blockquote>
-<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">javah</div><div class="line">Program:$JDKPath$/bin/javah</div><div class="line">Parameters:-encoding UTF-8 -d ../jni -jni $FileClass$</div><div class="line">Working directory:$ModuleFileDir$/src/main/java</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ndk-build</div><div class="line">Program:/Users/Liam/Library/Android/sdk/ndk-bundle/build/ndk-build</div><div class="line">Parameters:</div><div class="line">Working directory:$ModuleFileDir$/src/main</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ndk-build clean</div><div class="line">Program:/Users/Liam/Library/Android/sdk/ndk-bundle/build/ndk-build</div><div class="line">Parameters:clean</div><div class="line">Working directory:$ModuleFileDir$/src/main</div></pre></td></tr></table></figure>
-<h3 id="NDK开发常见的一些错误："><a href="#NDK开发常见的一些错误：" class="headerlink" title="NDK开发常见的一些错误："></a>NDK开发常见的一些错误：</h3><h4 id="Error-1"><a href="#Error-1" class="headerlink" title="Error 1"></a>Error 1</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">UnsatisfiedLinkError: No implementation found for int com.liam.nativeplugin.nativeutils.SymLink.createSymLinkJNI(java.lang.String, java.lang.String) </div><div class="line">(tried Java_com_liam_nativeplugin_nativeutils_SymLink_createSymLinkJNI and Java_com_liam_nativeplugin_nativeutils_SymLink_createSymLinkJNI__Ljava_lang_String_2Ljava_lang_String_2)</div></pre></td></tr></table></figure>
-<p>这是刚接触的时候最会遇到的错误类型了，意思就是会所，<code>.c</code>文件定义的JNI接口类型是<code>Java_com_liam_nativeplugin_nativeutils_SymLink_createSymLinkJNI</code> 即包名必须为<code>com.liam.nativeplugin.nativeutils</code>,类名为必须为<code>SymLink</code>。<br>也就是说，我们.so中函数声明涉及到的package name和class name与调用它的package name和class name不符。因此我们要改变我们工程中的package name和class name。使其与.so文件中函数签名提示的一致，在这个类中加入native方法的声明。<br>知道了这个规则，那么错误解决方案自然也就懂了。修改正确的package name和class name重新编译一下就好了。</p>
+<h2 id="终端命令更新SDK"><a href="#终端命令更新SDK" class="headerlink" title="终端命令更新SDK"></a>终端命令更新SDK</h2><ul>
+<li>android list sdk <code>查看已安装完成的包</code> </li>
+<li>android list sdk –all <code>列举出所有可安装更新包的序列号</code></li>
+<li>android update sdk –no-ui –filter 1,2,3… <code>下载更新对应序列号的包</code></li>
+</ul>
 
     
 
@@ -525,13 +537,21 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
+        <a href="/TexturePacker/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/04/01/How-to-use-git/" id="post_nav-older" class="next-content">
+        <a href="/How-To-Use-KeyTool/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

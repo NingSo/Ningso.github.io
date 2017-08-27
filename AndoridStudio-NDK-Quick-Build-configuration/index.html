@@ -12,7 +12,7 @@
     
     <title>
         
-            使用TexturePacker对资源图进行打包的两种方法 | 
+            Andorid Studio NDK快捷编译配置 | 
         
         NingSo
     </title>
@@ -37,10 +37,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="NingSo">
-    <meta name="description" itemprop="description" content="方式一：执行jar方式1java -jar runnable-texturepacker.jar [inputDir] [outputDir] [packFileName]
-注意：第一个参数资源文件路径必填项，后面两参数为可选项runnable-texturepacker.jar下载
-方式二：通过Android Studio的Gradle在项目全局build.gradle中引入环境">
-    <meta name="keywords" content="NingSo Kika keyboard,TexturePacker,Gradle,Libgdx">
+    <meta name="description" itemprop="description" content="Andorid Studio NDK快捷编译配置
+接触Jni的时候，最繁琐的就是去生成.h头文件，以前很笨的方法就是通过javah工具生成.h头文件，还要各种指定路径等繁琐操作,写着写着就有点烦人。现在介绍一种更快捷的方式，通过配置快捷键的形式一劳永逸。
+">
+    <meta name="keywords" content="NingSo Kika keyboard,NDK,Jni">
 
     <!-- Site Verification -->
     
@@ -69,30 +69,30 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://ningso.me">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="使用TexturePacker对资源图进行打包的两种方法 | NingSo">
+    <meta property="og:title" content="Andorid Studio NDK快捷编译配置 | NingSo">
     <meta property="og:image" content="/img/favicon.png" />
-    <meta property="og:description" content="方式一：执行jar方式1java -jar runnable-texturepacker.jar [inputDir] [outputDir] [packFileName]
-注意：第一个参数资源文件路径必填项，后面两参数为可选项runnable-texturepacker.jar下载
-方式二：通过Android Studio的Gradle在项目全局build.gradle中引入环境">
-    <meta property="og:article:tag" content="TexturePacker"> <meta property="og:article:tag" content="Gradle"> <meta property="og:article:tag" content="Libgdx"> 
+    <meta property="og:description" content="Andorid Studio NDK快捷编译配置
+接触Jni的时候，最繁琐的就是去生成.h头文件，以前很笨的方法就是通过javah工具生成.h头文件，还要各种指定路径等繁琐操作,写着写着就有点烦人。现在介绍一种更快捷的方式，通过配置快捷键的形式一劳永逸。
+">
+    <meta property="og:article:tag" content="NDK"> <meta property="og:article:tag" content="Jni"> 
 
     
-        <meta property="article:published_time" content="11月 29, 2016" />
-        <meta property="article:modified_time" content="4月 11, 2017" />
+        <meta property="article:published_time" content="7月 19, 2017" />
+        <meta property="article:modified_time" content="8月 23, 2017" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="使用TexturePacker对资源图进行打包的两种方法 | NingSo">
-    <meta name="twitter:description" content="方式一：执行jar方式1java -jar runnable-texturepacker.jar [inputDir] [outputDir] [packFileName]
-注意：第一个参数资源文件路径必填项，后面两参数为可选项runnable-texturepacker.jar下载
-方式二：通过Android Studio的Gradle在项目全局build.gradle中引入环境">
+    <meta name="twitter:title" content="Andorid Studio NDK快捷编译配置 | NingSo">
+    <meta name="twitter:description" content="Andorid Studio NDK快捷编译配置
+接触Jni的时候，最繁琐的就是去生成.h头文件，以前很笨的方法就是通过javah工具生成.h头文件，还要各种指定路径等繁琐操作,写着写着就有点烦人。现在介绍一种更快捷的方式，通过配置快捷键的形式一劳永逸。
+">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://ningso.me" />
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://ningso.me/2016/11/29/TexturePacker/index.html" />
+        <link rel="canonical" href="http://ningso.me/AndoridStudio-NDK-Quick-Build-configuration/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -118,13 +118,13 @@
         },
         "description": "一个还可以继续犯点二的年纪，我会努力变成一个不太二的自己！"
     },
-    "headline": "使用TexturePacker对资源图进行打包的两种方法",
-    "url": "http://ningso.me/2016/11/29/TexturePacker/index.html",
-    "datePublished": "11月 29, 2016",
-    "dateModified": "4月 11, 2017",
-    "description": "方式一：执行jar方式1java -jar runnable-texturepacker.jar [inputDir] [outputDir] [packFileName]
-注意：第一个参数资源文件路径必填项，后面两参数为可选项runnable-texturepacker.jar下载
-方式二：通过Android Studio的Gradle在项目全局build.gradle中引入环境",
+    "headline": "Andorid Studio NDK快捷编译配置",
+    "url": "http://ningso.me/AndoridStudio-NDK-Quick-Build-configuration/index.html",
+    "datePublished": "7月 19, 2017",
+    "dateModified": "8月 23, 2017",
+    "description": "Andorid Studio NDK快捷编译配置
+接触Jni的时候，最繁琐的就是去生成.h头文件，以前很笨的方法就是通过javah工具生成.h头文件，还要各种指定路径等繁琐操作,写着写着就有点烦人。现在介绍一种更快捷的方式，通过配置快捷键的形式一劳永逸。
+",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://ningso.me"
@@ -336,7 +336,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#方式一：执行jar方式"><span class="post-toc-number">1.</span> <span class="post-toc-text">方式一：执行jar方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#方式二：通过Android-Studio的Gradle"><span class="post-toc-number">2.</span> <span class="post-toc-text">方式二：通过Android Studio的Gradle</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参考来源"><span class="post-toc-number">3.</span> <span class="post-toc-text">参考来源:</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Andorid-Studio-NDK快捷编译配置"><span class="post-toc-number">1.</span> <span class="post-toc-text">Andorid Studio NDK快捷编译配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#NDK开发常见的一些错误："><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">NDK开发常见的一些错误：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Error-1"><span class="post-toc-number">1.0.1.1.</span> <span class="post-toc-text">Error 1</span></a></li></ol></li></ol></li></ol></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -374,7 +374,7 @@
         
     
             <p class="article-headline-p">
-                使用TexturePacker对资源图进行打包的两种方法
+                Andorid Studio NDK快捷编译配置
             </p>
         </div>
 
@@ -393,7 +393,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>NingSo</strong>
-        <span>11月 29, 2016</span>
+        <span>7月 19, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -415,7 +415,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACdElEQVR42u3aUW6DMBAE0Nz/0u0B0oSZNTGkenxFFRieK9nW7D5+/vX1wMPDw8PDw8PDuxnvEV/PT/0x9Is7X432/PvVX4pvw8PDw9vCO1hq32KSFycj5O89mFA8PDy8jbx2+X6/YbTLejsaHh4e3vfykmN0srjPphUPDw/vu3j5YTd56nYbAx4eHt5JYcT7sDXfPN6Pf1nWgoeHhxfzZpHBnt9b63t4eHh4Aa9uaSrDhfyeZOS66QoPDw/vA7x8Ic7jg9lm0zZd4eHh4V3Fa+OAJJxt2wuSdxXlNzw8PLyLeOuL9UrzVh5SDDcGPDw8vGVevjTnJbEkYlg5duPh4eFdxWsHyoOJ/J62EeFgNDw8PLztvCQIaBf6fELz6ag7I/Dw8PBO4uVxbbudtJFH21gwzFrw8PDwlnl5q9OsQapd3PPjdd0ZgYeHh3cSb1Zqmt2fRLR1uWu9MwIPDw9vxMtDh/yz2k1ldnDHw8PDu5a3crQdlvlLavQPwMPDw/swb6XQ1eLbo3le9MLDw8PbyWvL/22Ymwe+bWmt3vfw8PDwTu3nbI/CyUYyC3PzODiKcfHw8PC282YhRfEpbXErCTjw8PDwLuLl28ZKnLE+oXh4eHjX8mavn01EfuDOpxUPDw9vD6+92lB1pbTWHv3x8PDw9vBmS/AsYsg3oZWDNR4eHt4eXl7+zxfoldHyp/Dw8PCu5bVF/bxBKoHlG9VBkQwPDw/vq3j5QTmPJOpJxMPDw7slb9ZM0Ma7w9Hw8PDwNvLaolS+iK+XxPLgAw8PD28PL48AzjqCn9Ai8In6Hh4eHt4H+jnvf+Hh4eHh4eHh4d3g+gWyMqWBgIT4nAAAAABJRU5ErkJggg==">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC2klEQVR42u3aQW7jMBAEQP3/07vXAIHtbo52IZOlk5EoFmsMZMweXn+OvC5sbGxsbGxsbGzsR7Kv+Pp5/+/Xa+/2+2/fv8/kKdjY2Nh7sz/86397z6sFvSpHe2dS7mTN2NjY2Cewk6aVLyJvOZP1FGvGxsbGxo63AXk5Xv02LzQ2NjY29r0NI4mNkg3JFzQwbGxs7Eey89iobT9taSZrwMbGxj6TPR/0/v/Xj5hvY2NjYz+A3V7zwzT5wOB9q6tXjo2Njb0pe21M++FL/+DgTjv6LVaFjY2NvSm7fXw7Hmh/Mhk5fLgTGxsbe1N20gaSEuTFSgo92dIUWxFsbGzsjdjzhnFv+fKxcXE/NjY29qbsybLaQzOTwrVlWgyVsLGxsb+QnZPye9YGAGtFL9aPjY2NvSm7/XLfDmKT928b2w2hEjY2NvZG7KTltG1jEku1W533Hwk2Njb2mez2WMwk3G9DonYN2NjY2Oew1wKg9vH54HZtYPBhLIGNjY19JDvfPOTly/9qHmNhY2Njn8Nuv9a37W1tO3ENLmxsbOxz2G2Q1I5y8wJFEf/S07GxsbH3ZudRThTcxDFQ8p756CL6ILGxsbE3ZedtJo+E2jHDWlTUHvrBxsbG3pWdhO+jh00O2ZRgbGxsbOx2rLt23Kc9cJM0tijwwsbGxj6MnYRBa/FTezQnGQnc3LexsbGxv4qd89pQqd2K1A2pHRJjY2NjH8D+F5uNpGmtjYfrxomNjY29KTtvFfP2tjZgWIu6sLGxsc9ht9cENmmHbWOrd2DY2NjYX8u+4mveltqtzloTLaYi2NjY2Bux86bVhkdtkJSHRHmzxMbGxj6HnS+lDZ7yUk549XgAGxsb+0h2vqD390xiqWT7gY2NjY09306s8dpiFYMNbGxs7APYeTNoA6Yi+olJ9YABGxsbe2t2O+i9YWOwVIg2eMLGxsY+gX3OhY2NjY2NjY2Njf2Y6y+5TEfqjoKSqAAAAABJRU5ErkJggg==">
     
 </ul>
     
@@ -428,7 +428,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Gradle/">Gradle</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Libgdx/">Libgdx</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/TexturePacker/">TexturePacker</a>
+        <a class="post_tag-link" href="/tags/Jni/">Jni</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/NDK/">NDK</a>
     </ul>
     
 
@@ -446,7 +446,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=使用TexturePacker对资源图进行打包的两种方法&url=http://ningso.me/2016/11/29/TexturePacker/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Andorid Studio NDK快捷编译配置&url=http://ningso.me/AndoridStudio-NDK-Quick-Build-configuration/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -455,7 +455,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=使用TexturePacker对资源图进行打包的两种方法&url=http://ningso.me/2016/11/29/TexturePacker/index.html&via=NingSo" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Andorid Studio NDK快捷编译配置&url=http://ningso.me/AndoridStudio-NDK-Quick-Build-configuration/index.html&via=NingSo" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -464,7 +464,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ningso.me/2016/11/29/TexturePacker/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ningso.me/AndoridStudio-NDK-Quick-Build-configuration/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -473,7 +473,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://ningso.me/2016/11/29/TexturePacker/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://ningso.me/AndoridStudio-NDK-Quick-Build-configuration/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -497,14 +497,15 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="方式一：执行jar方式"><a href="#方式一：执行jar方式" class="headerlink" title="方式一：执行jar方式"></a>方式一：执行jar方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -jar runnable-texturepacker.jar [inputDir] [outputDir] [packFileName]</div></pre></td></tr></table></figure>
-<p>注意：第一个参数资源文件路径必填项，后面两参数为可选项<br><a href="https://pan.baidu.com/s/1jHCNpQ2" target="_blank" rel="external">runnable-texturepacker.jar</a>下载</p>
-<h3 id="方式二：通过Android-Studio的Gradle"><a href="#方式二：通过Android-Studio的Gradle" class="headerlink" title="方式二：通过Android Studio的Gradle"></a>方式二：通过Android Studio的Gradle</h3><p>在项目全局<code>build.gradle</code>中引入环境</p>
+        <h1 id="Andorid-Studio-NDK快捷编译配置"><a href="#Andorid-Studio-NDK快捷编译配置" class="headerlink" title="Andorid Studio NDK快捷编译配置"></a>Andorid Studio NDK快捷编译配置</h1><blockquote>
+<p>接触Jni的时候，最繁琐的就是去生成<code>.h</code>头文件，以前很笨的方法就是通过javah工具生成.h头文件，还要各种指定路径等繁琐操作,写着写着就有点烦人。现在介绍一种更快捷的方式，通过配置快捷键的形式一劳永逸。</p>
+</blockquote>
 <a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">buildscript &#123;</div><div class="line">    repositories &#123;</div><div class="line">        jcenter()</div><div class="line">    &#125;</div><div class="line">    dependencies &#123;</div><div class="line">        classpath &apos;com.android.tools.build:gradle:2.2.2&apos;</div><div class="line">        classpath &apos;com.badlogicgames.gdx:gdx-tools:1.9.4&apos; //版本号根据自己使用的libdgx来定。</div><div class="line">        // NOTE: Do not place your application dependencies here; they belong</div><div class="line">        // in the individual module build.gradle files</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// 定义一个变量texturePacker并设置想传递的参数...参数一：资源所在文件夹路径，参数二：生成的打包图片所存放的文件路径，参数三：packFileName包文件的名称。同时也作用于图片名。</div><div class="line">project.ext.texturePacker = [rootDir.getPath() + &quot;/app/src/main/atlas&quot;, rootDir.getPath() + &quot;/app/src/main/assets&quot;, &quot;atlas_flip&quot;]</div><div class="line"></div><div class="line">// 导入texturepacker的引用</div><div class="line">import com.badlogic.gdx.tools.texturepacker.TexturePacker</div><div class="line"></div><div class="line">// 添加一个生存进行图片资源打包的task </div><div class="line">task texturePacker &lt;&lt; &#123;</div><div class="line">    if (project.ext.has(&apos;texturePacker&apos;)) &#123;</div><div class="line">        logger.info &quot;Calling TexturePacker: &quot; + texturePacker</div><div class="line">        TexturePacker.process(texturePacker[0], texturePacker[1], texturePacker[2])</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>最后在执行这个task<code>./gradlew texturePacker</code>即可</p>
-<h3 id="参考来源"><a href="#参考来源" class="headerlink" title="参考来源:"></a>参考来源:</h3><p><a href="https://github.com/libgdx/libgdx/wiki/Texture-packer#running-texturepacker" target="_blank" rel="external">libgdx wiki</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">javah</div><div class="line">Program:$JDKPath$/bin/javah</div><div class="line">Parameters:-encoding UTF-8 -d ../jni -jni $FileClass$</div><div class="line">Working directory:$ModuleFileDir$/src/main/java</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ndk-build</div><div class="line">Program:/Users/Liam/Library/Android/sdk/ndk-bundle/build/ndk-build</div><div class="line">Parameters:</div><div class="line">Working directory:$ModuleFileDir$/src/main</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ndk-build clean</div><div class="line">Program:/Users/Liam/Library/Android/sdk/ndk-bundle/build/ndk-build</div><div class="line">Parameters:clean</div><div class="line">Working directory:$ModuleFileDir$/src/main</div></pre></td></tr></table></figure>
+<h3 id="NDK开发常见的一些错误："><a href="#NDK开发常见的一些错误：" class="headerlink" title="NDK开发常见的一些错误："></a>NDK开发常见的一些错误：</h3><h4 id="Error-1"><a href="#Error-1" class="headerlink" title="Error 1"></a>Error 1</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">UnsatisfiedLinkError: No implementation found for int com.liam.nativeplugin.nativeutils.SymLink.createSymLinkJNI(java.lang.String, java.lang.String) </div><div class="line">(tried Java_com_liam_nativeplugin_nativeutils_SymLink_createSymLinkJNI and Java_com_liam_nativeplugin_nativeutils_SymLink_createSymLinkJNI__Ljava_lang_String_2Ljava_lang_String_2)</div></pre></td></tr></table></figure>
+<p>这是刚接触的时候最会遇到的错误类型了，意思就是会所，<code>.c</code>文件定义的JNI接口类型是<code>Java_com_liam_nativeplugin_nativeutils_SymLink_createSymLinkJNI</code> 即包名必须为<code>com.liam.nativeplugin.nativeutils</code>,类名为必须为<code>SymLink</code>。<br>也就是说，我们.so中函数声明涉及到的package name和class name与调用它的package name和class name不符。因此我们要改变我们工程中的package name和class name。使其与.so文件中函数签名提示的一致，在这个类中加入native方法的声明。<br>知道了这个规则，那么错误解决方案自然也就懂了。修改正确的package name和class name重新编译一下就好了。</p>
 
     
 
@@ -524,21 +525,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/01/19/JobScheduler遇到的一些小问题/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2016/06/23/ADB常用命令总结/" id="post_nav-older" class="next-content">
+        <a href="/How-to-use-git/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

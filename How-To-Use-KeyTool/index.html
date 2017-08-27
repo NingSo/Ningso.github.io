@@ -12,7 +12,7 @@
     
     <title>
         
-            adb常用命令总结 | 
+            KeyTool的基本使用方式 | 
         
         NingSo
     </title>
@@ -37,8 +37,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="NingSo">
-    <meta name="description" itemprop="description" content="一个还可以继续犯点二的年纪，我会努力变成一个不太二的自己！">
-    <meta name="keywords" content="NingSo Kika keyboard,ADB">
+    <meta name="description" itemprop="description" content="keytool 创建签名keystore1keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &amp;quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&amp;quot;
+
+-dname       指定证书拥有者信息 例如：  “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名称,ST=州或省份名称,C=单位的两字母国家代码”
+
+结果:
+Keytool 查看keystore的签名信息执行如下命令，并按照提示输入keystore 密码">
+    <meta name="keywords" content="NingSo Kika keyboard,KeyTool">
 
     <!-- Site Verification -->
     
@@ -67,26 +72,36 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://ningso.me">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="adb常用命令总结 | NingSo">
+    <meta property="og:title" content="KeyTool的基本使用方式 | NingSo">
     <meta property="og:image" content="/img/favicon.png" />
-    <meta property="og:description" content="一个还可以继续犯点二的年纪，我会努力变成一个不太二的自己！">
-    <meta property="og:article:tag" content="ADB"> 
+    <meta property="og:description" content="keytool 创建签名keystore1keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &amp;quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&amp;quot;
+
+-dname       指定证书拥有者信息 例如：  “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名称,ST=州或省份名称,C=单位的两字母国家代码”
+
+结果:
+Keytool 查看keystore的签名信息执行如下命令，并按照提示输入keystore 密码">
+    <meta property="og:article:tag" content="KeyTool"> 
 
     
-        <meta property="article:published_time" content="6月 23, 2016" />
+        <meta property="article:published_time" content="2月 02, 2016" />
         <meta property="article:modified_time" content="8月 23, 2017" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="adb常用命令总结 | NingSo">
-    <meta name="twitter:description" content="一个还可以继续犯点二的年纪，我会努力变成一个不太二的自己！">
+    <meta name="twitter:title" content="KeyTool的基本使用方式 | NingSo">
+    <meta name="twitter:description" content="keytool 创建签名keystore1keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &amp;quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&amp;quot;
+
+-dname       指定证书拥有者信息 例如：  “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名称,ST=州或省份名称,C=单位的两字母国家代码”
+
+结果:
+Keytool 查看keystore的签名信息执行如下命令，并按照提示输入keystore 密码">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://ningso.me" />
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://ningso.me/2016/06/23/ADB常用命令总结/index.html" />
+        <link rel="canonical" href="http://ningso.me/How-To-Use-KeyTool/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -112,11 +127,16 @@
         },
         "description": "一个还可以继续犯点二的年纪，我会努力变成一个不太二的自己！"
     },
-    "headline": "adb常用命令总结",
-    "url": "http://ningso.me/2016/06/23/ADB常用命令总结/index.html",
-    "datePublished": "6月 23, 2016",
+    "headline": "KeyTool的基本使用方式",
+    "url": "http://ningso.me/How-To-Use-KeyTool/index.html",
+    "datePublished": "2月 02, 2016",
     "dateModified": "8月 23, 2017",
-    "description": "一个还可以继续犯点二的年纪，我会努力变成一个不太二的自己！",
+    "description": "keytool 创建签名keystore1keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &amp;quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&amp;quot;
+
+-dname       指定证书拥有者信息 例如：  “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名称,ST=州或省份名称,C=单位的两字母国家代码”
+
+结果:
+Keytool 查看keystore的签名信息执行如下命令，并按照提示输入keystore 密码",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://ningso.me"
@@ -328,7 +348,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ADB命令"><span class="post-toc-number">1.</span> <span class="post-toc-text">ADB命令</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#AAPT命令"><span class="post-toc-number">2.</span> <span class="post-toc-text">AAPT命令</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#终端命令更新SDK"><span class="post-toc-number">3.</span> <span class="post-toc-text">终端命令更新SDK</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#keytool-创建签名keystore"><span class="post-toc-number">1.</span> <span class="post-toc-text">keytool 创建签名keystore</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Keytool-查看keystore的签名信息"><span class="post-toc-number">2.</span> <span class="post-toc-text">Keytool 查看keystore的签名信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Keytool-查看apk的签名信息"><span class="post-toc-number">3.</span> <span class="post-toc-text">Keytool 查看apk的签名信息</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -366,7 +386,7 @@
         
     
             <p class="article-headline-p">
-                adb常用命令总结
+                KeyTool的基本使用方式
             </p>
         </div>
 
@@ -385,7 +405,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>NingSo</strong>
-        <span>6月 23, 2016</span>
+        <span>2月 02, 2016</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -407,7 +427,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACa0lEQVR42u3bS27jMBAEUN//0jMXiOkq/iwYT6vAMhQ+LdhMdef176evFx4eHh4eHh4e3sN4r/j640HDb+afJN/P14aHh4d3h/dhqx3ycnD+5JW14eHh4d3kjbf45Od3d8fPH38/XxseHh7ek3nJQseLGB/Q8fDw8H6Vt7KtrxQePDw8vOfwkj/4c2peGPKlH89a8PDw8GJe3mS6//PV/h4eHh5ewKtHmoLDdF422jJQD13h4eHhHeDlG3E+IrDy/bn14OHh4d3kzW3364Vh7smTR2o8PDy8A7w2hJ0Lc9v4OI+S8fDw8L7LSxY3F8vmDbB21BUPDw/vW7x8yCn5NXkZKDb95BM8PDy8i7y51lcey+Yhxdy/E+Dh4eHd5I3Dhb2fJM2tJMh4excPDw/vCi8/LudH7XakYKXZhoeHh/ct3lIEcGBIa/IV4OHh4V3ktRvxStAwF1ssDV3h4eHhbeW1B+UEkxSAFha9FDw8PLzDvLy91I5h5Xfb2KKIcfHw8PCO8VpYwmhfTd4Y+/Cy8PDw8K7w8kHVJGJIAtkWUKwKDw8P7wpvQ3haFpL8mXkMgYeHh/ccXntQnhvMasPit4dyPDw8vOu8PBpYP0C3MUQ9OoCHh4d3gNdeeRMrKRXt8ycnI/Dw8PC28iY33zJgbVtfCamoe3h4eHgHeHkxWAkO2vBiW2HAw8PDO8ZrW/h7Fz0XYRQxLh4eHt7DeLvGDjbEwXh4eHiP5EVH2/JuO8RwsDDg4eHhLUwl5U2pthm2Uoomj9R4eHh4W3n5sTVvROWAtjH24eXi4eHhHeb93oWHh4eHh4eHh/eA6z8TAHy4fFyvjAAAAABJRU5ErkJggg==">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACVklEQVR42u3aQW7DMAwEwPz/0+0D0iRLUpLdYHwqGsPW+CARSz5+vvp64OHh4eHh4eHh3Yz3iK8/HvT06/Odr56Q3NlbGx4eHt4Z3oettri4aBHx5yuvDQ8PD+8g79Urk836/YLyTX+yNjw8PLz785LCulc64+Hh4X0fbxI39Ap3PDw8vHvykhdXC+gkaKg+f2PWgoeHhxfz8hD2/N9H+3t4eHh4Aa880rRhXGDj0BUeHh7eBl6+EefsvDE2ORjw8PDwruX1iulesyofscqbZ3h4eHhX8ZIotlpAVz9BtRlWOBjw8PDwlvKqC6qW1/mHy5tqhZQaDw8PbwNvUkxXI+Akxp0U6Hh4eHgnefnj8k1/0gzrFdZ4eHh4u3nJBl0to3strkmsjIeHh3eSVy1z840+iX2T8j15Ox4eHt5JXj4UVdiaW6Re/DEqqfHw8PAGvMkBkIN7T84/BB4eHt4Z3ryEnX+mo0NXeHh4eGPeZHOfRLE98IIwAg8PD2/Mq4497Rsv6L0LDw8P71repB3VHJAqRrfRf/Dw8PBuwOsFr0njKv+g7+NdPDw8vKt4OSkvxHtRb++4wsPDwzvPywOC5DCots16sS8eHh7eed5kIKC6iffK9AWjA3h4eHhLeZM2fzW6ndyPh4eHdzdechjkS5yX0YsPBjw8PLxtvF5TanKcVJ+2bHQADw8P7yJedSxgctjg4eHh/XfepLCuRhvlcQQ8PDy8g7x8QUljrFo0rxpKwMPDwzvDyyOAPE7dMWoQDRng4eHhbeZ934WHh4eHh4eHh3eD6xd+UV3J17gRlwAAAABJRU5ErkJggg==">
     
 </ul>
     
@@ -420,7 +440,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/ADB/">ADB</a>
+        <a class="post_tag-link" href="/tags/KeyTool/">KeyTool</a>
     </ul>
     
 
@@ -438,7 +458,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=adb常用命令总结&url=http://ningso.me/2016/06/23/ADB常用命令总结/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=KeyTool的基本使用方式&url=http://ningso.me/How-To-Use-KeyTool/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -447,7 +467,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=adb常用命令总结&url=http://ningso.me/2016/06/23/ADB常用命令总结/index.html&via=NingSo" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=KeyTool的基本使用方式&url=http://ningso.me/How-To-Use-KeyTool/index.html&via=NingSo" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -456,7 +476,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ningso.me/2016/06/23/ADB常用命令总结/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ningso.me/How-To-Use-KeyTool/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -465,7 +485,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://ningso.me/2016/06/23/ADB常用命令总结/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://ningso.me/How-To-Use-KeyTool/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -489,35 +509,17 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="ADB命令"><a href="#ADB命令" class="headerlink" title="ADB命令"></a>ADB命令</h2><ul>
-<li>adb shell cat [file] <code>查看文件内容</code></li>
-<li>adb shell service list <code>查看后台服务信息</code></li>
-<li>adb push [local] [remote] <code>将电脑本地文件拷贝到手机设备</code></li>
-<li>adb pull [remote] [local] <code>把文件从设备复制到本地电脑</code></li>
-<li>adb shell monkey -v -p [packagename] 500 <code>执行monkey命令</code></li>
-<li>adb shell dumpsys activity top  <code>查看栈顶activity的信息</code></li>
-<li>adb shell pm clear [packagename] <code>清除应用数据</code></li>
-</ul>
-<h2 id="AAPT命令"><a href="#AAPT命令" class="headerlink" title="AAPT命令"></a>AAPT命令</h2><p> Android asset packaging tool</p>
-<ul>
-<li>aapt list filepath.apk <code>列出apk的所有资源文件目录清单</code></li>
-<li>aapt list -v filepath.apk </li>
-<li>aapt d[ump] [values] file.{apk} </li>
-</ul>
+        <h3 id="keytool-创建签名keystore"><a href="#keytool-创建签名keystore" class="headerlink" title="keytool 创建签名keystore"></a>keytool 创建签名<code>keystore</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -genkey -alias Test -keyalg RSA -sigalg SHA1withRSA -validity 8030 -keystore ./xxxx.keystore -dname &quot;EMAILADDRESS=android.os@samsung.com, CN=Samsung Cert, OU=DMC, O=Samsung Corporation, L=Suwon City, ST=South Korea, C=KR&quot;</div></pre></td></tr></table></figure>
 <blockquote>
-<p>下面的四个参值为values的值</p>
-<ul>
-<li><code>badging</code> 查看apk的包名，laber 权限等所有信息</li>
-<li><code>permissions</code> 查看apk权限</li>
-<li><code>resources</code> 打印的所有资源文件列表</li>
-<li><code>configurations</code> 查看apk配置信息</li>
-</ul>
+<p>-dname       指定证书拥有者信息 例如：  “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名称,ST=州或省份名称,C=单位的两字母国家代码”</p>
 </blockquote>
-<h2 id="终端命令更新SDK"><a href="#终端命令更新SDK" class="headerlink" title="终端命令更新SDK"></a>终端命令更新SDK</h2><ul>
-<li>android list sdk <code>查看已安装完成的包</code> </li>
-<li>android list sdk –all <code>列举出所有可安装更新包的序列号</code></li>
-<li>android update sdk –no-ui –filter 1,2,3… <code>下载更新对应序列号的包</code></li>
-</ul>
+<p>结果:<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-1@2x.png" alt="创建签名"></p>
+<h3 id="Keytool-查看keystore的签名信息"><a href="#Keytool-查看keystore的签名信息" class="headerlink" title="Keytool 查看keystore的签名信息"></a>Keytool 查看keystore的签名信息</h3><p>执行如下命令，并按照提示输入keystore 密码</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -list -v -keystore XXXX.keystore</div></pre></td></tr></table></figure>
+<p>结果：<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-0@2x.png" alt="keystore的签名信息"></p>
+<h3 id="Keytool-查看apk的签名信息"><a href="#Keytool-查看apk的签名信息" class="headerlink" title="Keytool 查看apk的签名信息"></a>Keytool 查看apk的签名信息</h3><p>解压apk得到META-INF文件夹下面的RSA文件，执行如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -printcert -file XXX/META-INF/CERT.RSA</div></pre></td></tr></table></figure></p>
+<p> 结果：<br><img src="http://7xiowj.com1.z0.glb.clouddn.com/QQ20160203-2@2x.png" alt="查看apk的签名信息"></p>
 
     
 
@@ -537,7 +539,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2016/11/29/TexturePacker/" id="post_nav-newer" class="prev-content">
+        <a href="/ADB常用命令总结/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -551,7 +553,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2016/02/02/How-To-Use-KeyTool/" id="post_nav-older" class="next-content">
+        <a href="/How-to-Root-on-Nexus6-Android6-0/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

@@ -12,7 +12,7 @@
     
     <title>
         
-            使用Hexo过程中遇到的问题 | 
+            JobScheduler 遇到的一些小问题 | 
         
         NingSo
     </title>
@@ -37,10 +37,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="NingSo">
-    <meta name="description" itemprop="description" content="执行npm install -g hexo-cli时报错：如下图提示没有/usr/local/lib/node_modules路径没有权限
-解决方法：执行该命令行获取权限sudo chown -R $USER /usr/local/lib/node_modules
-参考来源: npm throws error without sudo">
-    <meta name="keywords" content="NingSo Kika keyboard,Hexo">
+    <meta name="description" itemprop="description" content="Working on Android Nougat在Android7.0上设置jobinfoBuilder.setPeriodic(5 * 1000);为5秒时，看到系统自己打印出来的logo,当时没太留意，然而问题出来了，我勒个去？？等了好久都没执行onStartJob()方法，但是看设置schedule()的时候确实返回的是成功啊。最后注意到这个结果！！
+12W/JobInfo: Specified interval for 1 is +5s0ms. Clamped to +15m0s0msW/JobInfo: Specified flex for 1 is +5s0ms. Clamped to +5m0s0ms
+就是说指定周期间隔时间为5seconds，被强制指定为15minutes,指定弹性延迟时间为5seconds，被强制指定为5minutes！！这就日狗了。难道是因为Android Nuga的出了省电模式之后自己改了？？">
+    <meta name="keywords" content="NingSo Kika keyboard,JobScheduler">
 
     <!-- Site Verification -->
     
@@ -69,30 +69,30 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://ningso.me">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="使用Hexo过程中遇到的问题 | NingSo">
+    <meta property="og:title" content="JobScheduler 遇到的一些小问题 | NingSo">
     <meta property="og:image" content="/img/favicon.png" />
-    <meta property="og:description" content="执行npm install -g hexo-cli时报错：如下图提示没有/usr/local/lib/node_modules路径没有权限
-解决方法：执行该命令行获取权限sudo chown -R $USER /usr/local/lib/node_modules
-参考来源: npm throws error without sudo">
-    <meta property="og:article:tag" content="Hexo"> 
+    <meta property="og:description" content="Working on Android Nougat在Android7.0上设置jobinfoBuilder.setPeriodic(5 * 1000);为5秒时，看到系统自己打印出来的logo,当时没太留意，然而问题出来了，我勒个去？？等了好久都没执行onStartJob()方法，但是看设置schedule()的时候确实返回的是成功啊。最后注意到这个结果！！
+12W/JobInfo: Specified interval for 1 is +5s0ms. Clamped to +15m0s0msW/JobInfo: Specified flex for 1 is +5s0ms. Clamped to +5m0s0ms
+就是说指定周期间隔时间为5seconds，被强制指定为15minutes,指定弹性延迟时间为5seconds，被强制指定为5minutes！！这就日狗了。难道是因为Android Nuga的出了省电模式之后自己改了？？">
+    <meta property="og:article:tag" content="JobScheduler"> 
 
     
         <meta property="article:published_time" content="1月 19, 2017" />
-        <meta property="article:modified_time" content="4月 10, 2017" />
+        <meta property="article:modified_time" content="3月 10, 2017" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="使用Hexo过程中遇到的问题 | NingSo">
-    <meta name="twitter:description" content="执行npm install -g hexo-cli时报错：如下图提示没有/usr/local/lib/node_modules路径没有权限
-解决方法：执行该命令行获取权限sudo chown -R $USER /usr/local/lib/node_modules
-参考来源: npm throws error without sudo">
+    <meta name="twitter:title" content="JobScheduler 遇到的一些小问题 | NingSo">
+    <meta name="twitter:description" content="Working on Android Nougat在Android7.0上设置jobinfoBuilder.setPeriodic(5 * 1000);为5秒时，看到系统自己打印出来的logo,当时没太留意，然而问题出来了，我勒个去？？等了好久都没执行onStartJob()方法，但是看设置schedule()的时候确实返回的是成功啊。最后注意到这个结果！！
+12W/JobInfo: Specified interval for 1 is +5s0ms. Clamped to +15m0s0msW/JobInfo: Specified flex for 1 is +5s0ms. Clamped to +5m0s0ms
+就是说指定周期间隔时间为5seconds，被强制指定为15minutes,指定弹性延迟时间为5seconds，被强制指定为5minutes！！这就日狗了。难道是因为Android Nuga的出了省电模式之后自己改了？？">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://ningso.me" />
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://ningso.me/2017/01/19/Hexo遇到的问题/index.html" />
+        <link rel="canonical" href="http://ningso.me/JobScheduler遇到的一些小问题/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -118,13 +118,13 @@
         },
         "description": "一个还可以继续犯点二的年纪，我会努力变成一个不太二的自己！"
     },
-    "headline": "使用Hexo过程中遇到的问题",
-    "url": "http://ningso.me/2017/01/19/Hexo遇到的问题/index.html",
+    "headline": "JobScheduler 遇到的一些小问题",
+    "url": "http://ningso.me/JobScheduler遇到的一些小问题/index.html",
     "datePublished": "1月 19, 2017",
-    "dateModified": "4月 10, 2017",
-    "description": "执行npm install -g hexo-cli时报错：如下图提示没有/usr/local/lib/node_modules路径没有权限
-解决方法：执行该命令行获取权限sudo chown -R $USER /usr/local/lib/node_modules
-参考来源: npm throws error without sudo",
+    "dateModified": "3月 10, 2017",
+    "description": "Working on Android Nougat在Android7.0上设置jobinfoBuilder.setPeriodic(5 * 1000);为5秒时，看到系统自己打印出来的logo,当时没太留意，然而问题出来了，我勒个去？？等了好久都没执行onStartJob()方法，但是看设置schedule()的时候确实返回的是成功啊。最后注意到这个结果！！
+12W/JobInfo: Specified interval for 1 is +5s0ms. Clamped to +15m0s0msW/JobInfo: Specified flex for 1 is +5s0ms. Clamped to +5m0s0ms
+就是说指定周期间隔时间为5seconds，被强制指定为15minutes,指定弹性延迟时间为5seconds，被强制指定为5minutes！！这就日狗了。难道是因为Android Nuga的出了省电模式之后自己改了？？",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://ningso.me"
@@ -336,7 +336,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#执行npm-install-g-hexo-cli时报错：如下图"><span class="post-toc-number">1.</span> <span class="post-toc-text">执行npm install -g hexo-cli时报错：如下图</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Working-on-Android-Nougat"><span class="post-toc-number">1.</span> <span class="post-toc-text">Working on Android Nougat</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#setPersisted-true-导致crash"><span class="post-toc-number">2.</span> <span class="post-toc-text">setPersisted(true) 导致crash</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -361,11 +361,20 @@
                 
     <!-- Paradox Post Header -->
     
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://dn-ningso.qbox.me/blog/permission-denied.png)">
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 13 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
     
             <p class="article-headline-p">
-                使用Hexo过程中遇到的问题
+                JobScheduler 遇到的一些小问题
             </p>
         </div>
 
@@ -406,7 +415,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACYklEQVR42u3aQW7DMAwEQP//0+21QJFkSVqyEIxPQWI4HB8kYsXr56uvCw8PDw8PDw8P7zDeFV8vH/fn1/935k/7/2uvNjw8PLw9vA9LbVBQ9McvSq/+7/t78PDw8HbyXhWX31PdJN5Tq7Xh4eHhnc9LGutCWYPXioeHh3c+L4pTg1jhQ3OMh4eHdzyvV2geUsxLX5614OHh4cW8PJDd/3nr+R4eHh5ewCuPNA0Cizx6uG3oCg8PD28BL1+IJw33/FCtUA8eHh7eFl71QdURgWoznR+S4eHh4e3n5Qt3zksC33yzKb8UPDw8vMW8FYt4b+wgqSTatPDw8PC28PKmOWlqk4U+f03lUS08PDy8LbxeyzuPZXuM5mQEHh4e3k28ahjRa5fzwLf3PR4eHt4JvLyxngQTyXPK7TseHh7eYl4eRlQD2XsP2EYHYHh4eHi38vKGeDIWkI8aJC8FDw8P71lePjKVD7AWSok3mFFKjYeHh7eAlwCSgODeDSMJL/Dw8PCe5d0V785b9jySwMPDwzuB1xtUrTbf1c3j/TABHh4e3n5edRtYV/rk2AwPDw/vKV4e7ybf9Bb63oAXHh4e3n5efpRVPeKqDqeODt7w8PDwFvN60epkrKo66lrdwPDw8PBW8674qpaSYN7f3wyU8fDw8LbwJkf4+RKfBA3VjQEPDw/vWV6+QFe3k7yNrm5RzdEBPDw8vEd51e+rkUQZjIeHh3ckL1/uJ4NcyWDBkpYaDw8P79YwIimuugH08Hh4eHjP8qqxQiEaGMQKve0BDw8PbzXv+y48PDw8PDw8PLwDrl9rCqWB0zAQvwAAAABJRU5ErkJggg==">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC00lEQVR42u3aQZIiMQwEQP7/6d3rXiCqJGYH7OwTETO4neZQIcmPP1c+D2xsbGxsbGxsbOyPZD/i59//f7r0y78mb8zfku8ZGxsb+wZ2stH8c7LdhJHsIf8BsLGxsW9gJ3Hy7K/Ptpus3K7Z7hkbGxsbO4+TJJzy48uDExsbGxu7DbBNcyePKGxsbGzsn2gqvaFNH4TZbD8/2EvDxsbG/nj2bND7u59/bb6NjY2N/WHs2ZMXG227PylFhnvGxsbGPpSdX6DJL9wkBUxbhGyGvtjY2Nj3sPcj3rx0yaNx9q0iwLCxsbGPY0et9hjcPrPW0moqgo2Njf3l7H3ZkEfg5ppO/lMV4wFsbGzsg9j56/dtoLyZ9Xo/r/eAjY2NfQ+7bd/Mhgpti6odJ0c/AzY2NvY17M0otx0n5MVP267CxsbGvo3dRsKs0b9pQs0OCBsbG/tO9rsaSfloYTO+LdpY2NjY2Iey22iZNXeSb+VFSx6W2NjY2Dew39vof9dIICkw8pIGGxsb+2z2bFTQBt7mEmdbCGFjY2PfzJ7x2nXyYqYd7g4rMGxsbOwvZxdfi4uWpNnUhl87WogqMGxsbOwj2Hn7po2uWTTmx5qvg42NjX0Dux3c7ptQbUzmB4GNjY2NnTf3X2+x3XrechpeD8LGxsY+lJ1vPT+UWamTFCSzwQM2Njb2Dew2lvISJd96OzaojwkbGxv7aHb+yvY4Ztco26OMdoKNjY19AXsDzhtG+SXLzcrY2NjY97BnQdKOENpxQtH0z1fAxsbGPpS9D5tNwdAOCWYlEzY2NvYN7FloJW2jpKjIf4BNsGFjY2PfwJ6FVtJaaptH+xYVNjY2Nnay3fyVbSi2V3/+U4BhY2NjH8HelB/7wcOvlSLY2NjYX8IuwiCOt2SdPJZex9uwFMHGxsY+gr0f9M7Cb3bQw1ExNjY29qHsex5sbGxsbGxsbGzsj3n+AsZbucwKmtdqAAAAAElFTkSuQmCC">
     
 </ul>
     
@@ -419,7 +428,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Hexo/">Hexo</a>
+        <a class="post_tag-link" href="/tags/JobScheduler/">JobScheduler</a>
     </ul>
     
 
@@ -437,7 +446,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=使用Hexo过程中遇到的问题&url=http://ningso.me/2017/01/19/Hexo遇到的问题/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=JobScheduler 遇到的一些小问题&url=http://ningso.me/JobScheduler遇到的一些小问题/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -446,7 +455,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=使用Hexo过程中遇到的问题&url=http://ningso.me/2017/01/19/Hexo遇到的问题/index.html&via=NingSo" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=JobScheduler 遇到的一些小问题&url=http://ningso.me/JobScheduler遇到的一些小问题/index.html&via=NingSo" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -455,7 +464,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ningso.me/2017/01/19/Hexo遇到的问题/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://ningso.me/JobScheduler遇到的一些小问题/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -464,7 +473,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://ningso.me/2017/01/19/Hexo遇到的问题/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://ningso.me/JobScheduler遇到的一些小问题/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -488,10 +497,21 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="执行npm-install-g-hexo-cli时报错：如下图"><a href="#执行npm-install-g-hexo-cli时报错：如下图" class="headerlink" title="执行npm install -g hexo-cli时报错：如下图"></a>执行<code>npm install -g hexo-cli</code>时报错：如下图</h3><p><img src="https://dn-ningso.qbox.me/blog/permission-denied.png" alt="EACCES: permission denied, access &#39;/usr/local/lib/node_modules"><br>提示没有/usr/local/lib/node_modules路径没有权限</p>
-<p>解决方法：执行该命令行获取权限<code>sudo chown -R $USER /usr/local/lib/node_modules</code></p>
-<p>参考来源: <a href="http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo" target="_blank" rel="external">npm throws error without sudo</a></p>
+        <h3 id="Working-on-Android-Nougat"><a href="#Working-on-Android-Nougat" class="headerlink" title="Working on Android Nougat"></a>Working on Android Nougat</h3><p>在Android7.0上设置jobinfoBuilder.setPeriodic(5 * 1000);为5秒时，看到系统自己打印出来的logo,当时没太留意，然而问题出来了，我勒个去？？等了好久都没执行<code>onStartJob()</code>方法，但是看设置schedule()的时候确实返回的是成功啊。最后注意到这个结果！！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">W/JobInfo: Specified interval for 1 is +5s0ms. Clamped to +15m0s0ms</div><div class="line">W/JobInfo: Specified flex for 1 is +5s0ms. Clamped to +5m0s0ms</div></pre></td></tr></table></figure>
+<p>就是说指定周期间隔时间为5seconds，被强制指定为15minutes,<br>指定弹性延迟时间为5seconds，被强制指定为5minutes！！<br>这就日狗了。难道是因为Android Nuga的出了省电模式之后自己改了？？</p>
 <a id="more"></a>
+<p><img src="https://dn-ningso.qbox.me/blog/WX20161208-194549.png" alt="working on Nougat"></p>
+<p>跟踪到API24源码我们发现：在JobInfo中设置了最小间隔时间和最小弹性时间，如果设置的比改值还小，则取默认值。。。千万只草泥马有没有。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">/* Minimum interval for a periodic job, in milliseconds. */</div><div class="line">   private static final long MIN_PERIOD_MILLIS = 15 * 60 * 1000L;   // 15 minutes</div><div class="line"></div><div class="line">/* Minimum flex for a periodic job, in milliseconds. */</div><div class="line">   private static final long MIN_FLEX_MILLIS = 5 * 60 * 1000L; // 5 minutes</div><div class="line">      /**</div><div class="line">    * Set to the interval between occurrences of this job. This value is &lt;b&gt;not&lt;/b&gt; set if the</div><div class="line">    * job does not recur periodically.</div><div class="line">    */</div><div class="line">   public long getIntervalMillis() &#123;</div><div class="line">       return intervalMillis &gt;= getMinPeriodMillis() ? intervalMillis : getMinPeriodMillis();//看！！这里！！</div><div class="line">   &#125;</div><div class="line">&lt;---省略若干无关代码---&gt;</div><div class="line">   /**</div><div class="line">    * Flex time for this job. Only valid if this is a periodic job.  The job can</div><div class="line">    * execute at any time in a window of flex length at the end of the period.</div><div class="line">    */</div><div class="line">   public long getFlexMillis() &#123;</div><div class="line">       long interval = getIntervalMillis();</div><div class="line">       long percentClamp = 5 * interval / 100;</div><div class="line">       long clampedFlex = Math.max(flexMillis, Math.max(percentClamp, getMinFlexMillis()));//看！！这里！！</div><div class="line">       return clampedFlex &lt;= interval ? clampedFlex : interval;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p>在API为23的时候并没有这些，也就是说在24及以上版本会出现这样的问题。<br>作为解决方法，如果作业间隔小于15分钟，可以使用以下代码以定期间隔调度作业。不过该方式只能被执行一次。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">JobInfo jobInfo;</div><div class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N) &#123;</div><div class="line">  jobInfo = <span class="keyword">new</span> JobInfo.Builder(JOB_ID, serviceName)</div><div class="line">      .setMinimumLatency(REFRESH_INTERVAL)</div><div class="line">      .setExtras(bundle).build();</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  jobInfo = <span class="keyword">new</span> JobInfo.Builder(JOB_ID, serviceName)</div><div class="line">      .setPeriodic(REFRESH_INTERVAL)</div><div class="line">      .setExtras(bundle).build();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>参考链接：</p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/38344220/job-scheduler-not-running-on-android-n" target="_blank" rel="external">stackoverflow</a></li>
+<li><a href="https://code.google.com/p/android/issues/detail?id=81265" target="_blank" rel="external">Android Open Source Issue</a></li>
+</ul>
+<h3 id="setPersisted-true-导致crash"><a href="#setPersisted-true-导致crash" class="headerlink" title="setPersisted(true) 导致crash"></a>setPersisted(true) 导致crash</h3>
     
 
     
@@ -510,7 +530,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/04/01/How-to-use-git/" id="post_nav-newer" class="prev-content">
+        <a href="/Hexo遇到的问题/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -524,7 +544,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2017/01/19/JobScheduler遇到的一些小问题/" id="post_nav-older" class="next-content">
+        <a href="/TexturePacker/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
