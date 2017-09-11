@@ -182,6 +182,7 @@
 <li>adb shell dumpsys activity top  <code>查看栈顶activity的信息</code></li>
 <li>adb shell dumpsys activity | grep mFocusedActivities <code>只查看栈顶Activity名称</code></li>
 <li>adb shell pm clear [packagename] <code>清除应用数据</code></li>
+<li>adb shell ifconfig [grep addr]<code>查看ip等地址信息</code></li>
 </ul>
 <h2 id="AAPT命令"><a href="#AAPT命令" class="headerlink" title="AAPT命令"></a>AAPT命令</h2><p> Android asset packaging tool</p>
 <ul>
