@@ -352,7 +352,7 @@ git rm -r e fileName 删除git服务器追踪文件文件但不删除本地文�
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git查看某个文件的修改历史"><span class="post-toc-number">1.</span> <span class="post-toc-text">git查看某个文件的修改历史</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Clean-up-a-fork-and-restart-it-from-the-upstream"><span class="post-toc-number">2.</span> <span class="post-toc-text">Clean up a fork and restart it from the upstream</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-一个分支完全替换另一个分支"><span class="post-toc-number">3.</span> <span class="post-toc-text">git 一个分支完全替换另一个分支</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git查看某个文件的修改历史"><span class="post-toc-number">1.</span> <span class="post-toc-text">git查看某个文件的修改历史</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Update-a-fork-and-restart-it-from-the-upstream"><span class="post-toc-number">2.</span> <span class="post-toc-text">Update a fork and restart it from the upstream</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-一个分支完全替换另一个分支"><span class="post-toc-number">3.</span> <span class="post-toc-text">git 一个分支完全替换另一个分支</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cherry-pick的使用"><span class="post-toc-number">4.</span> <span class="post-toc-text">cherry-pick的使用</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -521,16 +521,23 @@ git rm -r e fileName 删除git服务器追踪文件文件但不删除本地文�
 <li>git rm -r e fileName 删除git服务器追踪文件文件但不删除本地文件</li>
 </ul>
 <a id="more"></a>
-<h3 id="Clean-up-a-fork-and-restart-it-from-the-upstream"><a href="#Clean-up-a-fork-and-restart-it-from-the-upstream" class="headerlink" title="Clean up a fork and restart it from the upstream"></a>Clean up a fork and restart it from the upstream</h3><ul>
+<h3 id="Update-a-fork-and-restart-it-from-the-upstream"><a href="#Update-a-fork-and-restart-it-from-the-upstream" class="headerlink" title="Update a fork and restart it from the upstream"></a>Update a fork and restart it from the upstream</h3><ul>
 <li>git remote add upstream git@github.com:XXXXXXXX.git</li>
 <li>git fetch upstream</li>
 <li>git rebase upstream/master</li>
+<li>git pull upstream/master</li>
+<li>git push origin master</li>
 <li>git rebase –abort</li>
 </ul>
 <h3 id="git-一个分支完全替换另一个分支"><a href="#git-一个分支完全替换另一个分支" class="headerlink" title="git 一个分支完全替换另一个分支"></a>git 一个分支完全替换另一个分支</h3><ul>
 <li>git checkout master</li>
 <li>git reset –hard upstream/master  </li>
 <li>git push origin master –force </li>
+</ul>
+<h3 id="cherry-pick的使用"><a href="#cherry-pick的使用" class="headerlink" title="cherry-pick的使用"></a>cherry-pick的使用</h3><ul>
+<li>git cherry-pick [commitID] 提取一个commit</li>
+<li>git cherry-pick [commitIDA]..[commitIDB] <code>从A到B的所有commit，但不包含A，包含B</code></li>
+<li>git cherry-pick [commitIDA]^..[commitIDB] <code>包含从A到B的所有commit，但包含A也包含B</code></li>
 </ul>
 
     

@@ -67,16 +67,23 @@
 <li>git rm -r e fileName 删除git服务器追踪文件文件但不删除本地文件</li>
 </ul>
 <a id="more"></a>
-<h3 id="Clean-up-a-fork-and-restart-it-from-the-upstream"><a href="#Clean-up-a-fork-and-restart-it-from-the-upstream" class="headerlink" title="Clean up a fork and restart it from the upstream"></a>Clean up a fork and restart it from the upstream</h3><ul>
+<h3 id="Update-a-fork-and-restart-it-from-the-upstream"><a href="#Update-a-fork-and-restart-it-from-the-upstream" class="headerlink" title="Update a fork and restart it from the upstream"></a>Update a fork and restart it from the upstream</h3><ul>
 <li>git remote add upstream git@github.com:XXXXXXXX.git</li>
 <li>git fetch upstream</li>
 <li>git rebase upstream/master</li>
+<li>git pull upstream/master</li>
+<li>git push origin master</li>
 <li>git rebase –abort</li>
 </ul>
 <h3 id="git-一个分支完全替换另一个分支"><a href="#git-一个分支完全替换另一个分支" class="headerlink" title="git 一个分支完全替换另一个分支"></a>git 一个分支完全替换另一个分支</h3><ul>
 <li>git checkout master</li>
 <li>git reset –hard upstream/master  </li>
 <li>git push origin master –force </li>
+</ul>
+<h3 id="cherry-pick的使用"><a href="#cherry-pick的使用" class="headerlink" title="cherry-pick的使用"></a>cherry-pick的使用</h3><ul>
+<li>git cherry-pick [commitID] 提取一个commit</li>
+<li>git cherry-pick [commitIDA]..[commitIDB] <code>从A到B的所有commit，但不包含A，包含B</code></li>
+<li>git cherry-pick [commitIDA]^..[commitIDB] <code>包含从A到B的所有commit，但包含A也包含B</code></li>
 </ul>
 ]]></content>
     
@@ -205,7 +212,7 @@
     <link href="http://ningso.me/ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/"/>
     <id>http://ningso.me/ADB常用命令总结/</id>
     <published>2016-06-23T15:26:13.000Z</published>
-    <updated>2017-08-23T15:19:02.000Z</updated>
+    <updated>2017-09-11T10:56:53.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="ADB命令"><a href="#ADB命令" class="headerlink" title="ADB命令"></a>ADB命令</h2><ul>
 <li>adb shell cat [file] <code>查看文件内容</code></li>
@@ -214,6 +221,7 @@
 <li>adb pull [remote] [local] <code>把文件从设备复制到本地电脑</code></li>
 <li>adb shell monkey -v -p [packagename] 500 <code>执行monkey命令</code></li>
 <li>adb shell dumpsys activity top  <code>查看栈顶activity的信息</code></li>
+<li>adb shell dumpsys activity | grep mFocusedActivities <code>只查看栈顶Activity名称</code></li>
 <li>adb shell pm clear [packagename] <code>清除应用数据</code></li>
 </ul>
 <h2 id="AAPT命令"><a href="#AAPT命令" class="headerlink" title="AAPT命令"></a>AAPT命令</h2><p> Android asset packaging tool</p>
