@@ -26,9 +26,11 @@
 <p>接触Jni的时候，最繁琐的就是去生成<code>.h</code>头文件，以前很笨的方法就是通过javah工具生成.h头文件，还要各种指定路径等繁琐操作,写着写着就有点烦人。现在介绍一种更快捷的方式，通过配置快捷键的形式一劳永逸。</p>
 </blockquote>
 <a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">javah</div><div class="line">Program:$JDKPath$/bin/javah</div><div class="line">Parameters:-encoding UTF-8 -d ../jni -jni $FileClass$</div><div class="line">Working directory:$ModuleFileDir$/src/main/java</div></pre></td></tr></table></figure>
+<h3 id="快捷配置效果预览"><a href="#快捷配置效果预览" class="headerlink" title="快捷配置效果预览"></a>快捷配置效果预览</h3><p><img src="https://dn-ningso.qbox.me/blog/image/android_ndk_.png" alt="enter image description here"><br><img src="https://dn-ningso.qbox.me/blog/image/android_ndk_externaltool.png?imageView2/0/q/90|watermark/2/text/TmluZ1Nv/font/Y29taWMgc2FucyBtcw==/fontsize/280/fill/I0ZGRkZGRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageslim" alt="enter image description here"></p>
+<h3 id="javah"><a href="#javah" class="headerlink" title="javah"></a>javah</h3><p><img src="https://dn-ningso.qbox.me/blog/image/android_ndk_javah.png?imageView2/0/q/90|watermark/2/text/TmluZ1Nv/font/Y29taWMgc2FucyBtcw==/fontsize/280/fill/I0ZGRkZGRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageslim" alt="ndk javah"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">javah</div><div class="line">Program:$JDKPath$/bin/javah</div><div class="line">Parameters:-encoding UTF-8 -d ../jni -jni $FileClass$</div><div class="line">Working directory:$ModuleFileDir$/src/main/java</div></pre></td></tr></table></figure></p>
+<h3 id="ndk-build"><a href="#ndk-build" class="headerlink" title="ndk-build"></a>ndk-build</h3><p><img src="https://dn-ningso.qbox.me/blog/image/android_ndk_build.png?imageView2/0/q/90|watermark/2/text/TmluZ1Nv/font/Y29taWMgc2FucyBtcw==/fontsize/280/fill/I0ZGRkZGRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageslim" alt="enter image description here"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ndk-build</div><div class="line">Program:/Users/Liam/Library/Android/sdk/ndk-bundle/build/ndk-build</div><div class="line">Parameters:</div><div class="line">Working directory:$ModuleFileDir$/src/main</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ndk-build clean</div><div class="line">Program:/Users/Liam/Library/Android/sdk/ndk-bundle/build/ndk-build</div><div class="line">Parameters:clean</div><div class="line">Working directory:$ModuleFileDir$/src/main</div></pre></td></tr></table></figure>
+<h3 id="ndk-build-clean"><a href="#ndk-build-clean" class="headerlink" title="ndk-build clean"></a>ndk-build clean</h3><p><img src="https://dn-ningso.qbox.me/blog/image/android_ndk_build_clean.png?imageView2/0/q/90|watermark/2/text/TmluZ1Nv/font/Y29taWMgc2FucyBtcw==/fontsize/280/fill/I0ZGRkZGRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageslim" alt="ndk build clean"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ndk-build clean</div><div class="line">Program:/Users/Liam/Library/Android/sdk/ndk-bundle/build/ndk-build</div><div class="line">Parameters:clean</div><div class="line">Working directory:$ModuleFileDir$/src/main</div></pre></td></tr></table></figure></p>
 <h3 id="NDK开发常见的一些错误："><a href="#NDK开发常见的一些错误：" class="headerlink" title="NDK开发常见的一些错误："></a>NDK开发常见的一些错误：</h3><h4 id="Error-1"><a href="#Error-1" class="headerlink" title="Error 1"></a>Error 1</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">UnsatisfiedLinkError: No implementation found for int com.liam.nativeplugin.nativeutils.SymLink.createSymLinkJNI(java.lang.String, java.lang.String) </div><div class="line">(tried Java_com_liam_nativeplugin_nativeutils_SymLink_createSymLinkJNI and Java_com_liam_nativeplugin_nativeutils_SymLink_createSymLinkJNI__Ljava_lang_String_2Ljava_lang_String_2)</div></pre></td></tr></table></figure>
 <p>这是刚接触的时候最会遇到的错误类型了，意思就是会所，<code>.c</code>文件定义的JNI接口类型是<code>Java_com_liam_nativeplugin_nativeutils_SymLink_createSymLinkJNI</code> 即包名必须为<code>com.liam.nativeplugin.nativeutils</code>,类名为必须为<code>SymLink</code>。<br>也就是说，我们.so中函数声明涉及到的package name和class name与调用它的package name和class name不符。因此我们要改变我们工程中的package name和class name。使其与.so文件中函数签名提示的一致，在这个类中加入native方法的声明。<br>知道了这个规则，那么错误解决方案自然也就懂了。修改正确的package name和class name重新编译一下就好了。</p>
 ]]></content>
@@ -113,14 +115,14 @@
     <published>2017-01-19T14:16:00.000Z</published>
     <updated>2017-04-10T10:27:00.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="执行npm-install-g-hexo-cli时报错：如下图"><a href="#执行npm-install-g-hexo-cli时报错：如下图" class="headerlink" title="执行npm install -g hexo-cli时报错：如下图"></a>执行<code>npm install -g hexo-cli</code>时报错：如下图</h3><p><img src="https://dn-ningso.qbox.me/blog/permission-denied.png" alt="EACCES: permission denied, access &#39;/usr/local/lib/node_modules"><br>提示没有/usr/local/lib/node_modules路径没有权限</p>
+    <content type="html"><![CDATA[<h3 id="执行npm-install-g-hexo-cli时报错：如下图"><a href="#执行npm-install-g-hexo-cli时报错：如下图" class="headerlink" title="执行npm install -g hexo-cli时报错：如下图"></a>执行<code>npm install -g hexo-cli</code>时报错：如下图</h3><p><img src="https://dn-ningso.qbox.me/blog/permission-denied.png?imageView2/0/q/90|watermark/2/text/TmluZ1Nv/font/Y29taWMgc2FucyBtcw==/fontsize/280/fill/I0ZGRkZGRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageslim" alt="EACCES: permission denied, access &#39;/usr/local/lib/node_modules"><br>提示没有/usr/local/lib/node_modules路径没有权限</p>
 <p>解决方法：执行该命令行获取权限<code>sudo chown -R $USER /usr/local/lib/node_modules</code></p>
 <p>参考来源: <a href="http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo" target="_blank" rel="external">npm throws error without sudo</a></p>
 <a id="more"></a>]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;执行npm-install-g-hexo-cli时报错：如下图&quot;&gt;&lt;a href=&quot;#执行npm-install-g-hexo-cli时报错：如下图&quot; class=&quot;headerlink&quot; title=&quot;执行npm install -g hexo-cli时报错：如下图&quot;&gt;&lt;/a&gt;执行&lt;code&gt;npm install -g hexo-cli&lt;/code&gt;时报错：如下图&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://dn-ningso.qbox.me/blog/permission-denied.png&quot; alt=&quot;EACCES: permission denied, access &amp;#39;/usr/local/lib/node_modules&quot;&gt;&lt;br&gt;提示没有/usr/local/lib/node_modules路径没有权限&lt;/p&gt;
+      &lt;h3 id=&quot;执行npm-install-g-hexo-cli时报错：如下图&quot;&gt;&lt;a href=&quot;#执行npm-install-g-hexo-cli时报错：如下图&quot; class=&quot;headerlink&quot; title=&quot;执行npm install -g hexo-cli时报错：如下图&quot;&gt;&lt;/a&gt;执行&lt;code&gt;npm install -g hexo-cli&lt;/code&gt;时报错：如下图&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://dn-ningso.qbox.me/blog/permission-denied.png?imageView2/0/q/90|watermark/2/text/TmluZ1Nv/font/Y29taWMgc2FucyBtcw==/fontsize/280/fill/I0ZGRkZGRg==/dissolve/100/gravity/SouthEast/dx/10/dy/10|imageslim&quot; alt=&quot;EACCES: permission denied, access &amp;#39;/usr/local/lib/node_modules&quot;&gt;&lt;br&gt;提示没有/usr/local/lib/node_modules路径没有权限&lt;/p&gt;
 &lt;p&gt;解决方法：执行该命令行获取权限&lt;code&gt;sudo chown -R $USER /usr/local/lib/node_modules&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;参考来源: &lt;a href=&quot;http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo&quot;&gt;npm throws error without sudo&lt;/a&gt;&lt;/p&gt;
     
@@ -212,7 +214,7 @@
     <link href="http://ningso.me/ADB%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/"/>
     <id>http://ningso.me/ADB常用命令总结/</id>
     <published>2016-06-23T15:26:13.000Z</published>
-    <updated>2017-09-11T11:08:19.000Z</updated>
+    <updated>2017-09-11T11:09:14.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="ADB命令"><a href="#ADB命令" class="headerlink" title="ADB命令"></a>ADB命令</h2><ul>
 <li>adb shell cat [file] <code>查看文件内容</code></li>
@@ -223,7 +225,7 @@
 <li>adb shell dumpsys activity top  <code>查看栈顶activity的信息</code></li>
 <li>adb shell dumpsys activity | grep mFocusedActivities <code>只查看栈顶Activity名称</code></li>
 <li>adb shell pm clear [packagename] <code>清除应用数据</code></li>
-<li>adb shell ifconfig [grep addr]<code>查看ip等地址信息</code></li>
+<li>adb shell ifconfig [|grep addr]<code>查看ip等地址信息</code></li>
 </ul>
 <h2 id="AAPT命令"><a href="#AAPT命令" class="headerlink" title="AAPT命令"></a>AAPT命令</h2><p> Android asset packaging tool</p>
 <ul>
